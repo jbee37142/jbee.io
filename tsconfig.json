@@ -7,7 +7,7 @@
     "jsx": "react-jsx",
     "moduleResolution": "Bundler",
     "resolveJsonModule": true,
-    "target": "ES2022",
+    "target": "esnext",
     "strict": true,
     "allowJs": true,
     "skipLibCheck": true,
@@ -19,5 +19,13 @@
 
     // Remix takes care of building everything in `remix build`.
     "noEmit": true
+  },
+  "ts-node": {
+    "transpileOnly": true,
+    "esm": true,
+    "compilerOptions": {
+      "module": "Node16",
+      "moduleResolution": "Node16"
+    }
   }
 }

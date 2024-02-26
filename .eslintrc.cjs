@@ -83,6 +83,7 @@ module.exports = {
 
   rules: {
     // Jbee
+    'object-curly-spacing': ['error', 'always'],
     'no-multiple-empty-lines': [
       'error',
       { 'max': 1, 'maxEOF': 1 }
@@ -91,10 +92,7 @@ module.exports = {
       'error',
       'always'
     ],
-    'semi': [
-      'error',
-      'always'
-    ],
+    'semi': ['off'],
     'quotes': [
       'error',
       'single'
@@ -102,5 +100,6 @@ module.exports = {
     'indent': ['error', 2],
     'import/newline-after-import': 'error',
     'padding-line-between-statements': ['warn', { blankLine: 'always', prev: '*', next: 'return' }],
+    'prefer-const': 'off',
   }
 };
