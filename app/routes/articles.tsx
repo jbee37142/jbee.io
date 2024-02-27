@@ -1,5 +1,6 @@
 import { Link, json, useLoaderData } from '@remix-run/react';
-import { GlobalNavigationBar } from '~/components/GlobalNavigationBar';
+import { Container } from '~/components/container/Container';
+import { GlobalNavigationBar } from '~/components/gnb/GlobalNavigationBar';
 import { articlesLayer } from '~/content-layer/articles';
 
 export async function loader() {
@@ -10,7 +11,7 @@ export default function ArticlesPage() {
   const articles = useLoaderData<typeof loader>();
   
   return (
-    <main>
+    <Container>
       <GlobalNavigationBar />
       <section>
         <h2>Articles</h2>
@@ -26,7 +27,7 @@ export default function ArticlesPage() {
           ))}
         </ul>
       </section>
-    </main>
+    </Container>
   );
 }
 

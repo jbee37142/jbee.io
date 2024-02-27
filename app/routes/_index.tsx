@@ -1,5 +1,6 @@
 import type { MetaFunction } from '@remix-run/node';
-import { GlobalNavigationBar } from '~/components/GlobalNavigationBar';
+import { Container } from '~/components/container/Container';
+import { GlobalNavigationBar } from '~/components/gnb/GlobalNavigationBar';
 
 export const meta: MetaFunction = () => {
   return [
@@ -10,9 +11,9 @@ export const meta: MetaFunction = () => {
 
 export default function HomePage() {
   return (
-    <main>
+    <Container>
       <GlobalNavigationBar />
       Home - summary
-    </main>
+    </Container>
   );
 }
