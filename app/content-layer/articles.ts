@@ -106,12 +106,23 @@ async function buildArticle(text: string) {
   return article;
 }
 
-async function getArticles(): Promise<ArticleSummary[]> {
+export interface ArticeListQueryOptions {
+  count?: number;
+}
+
+async function getArticles(options?: ArticeListQueryOptions): Promise<ArticleSummary[]> {
+  const { count } = options ?? { count: null };
   const articles = await prepareArticles();
   
-  return [...articles.values()].flatMap(x => [...x.values()]).sort((a, b) => {
+  const sortedArticles = [...articles.values()].flatMap(x => [...x.values()]).sort((a, b) => {
     return new Date(b.lastUpdatedAt).getTime() - new Date(a.lastUpdatedAt).getTime();
   });
+
+  if (count == null) {
+    return sortedArticles;
+  }
+
+  return sortedArticles.slice(0, count);
 }
 
 async function getArticle(category: string, title: string): Promise<Article> {
