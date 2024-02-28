@@ -3,26 +3,32 @@ import { Container } from '~/components/container/Container';
 import { GlobalNavigationBar } from '~/components/gnb/GlobalNavigationBar';
 import { List } from '~/components/list/List';
 import { articlesLayer } from '~/content-layer/articles';
-import { common } from '~/styles/element.css';
+import { safelyFormatDate } from '~/utils/safelyFormatDate';
+import * as styles from './articles.css';
 
 export async function loader() {
-  return json(await articlesLayer.getArticles());
+  const articles = json(await articlesLayer.getArticles());
+
+  return articles
 }
 
 export default function ArticlesPage() {
   const articles = useLoaderData<typeof loader>();
-  
+
   return (
     <Container>
       <GlobalNavigationBar />
       <List>
-        {articles.map(({ title, category }, index) => (
-          <li key={index} className={common.listitem}>
-            <Link to={`/articles/${category}/${title}`} className={common.anchor} prefetch="intent">
-              {title}
-            </Link>
-          </li>
-        ))}
+        {articles.map(({ title, category, lastUpdatedAt }, index) => {
+          return (
+            <li key={index} className={styles.articleItem}>
+              <Link to={`/articles/${category}/${title}`} className={styles.link} prefetch="intent">
+                <span>{title}</span>
+                <span className={styles.dateText}>{safelyFormatDate(lastUpdatedAt)}</span>
+              </Link>
+            </li>
+          
+          )})}
       </List>
     </Container>
   );
