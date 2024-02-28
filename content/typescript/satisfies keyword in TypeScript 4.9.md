@@ -1,3 +1,9 @@
+---
+title: '달satisfies keyword in TypeScript 4.9'
+date: 2023-7-17 16:21:13
+category: 'typescript'
+---
+
 👋 TypeScript **4.9** is coming.
 
 # Why
