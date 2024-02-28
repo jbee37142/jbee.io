@@ -11,6 +11,8 @@ import {
 
 import '~/styles/reset.css';
 import '~/styles/global.css';
+import { Container } from './components/container/Container';
+import { GlobalNavigationBar } from './components/gnb/GlobalNavigationBar';
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
@@ -27,11 +29,22 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Outlet />
+        <Layout>
+          <Outlet />
+        </Layout>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
       </body>
     </html>
+  );
+}
+
+function Layout({ children }: { children: React.ReactNode }) {
+  return (
+    <Container>
+      <GlobalNavigationBar />
+      {children}
+    </Container>
   );
 }

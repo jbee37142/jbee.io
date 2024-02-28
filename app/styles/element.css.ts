@@ -17,14 +17,7 @@ const listrow = style({
   flexDirection: 'row',
 });
 
-const listitem = style({
-  listStyle: 'none',
-  marginTop: '1rem',
-  marginBottom: '1rem',
-});
-
 export const common = {
   anchor,
   listrow,
-  listitem,
 };
