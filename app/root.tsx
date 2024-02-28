@@ -9,8 +9,12 @@ import {
   ScrollRestoration,
 } from '@remix-run/react';
 
+import '~/styles/reset.css';
+import '~/styles/global.css';
+
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
+  { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css' }
 ];
 
 export default function App() {
