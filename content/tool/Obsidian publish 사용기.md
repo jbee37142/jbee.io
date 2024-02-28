@@ -1,3 +1,9 @@
+---
+title: 'Obsidian publish 사용기'
+date: 2024-01-03 16:21:13
+category: 'tool'
+---
+
 최근에 블로그를 부랴 부랴 Obsidian publish 로 마이그레이션 했다. [Gatsby](https://www.gatsbyjs.com/) 기반으로 만든 [gatsby-starter-bee](https://github.com/JaeYeopHan/gatsby-starter-bee)를 운영할 시간이 없어서 방치해뒀더니 Node 12 기반에서만 돌아가는 레거시 오브 레거시가 되어버렸다. 이 템플릿으로 만들어진 블로그를 심심치 않게 만났는데, 참 죄송한 마음 뿐이다. :tear:
 
 일단 메인테이너가 먼저 탈출(?)해야 할 것 같아서 다시 만들 계획을 잡았다. 그러나 만들게 되면 똑같은 결과가 도출될 것 같아서 아예 돈을 쓰자는 결론을 내렸다. 이것 저것 알아보다가 이미 사용하고 있기도 한 Obsidian 을 선택했다.

@@ -41,18 +41,7 @@ export interface ArticleMap {
   }
 }
 
-export type ArticleSummary = Pick<Article,
-  | 'title'
-  | 'category'
->
-
-export type ArticleDetail = Pick<Article,
-  | 'title'
-  | 'category'
-  | 'lastUpdatedAt'
-  | 'readingTime'
-  | 'content'
->
+export type ArticleSummary = Omit<Article, 'content'>
 
 const dirname = path.resolve();
 const contentsDirectoryPath = BlogConfig.content.directory;
@@ -79,9 +68,9 @@ async function prepareArticles() {
         const text = await readFileToString(contentsDirectoryPath, category, fileName);
         const article = await buildArticle(text);
 
-        invariant(article != null, 'article is null');
-
-        articleByTitle.set(article.title, article);
+        if (article != null) {
+          articleByTitle.set(article.title, article);
+        }
       }));
   
       articles.set(category, articleByTitle);
@@ -99,6 +88,12 @@ async function buildArticle(text: string) {
   }
   
   const { html, attr } = result;
+
+  if (new Date(attr.date).toString() === 'Invalid Date') {
+    console.warn(`Invalid date: ${text.substring(0, 30)}`);
+
+    return null;
+  }
   const article: Article = {
     category: attr.category,
     content: html,
@@ -119,7 +114,7 @@ async function getArticles(): Promise<ArticleSummary[]> {
   });
 }
 
-async function getArticle(category: string, title: string): Promise<ArticleDetail> {
+async function getArticle(category: string, title: string): Promise<Article> {
   const articles = await prepareArticles();
   const categorized = articles.get(category);
 

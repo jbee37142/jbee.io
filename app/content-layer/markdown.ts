@@ -10,6 +10,8 @@ export async function parseMarkdown<FrontMatterType>(text: string) {
   const frontmatter = fm<FrontMatterType>(text);
     
   if (frontmatter == null) {
+    console.warn(text);
+
     return null;
   }
 

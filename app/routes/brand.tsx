@@ -5,7 +5,7 @@ export default function BrandPage() {
   return (
     <Container>
       <GlobalNavigationBar />
-      <p>about me</p>
+      <p>Coming soon</p>
     </Container>
   );
 }
