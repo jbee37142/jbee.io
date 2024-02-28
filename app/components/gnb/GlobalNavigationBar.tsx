@@ -5,7 +5,7 @@ export function GlobalNavigationBar() {
   return (
     <nav className={styles.root}>
       <ul className={styles.list}>
-        <GNBLink to="/">home</GNBLink>
+        <GNBLink to="/">Home</GNBLink>
         <GNBLink to="/articles">Articles</GNBLink>
         <GNBLink to="/brand">Brand</GNBLink>
       </ul>
