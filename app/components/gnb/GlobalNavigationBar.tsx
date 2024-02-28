@@ -16,7 +16,7 @@ export function GlobalNavigationBar() {
 
 function GNBLink({ to, children }: { to: string; children: React.ReactNode }) {
   return (
-    <li>
+    <li className={styles.listItem}>
       <NavLink className={common.anchor} prefetch='render' to={to}>{children}</NavLink>
     </li>
   ) 

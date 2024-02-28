@@ -9,3 +9,7 @@ export const root = style({
 export const list = style([common.listrow, {
   gap: '1rem',
 }]);
+
+export const listItem = style({
+  fontSize: '1.2rem',
+});
