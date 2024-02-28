@@ -1,7 +1,9 @@
 import { Link, json, useLoaderData } from '@remix-run/react';
 import { Container } from '~/components/container/Container';
 import { GlobalNavigationBar } from '~/components/gnb/GlobalNavigationBar';
+import { List } from '~/components/list/List';
 import { articlesLayer } from '~/content-layer/articles';
+import { common } from '~/styles/element.css';
 
 export async function loader() {
   return json(await articlesLayer.getArticles());
@@ -13,20 +15,15 @@ export default function ArticlesPage() {
   return (
     <Container>
       <GlobalNavigationBar />
-      <section>
-        <h2>Articles</h2>
-        <ul>
-          {articles.map(({ title, category }, index) => (
-            <li key={index}>
-              <Link to={`/articles/${category}/${title}`} prefetch="intent">
-                <div>
-                  <h3>{title}</h3>
-                </div>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </section>
+      <List>
+        {articles.map(({ title, category }, index) => (
+          <li key={index} className={common.listitem}>
+            <Link to={`/articles/${category}/${title}`} className={common.anchor} prefetch="intent">
+              {title}
+            </Link>
+          </li>
+        ))}
+      </List>
     </Container>
   );
 }

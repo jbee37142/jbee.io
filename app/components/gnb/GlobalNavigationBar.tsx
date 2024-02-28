@@ -1,5 +1,6 @@
 import { NavLink } from '@remix-run/react';
 import * as styles from './styles.css';
+import { common } from '~/styles/element.css';
 
 export function GlobalNavigationBar() {
   return (
@@ -15,8 +16,8 @@ export function GlobalNavigationBar() {
 
 function GNBLink({ to, children }: { to: string; children: React.ReactNode }) {
   return (
-    <li className={styles.listitem}>
-      <NavLink className={styles.link} prefetch='render' to={to}>{children}</NavLink>
+    <li className={common.listitem}>
+      <NavLink className={common.anchor} prefetch='render' to={to}>{children}</NavLink>
     </li>
   ) 
 }
