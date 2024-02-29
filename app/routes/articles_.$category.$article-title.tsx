@@ -2,6 +2,8 @@ import { LoaderFunctionArgs, json } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
 import { articlesLayer } from '~/content-layer/articles';
 import invariant from '~/utils/invariant';
+import * as styles from './article.css'
+import { safelyFormatDate } from '~/utils/safelyFormatDate';
 
 export async function loader({ params }: LoaderFunctionArgs) {
   const category = params.category;
@@ -17,12 +19,15 @@ export default function ArticlePage() {
   const { category, title, content, lastUpdatedAt, readingTime } = useLoaderData<typeof loader>();
 
   return (
-    <section>
-      <span>{category}</span>
-      <h2>{title}</h2>
-      <p>Updated At: {lastUpdatedAt}</p>
-      <p>Time: {readingTime} minutes</p>
-      <article dangerouslySetInnerHTML={{ __html: content }} />
+    <section className={styles.root}>
+      <span className={styles.category}>{category}</span>
+      <h1 className={styles.h1}>{title}</h1>
+      <p className={styles.description}>
+        <span className={styles.readingTime}>{readingTime} min read</span>
+        |
+        <span className={styles.updatedTime}>{safelyFormatDate(lastUpdatedAt)}</span>
+      </p>
+      <article className={styles.articles} dangerouslySetInnerHTML={{ __html: content }} />
     </section>
   );
 }

@@ -2,8 +2,5 @@
     font-family: 'Pretendard';
     color: #343a40;
     scrollbar-gutter: stable;
-}
-
-body {
-    word-wrap: break-word;
+    background-color: #f8f9fa;
 }

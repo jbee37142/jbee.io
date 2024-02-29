@@ -1,0 +1,151 @@
+/* readable.css 1.1.0, licensed 0BSD */
+  
+/* Color scheme support */
+html, html[data-theme="light"] {
+    --background-color: #f8f9fa;
+    --color: #343a40;
+}
+html[data-high-contrast="on"], html[data-theme="light"][data-high-contrast="on"] {
+    --background-color: #fff;
+}
+
+html[data-theme="dark"] {
+    --background-color: #212529;
+    --color: #fff;
+}
+html[data-theme="dark"][data-high-contrast="on"] {
+    --background-color: #000;
+}
+
+@media (prefers-color-scheme: dark) {
+html {
+    --background-color: #212529;
+    --color: #fff;
+}
+    html[data-high-contrast="on"] {
+        --background-color: #000;
+    }
+}
+
+@media (prefers-contrast: more) {
+    :is(html, html[data-theme="light"]):not([data-high-contrast="off"]) {
+        --background-color: #fff;
+    }
+
+    html[data-theme="dark"]:not([data-high-contrast="off"]) {
+        --background-color: #000;
+    }
+}
+
+/* Generic styles */
+:root {
+    --column-width: 67ch;
+    --line-width: 0.125rem;
+    --line-height: 1.7;
+
+    --one-line: calc(var(--line-height) * 0.5rem);
+    --half-line: calc(var(--one-line) * 0.25rem);
+
+    background-color: var(--background-color);
+    color: var(--color);
+}
+
+blockquote:not(.exclude) {
+    padding-left: var(--one-line);
+    border-left: var(--line-width) solid;
+}
+
+ul, ol {
+    padding-left: calc(var(--line-height) * 1rem);
+    list-style: circle;
+}
+
+:is(body, article, main, figure) > :is(img, video):not(.exclude) {
+    max-width: 100%;
+}
+
+hr {
+    color: inherit;
+    border: 0;
+    border-top: var(--line-width) solid;
+}
+
+/* Vertical Rhythm */
+p, ul, ol, figcaption, nav, td, th, label {
+    line-height: var(--line-height);
+}
+
+h1, h2, h3, h4, h5, h6, p, blockquote, hr, footer, header, nav, figure, figcaption, :is(ul, ol):not(li > *), :is(body, article, main) > :is(img, video, details):not(.exclude), table, article > aside, article > aside {
+    margin: var(--one-line) 0;
+}
+
+/* Headings */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: calc(var(--line-height) * 2rem);
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: calc(var(--line-height) * 2rem);
+    margin-bottom: calc(var(--line-height) * 0.5rem);
+    padding-top: calc(var(--line-height) * 2rem);
+}
+
+h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: calc(var(--line-height) * 1rem);
+    margin-bottom: calc(var(--line-height) * 0.25rem);
+    padding-top: calc(var(--line-height) * 1.5rem);
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: calc(var(--line-height) * 0.5rem);
+    margin-bottom: calc(var(--line-height) * 0.25rem);
+    padding-top: calc(var(--line-height) * 1.25rem);
+}
+
+h5, h6 {
+    font-size: 1.25rem;
+    line-height: var(--one-line);
+    margin-bottom: calc(var(--line-height) * 0.25rem);
+    padding-top: calc(var(--line-height) * 1rem);
+}
+
+:is(h3, h4, h5, h6) + * {
+    margin-top: 0;
+}
+
+/* Justification (default off; use data-justify="on" on <html> to enable) */
+/* 67ch (var(--column-width) / 95% (column max-width) === 70.526315789ch */
+@media (min-width: 70.5ch) {
+    [data-justify="on"] body {
+        text-align: justify;
+        text-justify: inter-character;
+    }
+}
+
+/* Tables */
+table:not(.exclude) {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    border-collapse: collapse;
+}
+
+table:not(.exclude) :is(td, th) {
+    padding: calc(var(--line-height) * 0.25rem);
+    border: var(--line-width) solid;
+}
+
+table:not(.exclude) td {
+    word-wrap: break-word;
+}

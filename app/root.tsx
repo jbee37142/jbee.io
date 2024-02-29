@@ -11,6 +11,7 @@ import {
 
 import '~/styles/reset.css';
 import '~/styles/global.css';
+import '~/styles/article.css';
 import { Container } from './components/container/Container';
 import { GlobalNavigationBar } from './components/gnb/GlobalNavigationBar';
 
