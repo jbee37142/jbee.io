@@ -1,7 +1,14 @@
-import { Link, json, useLoaderData } from '@remix-run/react';
+import { Link, MetaFunction, json, useLoaderData } from '@remix-run/react';
 import { articlesLayer } from '~/content-layer/articles';
 import { safelyFormatDate } from '~/utils/safelyFormatDate';
 import * as styles from './articles.css';
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: 'Articles | Jbee.io' },
+    { name: '글 목록', content: 'Welcome to Jbee.io' },
+  ];
+};
 
 export async function loader() {
   const articles = json(await articlesLayer.getArticles());

@@ -11,6 +11,6 @@ export default {
     directory: 'content',
   },
   image: {
-    directory: '**/images',
+    extensions: ['**/*.png', '**/*.jpg', '**/*.jpeg'],
   },
 };

@@ -1,8 +1,8 @@
-import path from 'path';
+import BlogConfig, { ArticleFrontMatter } from 'blog.config';
+import path from 'node:path';
+import { parseMarkdown } from '~/content-layer/markdown';
 import { readDir, readFileToString } from '~/utils/fs';
 import invariant from '~/utils/invariant';
-import { parseMarkdown } from '~/content-layer/markdown';
-import BlogConfig, { ArticleFrontMatter } from 'blog.config';
 
 type Category = string;
 type Title = string;
@@ -43,8 +43,8 @@ export interface ArticleMap {
 
 export type ArticleSummary = Omit<Article, 'content'>
 
-const dirname = path.resolve();
-const contentsDirectoryPath = BlogConfig.content.directory;
+const DIRNAME = path.resolve();
+const contentsDirectoryPath = path.join(DIRNAME, BlogConfig.content.directory);
 
 const articles = new Map<Category, Map<Title, Article>>()
 
@@ -52,10 +52,9 @@ async function prepareArticles() {
   if (articles.size > 0) {
     return articles;
   } else {
-
-    const contentsDirectory = (await readDir(dirname, contentsDirectoryPath)).filter(x => x.isDirectory);
+    const articlesDirectory = (await readDir(contentsDirectoryPath)).filter(x => x.isDirectory);
       
-    await Promise.all(contentsDirectory.flatMap(async ({ name: category }) => {
+    await Promise.all(articlesDirectory.flatMap(async ({ name: category }) => {
       const files = (await readDir(contentsDirectoryPath, category)).filter(x => x.isFile());
   
       const articleByTitle = articles.has(category)
@@ -129,11 +128,11 @@ async function getArticle(category: string, title: string): Promise<Article> {
   const articles = await prepareArticles();
   const categorized = articles.get(category);
 
-  invariant(categorized != null, `Category '${category}' not found`);
+  invariant(categorized != null, `[Content-layer] Category '${category}' not found`);
 
   const article = categorized.get(title);
 
-  invariant(article != null, `Article '${title}' not found`);
+  invariant(article != null, `[Content-layer] Article '${title}' not found`);
 
   return article;
 }

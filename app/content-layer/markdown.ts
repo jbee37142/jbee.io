@@ -10,7 +10,7 @@ export async function parseMarkdown<FrontMatterType>(text: string) {
   const frontmatter = fm<FrontMatterType>(text);
     
   if (frontmatter == null) {
-    console.warn(text);
+    console.warn('Invalid frontmatter', text.substring(0, 30));
 
     return null;
   }
