@@ -90,7 +90,7 @@ h2 {
 h3 {
     font-size: 1.75rem;
     font-weight: 600;
-    line-height: calc(var(--line-height) * 1rem);
+    line-height: calc(var(--line-height) * 1.2rem);
     margin-bottom: calc(var(--line-height) * 0.25rem);
     padding-top: calc(var(--line-height) * 1.5rem);
 }
@@ -98,14 +98,14 @@ h3 {
 h4 {
     font-size: 1.5rem;
     font-weight: 500;
-    line-height: calc(var(--line-height) * 0.5rem);
+    line-height: calc(var(--line-height) * 1.2rem);
     margin-bottom: calc(var(--line-height) * 0.25rem);
     padding-top: calc(var(--line-height) * 1.25rem);
 }
 
 h5, h6 {
     font-size: 1.25rem;
-    line-height: var(--one-line);
+    line-height: calc(var(--line-height) * 1.2rem);
     margin-bottom: calc(var(--line-height) * 0.25rem);
     padding-top: calc(var(--line-height) * 1rem);
 }
@@ -168,7 +168,12 @@ article {
 
 article > ul, ol {
     padding-left: calc(var(--line-height) * 1rem);
+    list-style: square;
+}
+
+ul, ol > ul, ol {
     list-style: circle;
+    padding-left: calc(var(--line-height) * 1rem);
 }
 
 article > a {
