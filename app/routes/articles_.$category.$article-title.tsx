@@ -4,6 +4,12 @@ import { articlesLayer } from '~/content-layer/articles';
 import invariant from '~/utils/invariant';
 import * as styles from './article.css'
 import { safelyFormatDate } from '~/utils/safelyFormatDate';
+import type { LinksFunction } from '@remix-run/node';
+import articleStyles from '~/styles/article.css';
+
+export const links: LinksFunction = () => [
+  { rel: 'stylesheet', href: articleStyles },
+];
 
 export async function loader({ params }: LoaderFunctionArgs) {
   const category = params.category;
@@ -27,7 +33,7 @@ export default function ArticlePage() {
         |
         <span className={styles.updatedTime}>{safelyFormatDate(lastUpdatedAt)}</span>
       </p>
-      <article className={styles.articles} dangerouslySetInnerHTML={{ __html: content }} />
+      <article dangerouslySetInnerHTML={{ __html: content }} />
     </section>
   );
 }

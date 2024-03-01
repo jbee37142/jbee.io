@@ -10,6 +10,7 @@ export const list = style([common.listrow, {
   gap: '1rem',
   padding: 0,
   listStyle: 'none',
+  lineHeight: '1rem',
 }]);
 
 export const listItem = style({

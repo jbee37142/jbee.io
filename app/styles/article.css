@@ -50,16 +50,6 @@ html {
     color: var(--color);
 }
 
-blockquote:not(.exclude) {
-    padding-left: var(--one-line);
-    border-left: var(--line-width) solid;
-}
-
-ul, ol {
-    padding-left: calc(var(--line-height) * 1rem);
-    list-style: circle;
-}
-
 :is(body, article, main, figure) > :is(img, video):not(.exclude) {
     max-width: 100%;
 }
@@ -148,4 +138,39 @@ table:not(.exclude) :is(td, th) {
 
 table:not(.exclude) td {
     word-wrap: break-word;
+}
+
+/* code */
+code {
+    font-family: 'Fira Code', monospace;
+}
+
+pre {
+    font-family: 'Fira Code', monospace;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    overflow: auto;
+}
+
+article {
+    word-wrap: break-word;
+    word-break: keep-all;
+    margin-bottom: 10rem;
+
+    blockquote:not(.exclude) {
+        padding-left: var(--one-line);
+        border-left: var(--line-width) solid;
+    }
+}
+
+
+article > ul, ol {
+    padding-left: calc(var(--line-height) * 1rem);
+    list-style: circle;
+}
+
+article > a {
+    color: #339af0,
 }

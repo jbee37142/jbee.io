@@ -33,8 +33,3 @@ export const updatedTime = style({
 export const readingTime = style({
   color: 'inherit',
 });
-
-export const articles = style({ 
-  wordWrap: 'break-word',
-  wordBreak: 'keep-all',
-});

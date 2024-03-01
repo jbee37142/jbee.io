@@ -11,13 +11,13 @@ import {
 
 import '~/styles/reset.css';
 import '~/styles/global.css';
-import '~/styles/article.css';
 import { Container } from './components/container/Container';
 import { GlobalNavigationBar } from './components/gnb/GlobalNavigationBar';
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
-  { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css' }
+  { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css' },
+  { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css' },
 ];
 
 export default function App() {

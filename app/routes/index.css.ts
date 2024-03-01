@@ -1,5 +1,4 @@
 import { style } from '@vanilla-extract/css';
-import { colors } from '~/styles/colors';
 import { common } from '~/styles/element.css';
 import { flex, gap } from '~/styles/util.css';
 
@@ -15,9 +14,7 @@ export const h2 = style({
 
 export const list = style([flex('column'), gap(0.5)]);
 
-export const link = style([common.anchor, {
-  color: colors.blue500,
-}]);
+export const link = style([common.anchor, {}]);
 
 export const h3 = style({
   fontSize: '1.3rem',
