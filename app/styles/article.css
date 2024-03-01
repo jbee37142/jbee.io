@@ -1,27 +1,24 @@
-/* readable.css 1.1.0, licensed 0BSD */
+/* Written based readable.css 1.1.0, licensed 0BSD */
   
 /* Color scheme support */
-html, html[data-theme="light"] {
-    --background-color: #f8f9fa;
-    --color: #343a40;
-}
-html[data-high-contrast="on"], html[data-theme="light"][data-high-contrast="on"] {
-    --background-color: #fff;
-}
 
-html[data-theme="dark"] {
-    --background-color: #212529;
-    --color: #fff;
-}
-html[data-theme="dark"][data-high-contrast="on"] {
-    --background-color: #000;
+@media (prefers-color-scheme: light) {
+    html {
+        --background-color: #f8f9fa;
+        --color: #343a40;
+        --inline-code-background-color: #e9ecef;
+    }
+    html[data-high-contrast="on"] {
+        --background-color: #000;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
-html {
-    --background-color: #212529;
-    --color: #fff;
-}
+    html {
+        --background-color: #212529;
+        --color: #fff;
+        --inline-code-background-color: #343a40;
+    }
     html[data-high-contrast="on"] {
         --background-color: #000;
     }
@@ -34,6 +31,18 @@ html {
 
     html[data-theme="dark"]:not([data-high-contrast="off"]) {
         --background-color: #000;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .shiki,
+    .shiki span {
+      color: var(--shiki-dark) !important;
+      background-color: var(--shiki-dark-bg) !important;
+      /* Optional, if you also want font styles */
+      font-style: var(--shiki-dark-font-style) !important;
+      font-weight: var(--shiki-dark-font-weight) !important;
+      text-decoration: var(--shiki-dark-text-decoration) !important;
     }
 }
 
@@ -141,30 +150,39 @@ table:not(.exclude) td {
 }
 
 /* code */
-code {
+:not(pre) > code {
     font-family: 'Fira Code', monospace;
+    background-color: inherit;
+    padding: 0.11rem 0.3rem;
+    margin-right: 0.2rem;
+    border: 1px solid var(--inline-code-background-color);
+    border-radius: 0.3rem;
+    background-color: var(--inline-code-background-color);
+    font-size: 0.9rem;
 }
 
 pre {
     font-family: 'Fira Code', monospace;
     padding: 1.5rem;
-    border-radius: 0.5rem;
-    margin-left: -1.5rem;
-    margin-right: -1.5rem;
+    border-radius: 0.8rem;
+    margin-left: -1.2rem;
+    margin-right: -1.2rem;
     overflow: auto;
+    tab-size: 2;
+    line-height: 1.5rem;
+    font-size: 0.9rem;
 }
 
 article {
     word-wrap: break-word;
     word-break: keep-all;
     margin-bottom: 10rem;
-
-    blockquote:not(.exclude) {
-        padding-left: var(--one-line);
-        border-left: var(--line-width) solid;
-    }
 }
 
+blockquote:not(.exclude) {
+    padding-left: var(--one-line);
+    border-left: var(--line-width) solid;
+}
 
 article > ul, ol {
     padding-left: calc(var(--line-height) * 1rem);

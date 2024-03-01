@@ -106,7 +106,7 @@ export const counterReducer = handleActions(reducer, initialState)
 
 위에서 정의했던 CounterModule을 컴포넌트에서 사용하면 다음과 같이 간단하게 작성할 수 있다.
 
-```tsx
+```ts
 export const TestComponent = () => {
   const dispatch = useDispatch()
   const { count } = useSelector(state => state[COUNTER])
@@ -171,7 +171,7 @@ export function createFetchAction(type: string): IFetchActionGroup {
 
 `FETCH`, `SUCCESS`, `FAILURE`라는 action type과 `fetch`, `success`, `failure`라는 action을 생성해주는 함수이며 이를 기반으로 component에서 action을 dispatch하고 saga에서 api call과 비즈니스 로직을 구현한다.
 
-```ts{5,8,10,12}
+```ts
 export function createSaga<P>(actions: IFetchActionGroup, req: any) {
   return function*(action: Action<P>) {
     const payload = oc(action).payload()
@@ -204,7 +204,7 @@ export const testSaga = [
 
 `fetchApi`라는 api function을 saga에서 처리하는 코드를 이렇게 간단하게 작성할 수 있다. 이에 따른 component에서 loading state 처리는 다음과 같이 간단하게 작성할 수 있다.
 
-```tsx
+```ts
 export const TestComponent = () => {
   const loading = useSelector<IRootState, ILoadingState>(state => state.loading)
 
@@ -240,7 +240,7 @@ Swagger를 통해 공유받은 API 명세를 클라이언트에서 입맛에 맞
 
 컴포넌트에서는 react-redux에서 제공하는 API인 `useSelector`를 이용하여 redux의 state에 접근한다. store에는 서버에서 전달해준 값을 그대로 가지고 있기 때문에 nested 한 값에 접근하려면 다음과 같이 진행된다.
 
-```tsx
+```ts
 export const TestComponent = () => {
   // Bad
   const 📦 = useSelector<IRootState, I🍑>(state => state[TEST])
@@ -264,7 +264,7 @@ export const testSelector = {
 
 위 컴포넌트의 `useSelector` 코드는 다음과 같이 변경할 수 있다.
 
-```tsx
+```ts
 export const TestComponent = () => {
   const 🍑 = useSelector<IRootState, I🍑>(state => testSelector.🍑(state))
   // something...

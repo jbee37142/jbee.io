@@ -1,6 +1,10 @@
-* {
-    font-family: 'Pretendard';
-    color: #343a40;
+html {
     scrollbar-gutter: stable;
-    background-color: #f8f9fa;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Pretendard';
+}
+article:not(pre) {
+    font-family: 'Pretendard';
 }

@@ -25,7 +25,7 @@ Webpack 설정부터 한땀 한땀 할 수 있다. 관련 자료도 많아졌고
 
 이번 프로젝트에서 `craco`라는 CRA override 도구를 사용하여 babel plugin을 추가하거나 Webpack plugin들을 추가했다. 생각보다 간단한 코드로 작성할 수 있다.
 
-```js{7,8}
+```js
 module.exports = () => {
   return {
     babel: {

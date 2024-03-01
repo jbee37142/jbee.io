@@ -1,7 +1,15 @@
-import { parseMarkdown } from 'content-layer/utils/parseMarkdown';
+  
+import rehypeShiki from '@shikijs/rehype';
 import fb from 'fast-glob';
+import fm from 'front-matter';
 import fs from 'fs-extra';
 import path from 'node:path';
+import readingTime from 'reading-time';
+import rehypeStringify from 'rehype-stringify';
+import remarkFrontmatter from 'remark-frontmatter';
+import remarkParse from 'remark-parse';
+import remarkRehype from 'remark-rehype';
+import { unified } from 'unified';
 import { Article, ArticleFrontMatter, Category, Title } from './types';
 
 export async function prepareArticles({ from: baseDirectory, to: destination }: {from:string;to:string}) {
@@ -11,10 +19,12 @@ export async function prepareArticles({ from: baseDirectory, to: destination }: 
   
   await Promise.all(markdownFiles.map(async (file) => {
     const text = await readFileToString(baseDirectory, file);
+    console.log('[content-layer] in: ', file);
     const article = await buildArticle(text);
   
     if (article != null)  {
       manifest.push(article);
+      console.log('[content-layer] generated: ', article.title);
       await fs.outputJson(`${destination}/${article.id}.json`, article)
     }
   }));
@@ -59,5 +69,37 @@ async function readFileToString(...args: string[]): Promise<string> {
   const data = await fs.readFile(path.join(...args), { encoding: 'utf-8' });
       
   return data.toString();
+}
+
+async function parseMarkdown<FrontMatterType>(text: string) {
+  const frontmatter = fm<FrontMatterType>(text);
+      
+  if (frontmatter == null) {
+    return null;
+  }
+  
+  const attr = frontmatter.attributes;
+  const time = Math.ceil(readingTime(text).minutes)
+  const html = await unified()
+    .use(remarkParse)
+    .use(remarkRehype)
+    .use(rehypeShiki, {
+      themes: {
+        light: 'vitesse-light',
+        dark: 'vitesse-dark',
+      }
+    })
+    .use(rehypeStringify)
+    .use(remarkFrontmatter, ['yaml', 'toml'])
+    .process(text)
+    .then((value) => String(value));
+  
+  return {
+    attr: {
+      ...attr,
+      readingTime: time,
+    },
+    html,
+  }
 }
   

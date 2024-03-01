@@ -68,7 +68,7 @@ const store = configureStore({
 
 아주 괜찮은 API라고 생각하는데요, createSlice는 `name` , `initialState`, `reducers` 세 가지를 넘겨주게 됩니다.
 
-```ts{7}
+```ts
 const todosSlice = createSlice({
   name: 'todos',
   initialState: [],

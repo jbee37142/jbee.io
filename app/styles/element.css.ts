@@ -7,7 +7,7 @@ const anchor = style({
   },
   'selectors': {
     '&.active': {
-      color: 'black',
+      textDecoration: 'underline',
     },
   },
 });

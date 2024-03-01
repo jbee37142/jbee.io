@@ -51,7 +51,7 @@ draft: false
 
 쉽게 접할 수 있는 패턴 중 ESLint도 작은 패턴 중 하나로 볼 수 있다.
 
-```jsx
+```js
 '@typescript-eslint/no-unused-vars': [
   'error',
   { argsIgnorePattern: '^_', ignoreRestSiblings: true },
@@ -66,7 +66,7 @@ draft: false
 
 아토믹 디자인 패턴의 프로젝트에 리스트 엘리먼트를 컴포넌트화 하여 `ListItem`이라는 원자 타입의 컴포넌트를 만들어보자.
 
-```tsx
+```ts
 interface Prop extends LiHTMLAttributes<HTMLLIElement> {}
 
 export function ListItem(props: Props) {
@@ -99,7 +99,7 @@ const Li = styled('li', {
 
 `ProfileImage` 라는 원자 컴포넌트와 `ListItem`이라는 컴포넌트를 조립하여 이 케이스를 대응해보자.
 
-```tsx
+```ts
 interface Props {
   imageSrc: string
   imageAlt: string
@@ -122,7 +122,7 @@ export function ProfileListItem({ imageSrc, imageAlt, contents }: Props) {
 
 방금 만든 `ProfileListItem`의 우측에 'NEW'라는 뱃지아이콘을 추가해줘야 하는 상황이 발생했다. 이번엔 분자와 원자를 조합하여 '유기체'로 만들어 대응을 하면 된다. 만들어둔 `Badge` 원자 컴포넌트와 `ProfileListItem` 컴포넌트를 사용하여 아래와 같이 만들어줄 수 있다.
 
-```tsx
+```ts
 interface Props {
   imageSrc: string
   imageAlt: string
@@ -199,7 +199,7 @@ export function ProfileListItemWithBadge({
 
 하단에 작은 글씨의 텍스트가 추가되어야 한다면 만들어 두었던 `ProfileListItemWithBadge` 컴포넌트를 재사용할 수 없다. 물론 `bottomText` 라는 props를 하나 추가해서 다음과 같이 만들 수도 **있긴** 하다.
 
-```tsx
+```ts
 interface Props {
   imageSrc: string
   imageAlt: string
@@ -249,7 +249,7 @@ export function ProfileListItemWithBadgeText({
 
 앞서 살펴본 예제에서 `<ProfileImage>`로 그려주는 부분, `bottomText`, `badge` 등 여러 요소들을 `ListItem`와 합성할 수 있도록 수정할 수 있다. 다음과 같이 `ListItem` 인터페이스를 수정해보면 어떨까?
 
-```tsx
+```ts
 <ListItem
   left={<ProfileImage src="..." alt="..." />}
   bottom={<span>하단 텍스트</span>}

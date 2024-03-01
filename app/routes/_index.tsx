@@ -22,7 +22,7 @@ export default function HomePage() {
   
   return (
     <section className={styles.root}>
-      <h2 className={styles.h2}>{'Hi, I\'m JaeYeop'}</h2>
+      <h2 className={styles.h2}>{'👋 Hello world'}</h2>
       <p>사람에 관심이 많은 엔지니어 입니다. 더 나은 삶을 많은 사람이 누릴 수 있도록 영향미치고 싶습니다. 교육이 사회의 많은 문제를 해결할 수 있다고 생각하며 언젠가 마을을 만들고 싶다는 꿈이 있습니다.</p>
       <ul className={styles.list}>
         <li>

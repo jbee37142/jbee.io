@@ -50,7 +50,7 @@ React에서는 상태(state)를 다음과 같이 정의하고 있다.
 
 문서의 어떤 곳에서라도 접근할 수 있는 영역을 '전역'이라고 할 수 있다. HTML 문서에 script 태그로 변수를 선언하면 그 script가 load 된 이후의 모든 JavaScript 코드에서 `foo` 라는 변수에 접근할 수 있다.
 
-```tsx
+```ts
 <!DOCTYPE>
 <html>
 <body>
@@ -104,7 +104,7 @@ React에서는 상태(state)를 다음과 같이 정의하고 있다.
 
 간단한 예를 들어보자. 거래내역을 조회하는 애플리케이션의 일부분을 예제 코드로 살펴보자.
 
-```tsx
+```ts
 interface Transaction {
   id: string;
   amount: number;
@@ -119,7 +119,7 @@ function fetchTransactions(): Promise<Transaction[]> { ... }
 
 거래내역 목록을 보여주는 컴포넌트를 만들어야 할 때, 거래내역 목록 API를 호출해야 한다. 그리고 이 API는 `TransactionList` 라는 컴포넌트에서 호출하는 것이 가장 이상적이다. (cc. [좋은 코드란 무엇인가](https://jbee.io/etc/what-is-good-code/#where))
 
-```tsx
+```ts
 function TransactionListA() {
   const [transactions, setTransaction] = useState()
 
@@ -142,7 +142,7 @@ function TransactionListA() {
 
 특정 컴포넌트 내부에서 API의 응답값을 state로 관리할 경우, 여러 컴포넌트에서 그 값을 공유해야 할 때 귀찮아 진다. A 컴포넌트와 B 컴포넌트에서 `foo` 라는 상태를 공유하기 위해선 A컴포넌트와 B컴포넌트의 부모 컴포넌트에서 `foo` 라는 상태를 가지고 있고 각각에게 props로 전달해줘야 한다. (cc. [Lift State Up](https://reactjs.org/docs/lifting-state-up.html))
 
-```tsx
+```ts
 function DailyTransaction() {
   return (
     <main>
@@ -157,7 +157,7 @@ function DailyTransaction() {
 
 `TransactionListAnother` 컴포넌트 에서도 다시 한번 거래내역 목록 API를 호출하게 되면 네트워크 비용이 한번 더 발생하기 때문에 낭비가 된다. 그렇기 때문에 `DailyTransaction` 컴포넌트에서 거래내역 목록 API를 호출하고 `TransactionListA` 컴포넌트와 `TransactionListB` 컴포넌트에 데이터를 내려주게 된다.
 
-```tsx
+```ts
 function DailyTransaction() {
   const transactions = fetchTransactions()
   return (
@@ -171,7 +171,7 @@ function DailyTransaction() {
 
 이런 상황은 계속해서 발생할 수 있다. 이렇게 상태를 lifting 해줄 필요가 없도록 서버로부터 받는 데이터를 전역에서 관리한다면 어떻게 될까?
 
-```tsx
+```ts
 function DailyTransaction() {
   const dipatch = useDipatch()
 
@@ -205,7 +205,7 @@ function TransactionListA() {
 
 위 예제 코드에서 `TransactionListA` 컴포넌트를 다시 살펴보자.
 
-```tsx
+```ts
 function TransactionListA() {
   const transactions = useSelector(state => state.transaction)
 
@@ -217,7 +217,7 @@ function TransactionListA() {
 
 하지만 이 컴포넌트는 redux에 접근하여 **가져올 값이 있다는 가정** 하에 유효한 컴포넌트이다. 이 컴포넌트가 마운트(mount)되기 전에 다음 코드는 **반드시** 실행되어야 한다.
 
-```tsx
+```ts
 useEffect(() => {
   dispatch('fetchTransactions') // fetch server api !!!
 }, [])
@@ -255,7 +255,7 @@ Redux에서 캐싱해두는 것처럼 단순히 메모리에 캐시를 해두면
 
 이전 예제 코드에서 사용했던 거래내역 API를 불러오는 함수에 이 방법을 적용해보자. 단순한 코드로 표현하면 다음과 같다.
 
-```tsx
+```ts
 function fetchTransactions(): Promise<Transaction[]> { ... }
 
 const CACHE = {}; // <-- Use cache!
@@ -284,7 +284,7 @@ function useTransaction() {
 
 후자의 경우를 위해 이 Transaction 값에 대한 별도의 `status`가 추가되면 좋을 것 같다. 또한 cache가 expire되는 시점을 정해 Garbage collect가 원활히 이루어지도록 해제(delete)해주는 과정도 필요할 것 같다. Cache를 단순한 Object가 아닌 다음과 같은 interface로 잡는다면 꽤 쓸만할 것 같다.
 
-```tsx
+```ts
 export interface CacheInterface {
   get(key: keyInterface): any
   set(key: keyInterface, value: any): any
@@ -335,7 +335,7 @@ React 생태계에서는 위 세 라이브러리를 참고할 수 있다. 서버
 
 react-query를 사용하여 아까 예제 코드 중 `TransactionList` 를 rewrite 해보면 다음과 같다.
 
-```tsx
+```ts
 function fetchTransactions(): Promise<Transaction[]> { ... }
 
 function TransactionListA() {
@@ -365,7 +365,7 @@ function TransactionListA() {
 
 대부분의 UI 상태는 자연스럽게 컴포넌트 내에 위치하게 된다. 그래서 거의 대부분의 UI state는 Redux에서 관리하지 않는다. 그러나 Toast, Modal, Dialog 등 컴포넌트 트리를 벗어나 노출되는 컴포넌트들은 보통 상태를 어디에선가 주입받는 형식으로 노출 여부가 결정된다.
 
-```tsx
+```ts
 function Modal({ open }) {
   if (open) {
     return <div>모달 컴포넌트</div>
@@ -396,7 +396,7 @@ function MyPage() {
 
 간단하게 Modal을 위한 Context를 만들어보면 다음과 같다.
 
-```tsx
+```ts
 const ModalContext = createContext(null)
 
 export function ModalProvider({ children }) {

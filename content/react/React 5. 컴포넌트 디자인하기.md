@@ -28,7 +28,7 @@ store에서 도메인 단위로 비즈니스 로직을 분리해두었을 경우
 
 컴포넌트와의 결합도를 높이면서도 재사용이 가능하도록 비즈니스 로직을 구성하기 위해 hooks를 사용할 수 있다. 간단하게 input 컴포넌트의 focus를 제어하는 로직이 있다고 가정해보자.
 
-```jsx
+```js
 const Input = () => {
   const [value, setValue] = useState('')
   const [isFocus, setFocus] = useState(false)
@@ -47,7 +47,7 @@ const Input = () => {
 
 다른 `input` element를 다루는 컴포넌트에서 focus를 제어하는 로직이 필요하다면 위에 있는 코드를 그대로 작성해줘야 하지만 이를 custom hooks로 빼서 재사용 할 수 있다.
 
-```jsx
+```js
 function useFocus() {
   const [isFocus, setFocus] = useState(false)
   const onFocus = useCallback(() => setFocus(true), [])
@@ -59,7 +59,7 @@ function useFocus() {
 
 다음과 같이 custom hooks를 사용할 수 있다.
 
-```jsx
+```js
 const Input = () => {
   const [value, setValue] = useState('')
   const [isFocus, ...focusProps] = useFocus()
@@ -74,7 +74,7 @@ const Input = () => {
 
 컴포넌트 안에서 상태를 관리하고 있을 경우, 부모 컴포넌트에서는 그 상태에 대해서는 알 수가 없다. 그렇기 때문에 **상태 끌어올리기(state lifting)**이 필요해진다. 위 `Input` 컴포넌트의 상위 컴포넌트 `FormContainer` 에서 input element에 입력된 value에 접근하기 위해선 다음과 같은 수고로움이 발생한다.
 
-```jsx
+```js
 const Input = (props) => {
   return (
     <input
@@ -97,7 +97,7 @@ const FormContainer = () => {
 
 그리고 로직을 들고 있는 부모 컴포넌트와 실제 그 로직을 사용하는 컴포넌트가 멀어질수록 디버깅이 어려워지며 유연하게 대처가 어려워진다. (낮은 응집도)
 
-```jsx
+```js
 const FormContainer = () => {
   const [name, setName] = useState('')
   const [age, setAge] = useState('')
@@ -120,7 +120,7 @@ const FormContainer = () => {
 
 `useImperativeHandle`를 사용하여 필요한 값만 노출(expose)하고 `ref` 를 넘겨서 필요한 값에 접근하도록 하자.
 
-```jsx
+```js
 const Input = forwardRef((_, ref) => {
   const [value, setValue] = useState('')
   useImperativeHandle(ref, () => ({ value }), [value])
@@ -131,7 +131,7 @@ const Input = forwardRef((_, ref) => {
 
 `forwardRef` 로 전달받은 ref를 첫번째 파라미터로 전달해준다. Controlled(제어형) 컴포넌트로 할 경우에는 두번째 파라미터로 전달되는 callback에 `value`를 반환하는 **함수**를 전달해주면 된다. 자식 컴포넌트에서는 `useImperativeHandle`를 통해서 값만 노출하도록 하는 것이다.
 
-```jsx
+```js
 const FormContainer = () => {
   const nameRef = useRef('')
   const ageRef = useRef('')
@@ -154,7 +154,7 @@ const FormContainer = () => {
 
 이`Input` 컴포넌트는 Uncontrolled(비제어형) 컴포넌트로도 재작성 될 수 있다.
 
-```jsx
+```js
 const Input = forwardRef((_, ref) => {
   const inputRef = useRef(null)
 
@@ -172,7 +172,7 @@ const Input = forwardRef((_, ref) => {
 
 기존에 사용하고 있던 Container, presentation component의 구조에선 Container에서 handler를 추가하고 그 함수를 drilling하여 전달하기만 하면 컴포넌트를 추가할 수 있었다. 그리고 추후 handler에 추가적으로 함수를 호출하기 위해서는 container에 존재하는 handler를 수정하면 되었다.
 
-```tsx
+```ts
 const Container = () => {
   const log = (log: string) => console.log(log)
   const handleSubmit = () => {
@@ -197,7 +197,7 @@ store에서는 특정 action에 middleware를 추가하여 해결할 수 있었�
 
 `SubmitButton`에는 logging을 위한 handler가 추가적으로 props로 전달되어야 하며 이는 모든 컴포넌트에 반복되게 된다. 좀 더 좋은 방법이 없을까 고민하게 만드는 코드가 작성된다.
 
-```tsx
+```ts
 const Container = () => {
   return (
     <>
@@ -212,7 +212,7 @@ const Container = () => {
 
 logging이라는 함수를 반복적으로 생성하여 전달해줘야 하는 문제를 횡단 관심사로 바라보고 공통으로 처리할 수 없을까? 예를 들면 다음과 같은 아름다운 모습으로 말이다. `SubmitButton` 컴포넌트에 추가적인 props를 전달하지 않으면서 `onClick` handler 호출 시 특정 callback을 심어주는 방식으로 한다면 아름다울 것 같다.
 
-```jsx
+```js
 const Container = () => {
   return (
     <>
@@ -229,7 +229,7 @@ const Container = () => {
 
 React에서 제공하는 cloneElement라는 API를 통해서 응집도가 높은 컴포넌트를 확장할 수 있다. children을 받는 WithLogging 컴포넌트는 다음과 같이 만들 수 있다.
 
-```jsx
+```js
 const WithLogging = ({ children, log }) => {
   const child = Children.only(children)
   const logging = (log: string) => console.log(log)

@@ -74,7 +74,7 @@ export function normalizePost(data: IPost[]): INormalizedPosts {
 
 실제 데이터가 변환되는 것을 테스트 코드로 살펴보면 다음과 같다.
 
-```ts{3,36,80}
+```ts
 test('should return normalized post data', () => {
   // Given (정규화 이전의 데이터)
   const data = [
@@ -167,7 +167,7 @@ test('should return normalized post data', () => {
 
 예제 코드에서 TypeScript가 사용되었는데 normalize 결과물에 대한 타입을 정의해줘야 한다. 위 코드에서는 다음과 같은 타입을 적용하였다.
 
-```ts{8}
+```ts
 export interface IndexSignatureStringType<V> {
   [key: string]: V
 }

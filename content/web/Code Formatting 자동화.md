@@ -57,7 +57,7 @@ $ npm install --save-dev husky
 
 husky 관련 설정을 `package.json` 파일에 추가할 수 있습니다.
 
-```json{4}
+```json
 "husky": {
   "hooks": {
     "pre-push": "npm run test:unit",
@@ -80,7 +80,7 @@ $ npm install --save-dev lint-staged
 
 husky를 설정해준 것처럼 `package.json`에 lint-staged 관련 설정을 추가해줄 수 있습니다. 그리고 husky로 설정해둔 설정에 lint-staged를 실행시키도록 합니다.
 
-```json{4}
+```json
 "husky": {
   "hooks": {
     "pre-push": "npm run test:unit",

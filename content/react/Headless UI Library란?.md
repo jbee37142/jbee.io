@@ -39,7 +39,7 @@ UI 라이브러리들을 둘러보면 '스타일'이 포함되어있는 경우�
 
 먼저 React 공식 문서에도 존재하는 아주 흔한 Counter 예제를 살펴보자.
 
-```tsx
+```ts
 import React, { useState } from 'react'
 
 function Counter() {

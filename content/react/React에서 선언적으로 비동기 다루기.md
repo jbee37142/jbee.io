@@ -27,7 +27,7 @@ draft: false
 
 먼저 일반적인 비동기 처리를 살펴보자.
 
-```tsx
+```ts
 async function getUser() {
   const response = await apiClient.get<User>(`URL`)
 
@@ -37,7 +37,7 @@ async function getUser() {
 
 이런 간단한 호출의 경우에도 비동기 상태에 따른 별도 처리가 필요하다. 그리고 try-catch statement로 감싸서 에러에 대한 처리가 필요하다.
 
-```tsx{3,8}
+```ts
 async function getUser() {
   try {
     // start loading
@@ -60,7 +60,7 @@ async function getUser() {
 
 위와 같은 API를 컴포넌트에서 사용하기 위해 공통 부분을 보통 hooks로 추상화 하곤 한다. 흔하디 흔한 예제 코드를 살펴보면 보통 다음과 같은 Hooks를 소개하곤 한다.
 
-```tsx
+```ts
 function useUser() {
   const [data, setData] = useState<User | null>(null)
   // loading state
@@ -108,7 +108,7 @@ Suspense는 비동기를 명령형으로 처리하고 있던 부분 중 `loading
 
 [swr](https://github.com/vercel/swr), [react-query](https://github.com/tannerlinsley/react-query) 등을 사용하면 다음과 같이 간단하게 처리할 수 있다. 이번 포스팅의 예제는 컴포넌트를 Suspended 상태로 만들어주는 suspense 옵션과 함께 작성할 예정이다.
 
-```tsx{7}
+```ts
 function useUser() {
   return useQuery(
     `getUser`,
@@ -122,7 +122,7 @@ function useUser() {
 
 이제 컴포넌트에서 가져다 쓰는 코드는 다음과 같이 작성할 수 있다.
 
-```tsx{4}
+```ts
 function Main() {
   return (
     <main>
@@ -148,7 +148,7 @@ function UserDropDown() {
 
 Suspense는 서버 사이드 렌더링 환경에서 지원하지 않는다. 이를 대응하기 위해 서버 사이드 환경에선 전달받은 fallback 컴포넌트를 렌더링 할 수 있도록 기존의 Suspense 컴포넌트를 확장하여 사용해야 한다.
 
-```tsx{16,19}
+```ts
 function useMounted() {
   const [mounted, setMounted] = useState(false)
 
@@ -190,7 +190,7 @@ React 공식 문서에서도 다루고 있는 내용이라 깊게 더 들여다�
 
 error 상황에 대한 처리를 ErrorBoundary에게 위임해보자. React 공식 문서에서 소개하고 있는 ErrorBoundary 코드이다.
 
-```tsx
+```ts
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props)
@@ -221,7 +221,7 @@ class ErrorBoundary extends React.Component {
 
 위 예제 코드에서 `hasError` 일 경우, 렌더링하는 컴포넌트를 props로 받아 좀 더 유연한 ErrorBoundary를 정의할 수 있다. 다음과 같이 error 객체를 받는 컴포넌트를 props로 전달해주면 상황에 맞게 fallback UI를 지정할 수 있다.
 
-```tsx{2}
+```ts
 <ErrorBoundary renderFallback={({ error }) => <ErrorAlert error={error} />}>
   {children}
 </ErrorBoundary>
@@ -229,7 +229,7 @@ class ErrorBoundary extends React.Component {
 
 renderFallback props의 type은 간단하다.
 
-```tsx
+```ts
 type RenderFallbackProps<ErrorType extends Error = Error> = {
   error: ErrorType
 }
@@ -259,7 +259,7 @@ ErrorBoundary 내부 상태에 `hasError` 값이 **상태로 존재하기 때문
 
 위에서 정의한 renderFallback props의 타이핑을 다음과 같이 수정해야 에러 상황에서 렌더링하는 컴포넌트에 reset handler를 전달해줄 수 있다.
 
-```tsx{3}
+```ts
 type RenderFallbackProps<ErrorType extends Error = Error> = {
   error: ErrorType
   reset: (...args: unknown[]) => void
@@ -272,7 +272,7 @@ type RenderFallbackProps<ErrorType extends Error = Error> = {
 
 `useEffect` hooks처럼 dependency array 같은 것을 만들 수 있지 않을까? 배열을 전달하여 값이 변경되는 경우, 상황이 바뀌었으니 에러를 초기화 하면 된다. 이 방법은 react-query, swr 등에서도 사용하는 방법으로 react-query에서는 [queryKey](https://react-query.tanstack.com/guides/query-keys)를 기반으로 데이터 캐싱 여부를 판단한다. 우리가 확장하는 ErrorBoundary에서는 `resetKeys`라는 것으로 에러 초기화 여부를 판단한다.
 
-```tsx{9}
+```ts
 interface Props {
   // ...
   resetKeys: unknown[]
@@ -294,7 +294,7 @@ componentDidUpdate(prevProps: Props) {
 
 인터페이스를 만들어뒀으니 이제 ErrorBoundary 안에서 reset을 구현하면 된다.
 
-```tsx{14}
+```ts
 // error fallback에 전달할 reset handler
 resetErrorBoundary = () => {
   // ErrorBoundary state를 초기화
@@ -327,7 +327,7 @@ render() {
 
 이름은 비동기 환경을 가둔다고 해서 AsyncBoundary라고 지었다. 단순히 Suspense와 ErrorBoundary를 조합한 Wrapper 컴포넌트이다.
 
-```tsx
+```ts
 type ErrorBoundaryProps = ComponentProps<typeof ErrorBoundary>;
 
 interface Props extends Omit<ErrorBoundaryProps, 'renderFallback'> {
@@ -362,7 +362,7 @@ Promise의 상태를 기준으로 fallback props 네이밍을 했다. 로딩 상
 
 비동기로 데이터를 가져오는 컴포넌트를 다룰 때, AsyncBoundary를 사용할 수 있다. `User`라는 컴포넌트에서 비동기 호출을 하고 있다면 부모 컴포넌트에서 AsyncBoundary로 감싸주면 된다.
 
-```tsx
+```ts
 function UserList() {
   return (
     <AsyncBoundary pendingFallback={<Loading />} rejectedFallback={<Error />}>

@@ -1,7 +1,7 @@
-import BlogConfig from 'blog.config.ts';
-import { prepareArticles } from 'content-layer/article/prepare-article.ts';
-import { prepareImages } from 'content-layer/article/prepare-images.ts';
 import path from 'node:path';
+import BlogConfig from '../blog.config.ts';
+import { prepareArticles } from '../content-layer/article/prepare-article.ts';
+import { prepareImages } from '../content-layer/article/prepare-images.ts';
 
 const DIRNAME = path.resolve();
 

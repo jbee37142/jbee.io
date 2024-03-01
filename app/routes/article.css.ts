@@ -5,11 +5,11 @@ import { flex, gap } from '~/styles/util.css';
 export const root = style([flex('column'), gap(0.7), {}]);
 
 export const category = style({
-  fontSize: '0.7rem',
+  fontSize: '0.8rem',
   color: colors.gray600,
   textTransform: 'uppercase',
   letterSpacing: '0.1px',
-  fontWeight: 200,
+  fontWeight: 500,
 
   width: 'fit-content',
   padding: '0.3rem',

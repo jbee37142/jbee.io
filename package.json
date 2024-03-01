@@ -31,6 +31,7 @@
     "@mdx-js/mdx": "^3.0.1",
     "@mdx-js/node-loader": "^3.0.1",
     "@remix-run/dev": "^2.8.0",
+    "@shikijs/rehype": "^1.1.7",
     "@types/fs-extra": "^11.0.4",
     "@types/react": "^18.2.60",
     "@types/react-dom": "^18.2.19",

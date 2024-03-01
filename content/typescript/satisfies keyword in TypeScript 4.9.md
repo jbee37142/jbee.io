@@ -12,7 +12,7 @@ category: 'typescript'
 
 ## Situation 1.
 
-```jsx
+```js
 // 여기 palette라는 tuple이 있습니다. 레코드라고 부르죠.
 const palette = {
   red: [255, 0, 0],
@@ -39,7 +39,7 @@ const blueValue = palette.bleu.join(',');
 
 (당연한 접근) palette에 타입이 필요하겠군.
 
-```tsx
+```ts
 type Color = "red" | "green" | "blue";
 
 const palette: Record<Color, string | number[]> = {
@@ -51,7 +51,7 @@ const palette: Record<Color, string | number[]> = {
 
 이렇게 오타를 잡을 수 있지! 만…
 
-```tsx
+```ts
 
 const redValue = palette.red.join(",");
 // ❌ Error: red is `number[] | string`
@@ -65,7 +65,7 @@ const greenValue = palette.green.toUpperCase();
 
 ### 두둥
 
-```tsx
+```ts
 const palette = {
   red: [255, 0, 0],
   green: "#00ff00",
@@ -81,7 +81,7 @@ const greenValue = palette.green.toUpperCase();
 
 ### One more thing ☝️
 
-```tsx
+```ts
 const palette = {
   red: [255, 0, 0],
   green: "#00ff00",
@@ -94,7 +94,7 @@ const greenValue = palette.green.toUpperCase(); // `green` is string
 
 with `as const`
 
-```tsx
+```ts
 const palette = {
   red: [255, 0, 0],
   green: "#00ff00",
@@ -109,7 +109,7 @@ const greenValue = palette.green.toUpperCase(); // `green` is "#00ff00"
 
 ## Situation 2.
 
-```tsx
+```ts
 type Animal = {
   kind: 'dog' | 'cat';
   food: 'fish' | 'meat' | 'chur';
@@ -128,7 +128,7 @@ calculateAge(puppy);
 
 `as` …?
 
-```tsx
+```ts
 calculateAge(puppy as Animal);
 ```
 
@@ -138,7 +138,7 @@ puppy가 변해도 알 수가 없다.
 
 **`as const`…?**
 
-```tsx
+```ts
 type Animal = {
   kind: 'dog' | 'cat';
   food: 'fish' | 'meat' | 'chur';
@@ -161,7 +161,7 @@ calculateAge(puppy);
 
 **타입 정의…?**
 
-```tsx
+```ts
 type Animal = {
   kind: 'dog' | 'cat';
   food: 'fish' | 'meat' | 'chur';
@@ -182,7 +182,7 @@ calculateAge(puppy);
 
 되긴 되는데…
 
-```tsx
+```ts
 puppy.kind // 'dog' | 'cat'
 // not 'dog'
 ```
@@ -191,7 +191,7 @@ narrow… more narrow…
 
 ### 두둥
 
-```tsx
+```ts
 type Animal = {
   kind: 'dog' | 'cat';
   food: 'fish' | 'meat' | 'chur';

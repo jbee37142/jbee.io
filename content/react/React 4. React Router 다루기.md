@@ -110,7 +110,7 @@ react-router를 사용한다는 것은 브라우저의 history에 접근하여 �
 
 history는 다음과 같이 주입할 수 있다.
 
-```ts{3}
+```ts
 import { createBrowserHistory } from 'history'
 
 const history = createBrowserHistory()
