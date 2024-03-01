@@ -54,7 +54,7 @@ category: 'etc'
 
 _Code Snippets Example_
 
-```js{6,7,9}
+```js
 import React from 'react'
 
 const TEMPLATE = 'gatsby-starter-bee'

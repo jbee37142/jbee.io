@@ -19,13 +19,13 @@ thumbnail: './images/redux_app_data.png'
 
 > 사용된 예제 코드는 [react-data-handling-lab](https://github.com/JaeYeopHan/react-data-handling-lab)에서 확인할 수 있다.
 
-# Normalize
+## Normalize
 
 보통 '정규화' 과정이라고 불린다. 데이터의 구조를 가공하는 방법 중 하나이며 데이터베이스에서 많이 사용된다. ([참고](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Database#%EC%A0%95%EA%B7%9C%ED%99%94%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C))
 
 웹 프런트엔드에서는 상태 관리 라이브러리에서 지원을 하는 경우도 있고 보통 [normalizr](https://github.com/paularmstrong/normalizr)라는 라이브러리를 통해 정규화를 진행한다. 최근에는 [redux-toolkit](https://github.com/reduxjs/redux-toolkit)이라는 상태 관리 라이브러리에 관련 API로 `createEntityAdapter`가 추가됐다. ([1.3.0 version Release Note](https://github.com/reduxjs/redux-toolkit/releases/tag/v1.3.0-alpha.9))
 
-## Designing a Normalized State
+### Designing a Normalized State
 
 데이터를 정규화한다는 것은 기본적으로 다음과 같은 의미를 갖는다.
 

@@ -15,7 +15,7 @@ category: react
 
 > 이 글을 다 읽고 난 후, 공식 문서도 한 번 읽어보시면 좋을 것 같습니다.
 
-# TL;DR
+### TL;DR
 
 1. [redux-actions](https://github.com/redux-utilities/redux-actions), [reselect](https://github.com/reduxjs/reselect)를 포용.
 2. [immer](https://github.com/immerjs/immer)의 `produce` API 포용.

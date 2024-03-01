@@ -6,7 +6,7 @@ category: 'typescript'
 
 👋 TypeScript **4.9** is coming.
 
-# Why
+## Why
 
 어떤 문제를 해결하는지는 syntax가 탄생한 배경을 통해 살펴보자.
 
