@@ -1,26 +1,20 @@
-import BlogConfig from '../blog.config.ts';
-import fb from 'fast-glob';
-import fs from 'fs-extra';
+import BlogConfig from 'blog.config.ts';
+import { prepareArticles } from 'content-layer/article/prepare-article.ts';
+import { prepareImages } from 'content-layer/article/prepare-images.ts';
 import path from 'node:path';
 
 const DIRNAME = path.resolve();
-const contentsDirectoryPath = path.join(DIRNAME, BlogConfig.content.directory);
-const contentsImagePath = path.join(DIRNAME, 'public', 'articles');
 
-async function prepareImages() {
-  const images = await fb.glob(['**/*.png', '**/*.jpg', '**/*.jpeg'], {
-    cwd: contentsDirectoryPath,
-  });
-  try {
-    await Promise.all(images.map(async (image) => {
-      await fs.copy(
-        path.join(contentsDirectoryPath, image),
-        path.join(contentsImagePath, image)
-      );
-    }));
-  } catch (error) {
-    console.error('[Content-layer] Failed to copy images -> ', error);
-  }
-}
+(async () => {
+  await Promise.all([
+    prepareArticles({
+      from: path.join(DIRNAME, BlogConfig.articles.contentDirectory),
+      to: path.join(DIRNAME, BlogConfig.articles.generatedDirectory, BlogConfig.articles.articlesDirectory),
+    }),
+    prepareImages({
+      from:path.join(DIRNAME, BlogConfig.articles.contentDirectory),
+      to: path.join(DIRNAME, 'public', 'articles'),
+    }),
+  ]);
+})();
 
-prepareImages()

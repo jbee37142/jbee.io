@@ -1,8 +1,8 @@
 import { json, type MetaFunction } from '@remix-run/node';
 import { Link, useLoaderData } from '@remix-run/react';
-import { articlesLayer } from '~/content-layer/articles';
-import * as styles from './index.css';
+import { articleQuery } from '~/queries/article';
 import { common } from '~/styles/element.css';
+import * as styles from './index.css';
 
 export const meta: MetaFunction = () => {
   return [
@@ -12,7 +12,7 @@ export const meta: MetaFunction = () => {
 };
 
 export async function loader() {
-  const articles = json(await articlesLayer.getArticles({ count: 5 }));
+  const articles = json(await articleQuery.getArticles({ count: 5 }));
 
   return articles
 }

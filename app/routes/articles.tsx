@@ -1,5 +1,5 @@
 import { Link, MetaFunction, json, useLoaderData } from '@remix-run/react';
-import { articlesLayer } from '~/content-layer/articles';
+import { articleQuery } from '~/queries/article';
 import { safelyFormatDate } from '~/utils/safelyFormatDate';
 import * as styles from './articles.css';
 
@@ -11,7 +11,7 @@ export const meta: MetaFunction = () => {
 };
 
 export async function loader() {
-  const articles = json(await articlesLayer.getArticles());
+  const articles = json(await articleQuery.getArticles());
 
   return articles
 }

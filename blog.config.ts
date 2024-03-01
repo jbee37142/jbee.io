@@ -1,12 +1,9 @@
-export interface ArticleFrontMatter {
-  title: string;
-  date: Date;
-  category: string;
-  thumbnail?: string;
-  draft?: boolean;
-}
-
 export default {
+  articles: {
+    contentDirectory: 'content',
+    generatedDirectory: '.generated',
+    articlesDirectory: 'articles',
+  },
   content: {
     directory: 'content',
   },

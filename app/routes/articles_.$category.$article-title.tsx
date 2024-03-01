@@ -1,11 +1,11 @@
-import { LoaderFunctionArgs, json } from '@remix-run/node';
-import { useLoaderData } from '@remix-run/react';
-import { articlesLayer } from '~/content-layer/articles';
-import invariant from '~/utils/invariant';
-import * as styles from './article.css'
-import { safelyFormatDate } from '~/utils/safelyFormatDate';
 import type { LinksFunction } from '@remix-run/node';
+import { LoaderFunctionArgs, json, redirect } from '@remix-run/node';
+import { useLoaderData } from '@remix-run/react';
+import { articleQuery } from '~/queries/article';
 import articleStyles from '~/styles/article.css';
+import invariant from '~/utils/invariant';
+import { safelyFormatDate } from '~/utils/safelyFormatDate';
+import * as styles from './article.css';
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: articleStyles },
@@ -18,7 +18,13 @@ export async function loader({ params }: LoaderFunctionArgs) {
   invariant(category != null, '\'category\' is required');
   invariant(title != null, '\'title\' is required');
 
-  return json(await articlesLayer.getArticle(category, title));
+  const article = await articleQuery.getArticle(category, title);
+
+  if (article == null) {
+    return redirect('/404');
+  }
+
+  return json(article);
 }
 
 export default function ArticlePage() { 
@@ -37,4 +43,3 @@ export default function ArticlePage() {
     </section>
   );
 }
-

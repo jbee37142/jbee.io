@@ -8,13 +8,11 @@ import { unified } from 'unified';
 
 export async function parseMarkdown<FrontMatterType>(text: string) {
   const frontmatter = fm<FrontMatterType>(text);
-    
+      
   if (frontmatter == null) {
-    console.warn('Invalid frontmatter', text.substring(0, 30));
-
     return null;
   }
-
+  
   const attr = frontmatter.attributes;
   const time = Math.ceil(readingTime(text).minutes)
   const html = await unified()
@@ -24,7 +22,7 @@ export async function parseMarkdown<FrontMatterType>(text: string) {
     .use(remarkFrontmatter, ['yaml', 'toml'])
     .process(text)
     .then((value) => String(value));
-
+  
   return {
     attr: {
       ...attr,
@@ -33,3 +31,4 @@ export async function parseMarkdown<FrontMatterType>(text: string) {
     html,
   }
 }
+  
