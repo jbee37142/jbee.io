@@ -1,8 +1,9 @@
 html {
     scrollbar-gutter: stable;
+    background-color: #f8f9fa;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p, ul, li, a, span, div {
     font-family: 'Pretendard';
 }
 article:not(pre) {

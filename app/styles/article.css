@@ -184,16 +184,17 @@ blockquote:not(.exclude) {
     border-left: var(--line-width) solid;
 }
 
-article > ul, ol {
+article ul, ol {
     padding-left: calc(var(--line-height) * 1rem);
+}
+article > ul, ol {
     list-style: square;
 }
 
 ul, ol > ul, ol {
-    list-style: circle;
     padding-left: calc(var(--line-height) * 1rem);
 }
 
-article > a {
-    color: #339af0,
+article a {
+    color: #4055dc;
 }
