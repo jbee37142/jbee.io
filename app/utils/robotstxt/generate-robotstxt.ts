@@ -1,3 +1,6 @@
+/**
+ * @see {@link https://github.com/nasa-gcn/remix-seo/blob/main/src/robotstxt/index.ts}
+ */
 import { RobotsPolicy, RobotsConfig } from './types';
 
 const defaultPolicies: RobotsPolicy[] = [
