@@ -12,7 +12,6 @@ const DELIMITER = ' | ';
 
 export function generateMeta({ title, description, image = '', author = '', site = '' }: generateMetaOptions): MetaDescriptor[] {
   return [
-    // General
     { title: title.join(DELIMITER) },
     { description },
     meta('description', description),

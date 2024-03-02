@@ -1,5 +1,10 @@
 export default {
   origin: 'jbee.io',
+  site: 'https://jbee.io',
+  author: {
+    displayName: 'Jbee',
+    twitter: 'JbeeLjyhanll',
+  },
   seo: {
     title: 'Jbee.io',
     name: 'Jbee.io',

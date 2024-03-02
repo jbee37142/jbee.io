@@ -68,7 +68,7 @@ TypeScript Tutorial을 마무리했고 React Tutorial을 갑자기 마무리했�
 
 > https://slides.com/jbee/devfest_seoul_2018_performance_optimization_with_chrome_devtools?fbclid=IwAR2uOqKbvSATuPrmSFNYp6DZzYXns_mlWJf3yBi-_SQlzbJ3_MQc6iaq714#/
 
-첫 발표를 2월에 했었다. 기술 발표는 아니었지만 온 힘을 다했다. 참석자들에게 정말 도움이 되는 발표를 하고 싶었다. 너무 힘을 줬는지 다시는 발표를 하지 않겠다고 다짐을 했었다. 그러나 나는 한 번의 발표를 또 했다. 인간은 똑같은 실수를 반복한다. 두 번의 발표 모두 최선을 다해 준비했기 때문에 후회없는 발표를 했다. 아마 내년에도 기회가 된다면 개발자 행사에서 발표를 하지 않을까 싶다. 발표를 해서 경험한 좋은 것들에 대해 글도 썼다. [[컨퍼런스에서 발표를 해보자]]
+첫 발표를 2월에 했었다. 기술 발표는 아니었지만 온 힘을 다했다. 참석자들에게 정말 도움이 되는 발표를 하고 싶었다. 너무 힘을 줬는지 다시는 발표를 하지 않겠다고 다짐을 했었다. 그러나 나는 한 번의 발표를 또 했다. 인간은 똑같은 실수를 반복한다. 두 번의 발표 모두 최선을 다해 준비했기 때문에 후회없는 발표를 했다. 아마 내년에도 기회가 된다면 개발자 행사에서 발표를 하지 않을까 싶다. 발표를 해서 경험한 좋은 것들에 대해 글도 썼다. [컨퍼런스에서 발표를 해보자](https://www.jbee.io/articles/essay/%EC%BB%A8%ED%8D%BC%EB%9F%B0%EC%8A%A4%EC%97%90%EC%84%9C%20%EB%B0%9C%ED%91%9C%EB%A5%BC%20%ED%95%B4%EB%B3%B4%EC%9E%90)
 
 ### FEConf
 

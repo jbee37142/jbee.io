@@ -13,6 +13,8 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
     title: [data?.title ?? 'Article', BlogConfig.seo.title],
     description: data?.description ?? BlogConfig.seo.description,
     image: data?.thumbnail,
+    author: BlogConfig.author.twitter,
+    site: BlogConfig.site,
   });
 };
 
