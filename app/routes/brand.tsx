@@ -3,7 +3,7 @@ import BlogConfig from '../../blog.config';
 
 export const meta: MetaFunction = () => {
   return [{
-    title: `Brand | ${BlogConfig.seo.title}}`,
+    title: `Brand | ${BlogConfig.seo.title}`,
   }];
 };
 

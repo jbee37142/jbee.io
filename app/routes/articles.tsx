@@ -6,7 +6,7 @@ import * as styles from './articles.css';
 
 export const meta: MetaFunction = () => {
   return [{
-    title: `Articles | ${BlogConfig.seo.title}}`,
+    title: `Articles | ${BlogConfig.seo.title}`,
   }];
 };
 
