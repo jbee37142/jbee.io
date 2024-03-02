@@ -35,7 +35,7 @@ function LinkedIn({ className }: { className?: string }) {
   )
 }
 
-export const Icon = {
+export const SVGIcon = {
   X,
   GitHub,
   LinkedIn

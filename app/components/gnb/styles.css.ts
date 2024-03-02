@@ -16,3 +16,19 @@ export const list = style([common.listrow, {
 export const listItem = style({
   fontSize: '1rem',
 });
+
+export const link = style([common.anchor, {
+  ':hover': {
+    textDecoration: 'underline',
+    textDecorationThickness: '0.1em',
+    textUnderlinePosition: 'under',
+
+  },
+  'selectors': {
+    '&.active': {
+      textDecoration: 'underline',
+      textDecorationThickness: '0.2em',
+      textUnderlinePosition: 'under',
+    },
+  }
+}]);
