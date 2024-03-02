@@ -1,8 +1,8 @@
 import { Link, MetaFunction, json, useLoaderData } from '@remix-run/react';
 import { articleQuery } from '~/queries/article';
 import { safelyFormatDate } from '~/utils/safelyFormatDate';
-import * as styles from './articles.css';
 import BlogConfig from '../../blog.config';
+import * as styles from './articles.css';
 
 export const meta: MetaFunction = () => {
   return [{

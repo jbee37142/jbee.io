@@ -5,8 +5,8 @@ import { articleQuery } from '~/queries/article';
 import articleStyles from '~/styles/article.css';
 import invariant from '~/utils/invariant';
 import { safelyFormatDate } from '~/utils/safelyFormatDate';
-import * as styles from './article.css';
 import BlogConfig from '../../blog.config';
+import * as styles from './article.css';
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
   return [{
