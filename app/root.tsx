@@ -22,6 +22,10 @@ export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
   { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css' },
   { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css' },
+  { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/icon/favicon-32x32.png' },
+  { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/icon/favicon-16x16.png' },
+  { rel: 'manifest', href: '/icon/site.webmanifest' },
+  { rel: 'apple-touch-icon', sizes: '180x180', href: '/icon/apple-touch-icon.png' },
 ];
 
 export default function App() {
@@ -30,10 +34,6 @@ export default function App() {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png" />
-        <link rel="manifest" href="/icon/site.webmanifest" />
         <Meta />
         <Links />
         <GoogleAnalyticsScripts id={BlogConfig.ga.id} />
