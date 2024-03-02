@@ -10,13 +10,15 @@ import {
   isRouteErrorResponse,
   useRouteError,
 } from '@remix-run/react';
-
+import '~/styles/article.css';
 import '~/styles/global.css';
 import '~/styles/reset.css';
 import BlogConfig from '../blog.config';
 import { Container } from './components/container/Container';
 import { GlobalNavigationBar } from './components/gnb/GlobalNavigationBar';
 import { GoogleAnalyticsScripts } from './utils/ga/google-analytics';
+import { createSitemapLink } from './utils/sitemap/link';
+import { createRSSLink } from './utils/rss/link';
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
@@ -26,6 +28,8 @@ export const links: LinksFunction = () => [
   { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/icon/favicon-16x16.png' },
   { rel: 'manifest', href: '/icon/site.webmanifest' },
   { rel: 'apple-touch-icon', sizes: '180x180', href: '/icon/apple-touch-icon.png' },
+  createSitemapLink(),
+  createRSSLink()
 ];
 
 export default function App() {
