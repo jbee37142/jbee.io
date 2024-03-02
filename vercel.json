@@ -1,0 +1,60 @@
+{
+    "redirects": [
+        {
+            "source": "/book/:title",
+            "destination": "/articles/essay/:title"
+        },
+        {
+            "source": "/career/:title",
+            "destination": "/articles/career/:title"
+        },
+        {
+            "source": "/developments/:title",
+            "destination": "/articles/developments/:title"
+        },
+        {
+            "source": "/diving/:title",
+            "destination": "/articles/diving/:title"
+        },
+        {
+            "source": "/essay/:title",
+            "destination": "/articles/essay/:title"
+        },
+        {
+            "source": "/javascript/:title",
+            "destination": "/articles/javascript/:title"
+        },
+        {
+            "source": "/presentation/:title",
+            "destination": "/articles/presentation/:title"
+        },
+        {
+            "source": "/react/:title",
+            "destination": "/articles/react/:title"
+        },
+        {
+            "source": "/react-tutorials/:title",
+            "destination": "/articles/react-tutorials/:title"
+        },
+        {
+            "source": "/tool/:title",
+            "destination": "/articles/tool/:title"
+        },
+        {
+            "source": "/typescript/:title",
+            "destination": "/articles/typescript/:title"
+        },
+        {
+            "source": "/vuetorials/:title",
+            "destination": "/articles/vuetorials/:title"
+        },
+        {
+            "source": "/web/:title",
+            "destination": "/articles/web/:title"
+        },
+        {
+            "source": "/about",
+            "destination": "/brand"
+        }
+    ]
+}
