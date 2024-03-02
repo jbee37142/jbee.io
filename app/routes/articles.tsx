@@ -23,11 +23,11 @@ export default function ArticlesPage() {
     <ul className={styles.root}>
       {articles.map(({ title, category, lastUpdatedAt }, index) => {
         return (
-          <li key={index}>
+          <li key={index} className={styles.item}>
             <Link to={`/articles/${category}/${title}`} className={styles.link} prefetch="intent">
               <span>{title}</span>
-              <span className={styles.dateText}>{safelyFormatDate(lastUpdatedAt)}</span>
             </Link>
+            <span className={styles.dateText}>{safelyFormatDate(lastUpdatedAt)}</span>
           </li>
         )})}
     </ul>

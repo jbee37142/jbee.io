@@ -8,15 +8,27 @@ export const root = style({
   padding: 0,
 })
 
-export const link = style([common.anchor, {
+export const item = style({
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
+});
+
+export const link = style([common.anchor, {
+  flex: 1,
   paddingTop: '0.5rem',
   paddingBottom: '0.5rem',
+  ':hover': {
+    textDecoration: 'underline',
+    textDecorationThickness: 'from-font',
+    textUnderlinePosition: 'under',
+    textDecorationColor: '#495057',
+  }
 }])
 
 export const dateText = style({
   fontSize: '0.9rem',
   color: colors.gray600,
+  flexShrink: 0,
+  fontVariantNumeric: 'tabular-nums',
 });
