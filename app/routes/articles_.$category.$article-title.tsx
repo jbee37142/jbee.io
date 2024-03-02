@@ -1,4 +1,4 @@
-import type { LinksFunction } from '@remix-run/node';
+import type { LinksFunction, MetaFunction } from '@remix-run/node';
 import { LoaderFunctionArgs, json, redirect } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
 import { articleQuery } from '~/queries/article';
@@ -6,6 +6,14 @@ import articleStyles from '~/styles/article.css';
 import invariant from '~/utils/invariant';
 import { safelyFormatDate } from '~/utils/safelyFormatDate';
 import * as styles from './article.css';
+import BlogConfig from '../../blog.config';
+
+export const meta: MetaFunction<typeof loader> = ({ data }) => {
+  return [{
+    title: `${data?.title ?? 'Article'} | ${BlogConfig.seo.title}`,
+    description: data?.description,
+  }];
+};
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: articleStyles },

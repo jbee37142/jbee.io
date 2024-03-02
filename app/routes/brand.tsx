@@ -1,10 +1,10 @@
 import { MetaFunction } from '@remix-run/node';
+import BlogConfig from '../../blog.config';
 
 export const meta: MetaFunction = () => {
-  return [
-    { title: 'Brand | Jbee.io' },
-    { name: '브랜딩', content: 'Welcome to Jbee.io' },
-  ];
+  return [{
+    title: `Brand | ${BlogConfig.seo.title}}`,
+  }];
 };
 
 export default function BrandPage() {

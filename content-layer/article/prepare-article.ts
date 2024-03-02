@@ -19,7 +19,6 @@ export async function prepareArticles({ from: baseDirectory, to: destination }: 
   
   await Promise.all(markdownFiles.map(async (file) => {
     const text = await readFileToString(baseDirectory, file);
-    console.log('[content-layer] in: ', file);
     const article = await buildArticle(text);
   
     if (article != null)  {
@@ -55,6 +54,7 @@ async function buildArticle(text: string) {
     title: attr.title,
     lastUpdatedAt: attr.date,
     thumbnail: attr.thumbnail, // TODO: default thumbnail
+    description: attr?.description,
     readingTime: attr.readingTime,
   };
   

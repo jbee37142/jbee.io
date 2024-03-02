@@ -2,12 +2,12 @@ import { Link, MetaFunction, json, useLoaderData } from '@remix-run/react';
 import { articleQuery } from '~/queries/article';
 import { safelyFormatDate } from '~/utils/safelyFormatDate';
 import * as styles from './articles.css';
+import BlogConfig from '../../blog.config';
 
 export const meta: MetaFunction = () => {
-  return [
-    { title: 'Articles | Jbee.io' },
-    { name: '글 목록', content: 'Welcome to Jbee.io' },
-  ];
+  return [{
+    title: `Articles | ${BlogConfig.seo.title}}`,
+  }];
 };
 
 export async function loader() {

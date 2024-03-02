@@ -28,6 +28,10 @@ export interface Article {
    */
   thumbnail?: string;
   /**
+   * @description frontmatter.description
+   */
+  description?: string;
+  /**
    * @description calculated by 'reading-time' package
    */
   readingTime: number;
@@ -38,5 +42,6 @@ export interface ArticleFrontMatter {
   date: Date;
   category: string;
   thumbnail?: string;
+  description?: string;
   draft?: boolean;
 }

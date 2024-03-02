@@ -3,11 +3,12 @@ import { Link, useLoaderData } from '@remix-run/react';
 import { Icon } from '~/components/icon/Icon';
 import { articleQuery } from '~/queries/article';
 import * as styles from './index.css';
+import BlogConfig from '../../blog.config';
 
 export const meta: MetaFunction = () => {
   return [
-    { title: 'Home | Jbee.io' },
-    { name: '개발 블로그', content: 'Welcome to Jbee.io' },
+    { title: `Home | ${BlogConfig.seo.title}` },
+    { name: BlogConfig.seo.name, content: BlogConfig.seo.description },
   ];
 };
 
