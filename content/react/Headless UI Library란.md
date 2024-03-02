@@ -1,5 +1,5 @@
 ---
-title: 'Headless UI Library란?'
+title: 'Headless UI Library란'
 date: 2021-07-20 12:07:07
 category: react
 thumbnail: './images/headless_ui_library.png'
