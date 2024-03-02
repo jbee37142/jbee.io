@@ -9,7 +9,7 @@ export const category = style({
   color: colors.gray600,
   textTransform: 'uppercase',
   letterSpacing: '0.1px',
-  fontWeight: 500,
+  fontWeight: 400,
 
   width: 'fit-content',
   padding: '0.3rem',
