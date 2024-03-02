@@ -1,4 +1,5 @@
 export default {
+  origin: 'jbee.io',
   seo: {
     title: 'Jbee.io',
     name: 'Jbee.io',
