@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Wendy One
+- Font Author: Copyright (c) 2012, Alejandro Inler (alejandroinler@gmail.com), with Reserved Font Name 'Wendy'
+- Font Source: https://fonts.gstatic.com/s/wendyone/v18/2sDcZGJOipXfgfXV5wgDb2-4C7wFZQ.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
