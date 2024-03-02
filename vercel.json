@@ -55,6 +55,10 @@
         {
             "source": "/about",
             "destination": "/brand"
+        },
+        {
+            "source": "/book/review-collective-illusions/",
+            "destination": "/articles/book/집단%20착각과%20팀"
         }
     ]
 }
