@@ -7,10 +7,12 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  isRouteErrorResponse,
+  useRouteError,
 } from '@remix-run/react';
 
-import '~/styles/reset.css';
 import '~/styles/global.css';
+import '~/styles/reset.css';
 import { Container } from './components/container/Container';
 import { GlobalNavigationBar } from './components/gnb/GlobalNavigationBar';
 
@@ -47,5 +49,35 @@ function Layout({ children }: { children: React.ReactNode }) {
       <GlobalNavigationBar />
       {children}
     </Container>
+  );
+}
+
+export function ErrorBoundary() {
+  const error = useRouteError();
+
+  function parseError(error: unknown) {
+    if (isRouteErrorResponse(error)) {
+      return `${error.status} ${error.statusText}`;
+    }if (error instanceof Error) {
+      return error.message;
+    }
+
+    return 'Unknown Error';
+  }
+
+  return (
+    <html lang='ko'>
+      <head>
+        <title>Oops!</title>
+        <Meta />
+        <Links />
+      </head>
+      <body>
+        <Layout>
+          <h1>{parseError(error)}</h1>
+        </Layout>
+        <Scripts />
+      </body>
+    </html>
   );
 }
