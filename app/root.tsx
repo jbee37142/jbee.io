@@ -26,6 +26,7 @@ export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css' },
   { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/icon/favicon-32x32.png' },
   { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/icon/favicon-16x16.png' },
+  { rel: 'icon', href: '/favicon.ico' },
   { rel: 'manifest', href: '/icon/site.webmanifest' },
   { rel: 'apple-touch-icon', sizes: '180x180', href: '/icon/apple-touch-icon.png' },
   createSitemapLink(),
