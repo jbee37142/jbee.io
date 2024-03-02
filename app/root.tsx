@@ -13,8 +13,10 @@ import {
 
 import '~/styles/global.css';
 import '~/styles/reset.css';
+import BlogConfig from '../blog.config';
 import { Container } from './components/container/Container';
 import { GlobalNavigationBar } from './components/gnb/GlobalNavigationBar';
+import { GoogleAnalyticsScripts } from './utils/ga/google-analytics';
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
@@ -34,6 +36,7 @@ export default function App() {
         <link rel="manifest" href="/icon/site.webmanifest" />
         <Meta />
         <Links />
+        <GoogleAnalyticsScripts id={BlogConfig.ga.id} />
       </head>
       <body>
         <Layout>

@@ -16,4 +16,7 @@ export default {
   image: {
     extensions: ['**/*.png', '**/*.jpg', '**/*.jpeg'],
   },
+  ga: {
+    id: 'G-DNVPN56ZPP' // G-XXXXXXXXXX
+  }
 };
