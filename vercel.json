@@ -131,6 +131,22 @@
         {
             "source": "/essay/2023_retro/",
             "destination": "/articles/essay/Jbee.log(2023)"
+        },
+        {
+            "source": "/react/error-declarative-handling-0/",
+            "destination": "/articles/react/효율적인%20프런트엔드%20에러%20핸들링"
+        },
+        {
+            "source": "/react/error-declarative-handling-1/",
+            "destination": "/articles/react/React에서%20선언적으로%20비동기%20다루기"
+        },
+        {
+            "source": "/react/error-declarative-handling-2/",
+            "destination": "/articles/react/클라이언트의%20사용자%20중심%20예외%20처리"
+        },
+        {
+            "source": "/react/error-declarative-handling-3/",
+            "destination": "/articles/react/선언적으로%20에러%20상황%20제어하기"
         }
     ]
 }
