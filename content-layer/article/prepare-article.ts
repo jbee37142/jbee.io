@@ -60,10 +60,6 @@ async function buildArticle(text: string) {
   
   return article;
 }
-
-export function getArticleId(category: Category, title: Title) {
-  return `${category}+${title}`;
-}
   
 async function readFileToString(...args: string[]): Promise<string> {
   const data = await fs.readFile(path.join(...args), { encoding: 'utf-8' });
@@ -103,3 +99,6 @@ async function parseMarkdown<FrontMatterType>(text: string) {
   }
 }
   
+function getArticleId(category: Category, title: Title) {
+  return `${category}+${title}`;
+}

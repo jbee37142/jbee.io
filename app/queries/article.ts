@@ -1,5 +1,5 @@
 import BlogConfig from 'blog.config.ts';
-import { getArticleId } from 'content-layer/article/prepare-article';
+import { getArticleId } from 'content-layer/article/getArticleId';
 import { Article } from 'content-layer/article/types';
 import fs from 'fs-extra';
 import path from 'node:path';
