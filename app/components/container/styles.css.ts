@@ -6,4 +6,6 @@ export const root = style({
   marginRight: 'auto',
   marginTop: '2rem',
   marginBottom: '2rem',
+  paddingLeft: '1rem',
+  paddingRight: '1rem',
 });
