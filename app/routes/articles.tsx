@@ -3,11 +3,13 @@ import { articleQuery } from '~/queries/article';
 import { safelyFormatDate } from '~/utils/safelyFormatDate';
 import BlogConfig from '../../blog.config';
 import * as styles from './articles.css';
+import { generateMeta } from '~/utils/meta/generate-meta';
 
 export const meta: MetaFunction = () => {
-  return [{
-    title: `Articles | ${BlogConfig.seo.title}`,
-  }];
+  return generateMeta({
+    title: ['Articles', BlogConfig.seo.title],
+    description: BlogConfig.seo.description,
+  });
 };
 
 export async function loader() {
