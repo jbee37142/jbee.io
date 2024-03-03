@@ -29,7 +29,7 @@ export const links: LinksFunction = () => [
   { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/icon/favicon-32x32.png' },
   { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/icon/favicon-16x16.png' },
   { rel: 'icon', href: '/favicon.ico' },
-  { rel: 'preload', as: 'image', href: '/main-image.jpg' },
+  { rel: 'preload', as: 'image', href: BlogConfig.image.main },
   { rel: 'manifest', href: '/icon/site.webmanifest' },
   { rel: 'apple-touch-icon', sizes: '180x180', href: '/icon/apple-touch-icon.png' },
   createSitemapLink(),

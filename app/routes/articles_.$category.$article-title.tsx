@@ -17,7 +17,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
   return generateMeta({
     title: [data?.title ?? 'Article', BlogConfig.seo.title],
     description: data?.description ?? BlogConfig.seo.description,
-    image: pathJoin(BlogConfig.site, 'articles', category, data?.thumbnail ?? ''),
+    image: data?.thumbnail != null ? pathJoin(BlogConfig.site, 'articles', category, data.thumbnail) : pathJoin(BlogConfig.site, BlogConfig.image.main),
     author: BlogConfig.author.twitter,
     site: BlogConfig.site,
   });

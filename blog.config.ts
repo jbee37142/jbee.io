@@ -19,6 +19,7 @@ export default {
     directory: 'content',
   },
   image: {
+    main: '/main-image.jpg', // public
     extensions: ['**/*.png', '**/*.jpg', '**/*.jpeg'],
   },
   ga: {

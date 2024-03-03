@@ -7,7 +7,7 @@ export const meta: MetaFunction = () => {
   return generateMeta({
     title: ['Brand', BlogConfig.seo.title],
     description: BlogConfig.seo.description,
-    image: pathJoin(BlogConfig.site, '/main-image.jpg'),
+    image: pathJoin(BlogConfig.site, BlogConfig.image.main),
   });
 };
 
