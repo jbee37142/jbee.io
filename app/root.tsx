@@ -19,6 +19,8 @@ import { GlobalNavigationBar } from './components/gnb/GlobalNavigationBar';
 import { GoogleAnalyticsScripts } from './utils/ga/google-analytics';
 import { createSitemapLink } from './utils/sitemap/link';
 import { createRSSLink } from './utils/rss/link';
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/remix'
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
@@ -50,6 +52,8 @@ export default function App() {
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
