@@ -19,3 +19,7 @@ export const icon = style([common.anchor, {
   width: '1.3rem',
   height: '1.3rem',
 }]);
+
+export const list = style([flex('column'), gap(0.2), {
+  listStyle: 'square',
+}]);
