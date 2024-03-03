@@ -10,7 +10,7 @@ interface generateMetaOptions {
 
 const DELIMITER = ' | ';
 
-export function generateMeta({ title, description, image = '', author = '', site = '' }: generateMetaOptions): MetaDescriptor[] {
+export function generateMeta({ title, description, image = '', author = '' }: generateMetaOptions): MetaDescriptor[] {
   return [
     { title: title.join(DELIMITER) },
     { description },
@@ -22,8 +22,8 @@ export function generateMeta({ title, description, image = '', author = '', site
     twitter('description', description),
     twitter('image', image),
     twitter('card', 'summary_large_image'),
-    twitter('creator', author),
-    twitter('site', site),
+    twitter('creator', `@${author}`),
+    twitter('site', `@${author}`),
   ];
 }
 
