@@ -5,12 +5,15 @@ import { SVGIcon } from '~/components/icon/SVGIcon';
 import { articleQuery } from '~/queries/article';
 import BlogConfig from '../../blog.config';
 import * as styles from './index.css';
+import { generateMeta } from '~/utils/meta/generate-meta';
+import { pathJoin } from '~/utils/path';
 
 export const meta: MetaFunction = () => {
-  return [
-    { title: `Home | ${BlogConfig.seo.title}` },
-    { name: BlogConfig.seo.name, content: BlogConfig.seo.description },
-  ];
+  return generateMeta({
+    title: [BlogConfig.seo.title],
+    description: BlogConfig.seo.description,
+    image: pathJoin(BlogConfig.site, '/main-image.jpg'),
+  });
 };
 
 export async function loader() {

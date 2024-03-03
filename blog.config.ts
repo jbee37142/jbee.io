@@ -8,7 +8,7 @@ export default {
   seo: {
     title: 'Jbee.io',
     name: 'Jbee.io',
-    description: 'Frontend Engineer who loves web and writes about it.',
+    description: 'Articles are contributed, mostly about the web, but also the author\'s own thoughts; writing is not their profession, but they retire to write fragrant pieces.',
   },
   articles: {
     contentDirectory: 'content',

@@ -4,11 +4,13 @@ import { safelyFormatDate } from '~/utils/safelyFormatDate';
 import BlogConfig from '../../blog.config';
 import * as styles from './articles.css';
 import { generateMeta } from '~/utils/meta/generate-meta';
+import { pathJoin } from '~/utils/path';
 
 export const meta: MetaFunction = () => {
   return generateMeta({
     title: ['Articles', BlogConfig.seo.title],
     description: BlogConfig.seo.description,
+    image: pathJoin(BlogConfig.site, '/main-image.jpg'),
   });
 };
 
