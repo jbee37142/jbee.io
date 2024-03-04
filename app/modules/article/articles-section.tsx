@@ -1,9 +1,10 @@
 import { Link } from '@remix-run/react';
 import * as styles from './styles.css';
 import { Article } from 'content-layer/article/types';
+import { ReactNode } from 'react';
 
 export interface ArticlesSectionProps {
-  title: string;
+  title: ReactNode;
   articles: Article[];
 }
 
@@ -13,7 +14,7 @@ export function ArticlesSection({
 }: ArticlesSectionProps) {
   return (
     <section>
-      <h3>{title}</h3>
+      {title}
       <ul className={styles.list}>
         {articles.map(({ title, category }, index) => {
           return (

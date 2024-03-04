@@ -2,6 +2,7 @@ import type { MetaFunction } from '@remix-run/node';
 import { LoaderFunctionArgs, json, redirect } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
 import { ArticlesSection } from '~/modules/article/articles-section';
+import { ContactList } from '~/modules/contact/ContactList';
 import { articleQuery } from '~/queries/article';
 import invariant from '~/utils/invariant';
 import { generateMeta } from '~/utils/meta/generate-meta';
@@ -64,7 +65,8 @@ export default function ArticlePage() {
       <article dangerouslySetInnerHTML={{ __html: content }} />
       <hr />
       <footer>
-        <ArticlesSection title="Recent articles" articles={recentArticles} />
+        <ContactList />
+        <ArticlesSection title={<h5>Recent articles</h5>} articles={recentArticles} />
       </footer>
     </section>
   );
