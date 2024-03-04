@@ -10,7 +10,7 @@ draft: false
 
 React는 자체적으로 '상태'를 관리하기 위한 `state` API를 제공하기 때문에 View 라이브러리이자 상태 관리 라이브러리라고 할 수 있다.
 
-이 글은 React 시리즈의 [2번째](https://jbee.io/react/react-3-react-architecture/) 글을 반박하는 글이다. 정확히는 다음과 같은 문장을 반박하고자 한다.
+이 글은 React 시리즈의 [2번째](https://jbee.io/articles/react/react-3-react-architecture/) 글을 반박하는 글이다. 정확히는 다음과 같은 문장을 반박하고자 한다.
 
 > 모든 컴포넌트에서 store에 접근하여 필요한 데이터를 가져오고 렌더링만 수행한다.
 
@@ -253,8 +253,8 @@ children으로 받는 `SubmitButton`의 `onClick` handler에 `sendLog`라는 han
 
 어떤 상태를 필요한 곳과 가장 가까운 곳에서 관리하고 외부에서 제한적으로 접근할 수 있도록 격리시켜서 컴포넌트를 설계하는 이야기를 해보았다. 모든 것에는 정답이 없듯이 2번째 글에서 이야기했던 All Dumb Component 또한 장단점이 있다. 재사용을 고려했을 때, store에서는 애플리케이션 전반에서 사용되는 상태만을 관리하고 지역 상태를 적극적으로 사용했을 때의 장단점도 함께 고려해서 프로젝트를 설계해야 한다.
 
-[_> React 테스트 시리즈 보러가기_](https://jbee.io/react/testing-0-react-testing-intro/)
+[_> React 테스트 시리즈 보러가기_](https://jbee.io/articles/react/testing-0-react-testing-intro/)
 
 |       |                                                       |
 | :---: | :---------------------------------------------------: |
-| Intro | [0. 들어가면서](https://jbee.io/react/react-0-intro/) |
+| Intro | [0. 들어가면서](https://jbee.io/articles/react/react-0-intro/) |

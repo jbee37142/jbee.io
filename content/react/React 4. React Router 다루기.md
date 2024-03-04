@@ -46,7 +46,7 @@ components
 
 ### Store, Components, etc...
 
-일반적인 redux application에는 store와 관련된 directory가 있을 것이다. redux 사상에 맞춰 actions directory, reducer directory로 작성할 수 있다. 이번 프로젝트에서는 [Redux architecture](https://jbee.io/react/react-2-redux-architecture/)에서 이야기한 것 처럼 ducks pattern을 적용하였으며 이에 맞게 module 단위로 directory를 구성했다.
+일반적인 redux application에는 store와 관련된 directory가 있을 것이다. redux 사상에 맞춰 actions directory, reducer directory로 작성할 수 있다. 이번 프로젝트에서는 [Redux architecture](https://jbee.io/articles/react/react-2-redux-architecture/)에서 이야기한 것 처럼 ducks pattern을 적용하였으며 이에 맞게 module 단위로 directory를 구성했다.
 
 ## 그 외 directory
 
@@ -56,7 +56,7 @@ components
 
 ### /configs
 
-컴파일 타임에서 필요한 것들을 정의해두는 directory로 Phase 별로 달라질 수 있는 상수들을 정리해두었다. Phase마다 달라질 수 있는 것으로는 API의 base url, phase 상수, static resource path 등이 존재한다. 이러한 값들을 phase에 따라 다른 값으로 컴파일한다. [1편 개발 환경 세팅](https://jbee.io/react/react-1-development-environment-setup/#-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%84%B8%ED%8C%85)에서 가볍게 언급하고 넘어간 phase 관련 내용이다. 이 부분은 [Webpack의 DefinePlugin](https://webpack.js.org/plugins/define-plugin/)을 이용했다.
+컴파일 타임에서 필요한 것들을 정의해두는 directory로 Phase 별로 달라질 수 있는 상수들을 정리해두었다. Phase마다 달라질 수 있는 것으로는 API의 base url, phase 상수, static resource path 등이 존재한다. 이러한 값들을 phase에 따라 다른 값으로 컴파일한다. [1편 개발 환경 세팅](https://jbee.io/articles/react/react-1-development-environment-setup/#-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%84%B8%ED%8C%85)에서 가볍게 언급하고 넘어간 phase 관련 내용이다. 이 부분은 [Webpack의 DefinePlugin](https://webpack.js.org/plugins/define-plugin/)을 이용했다.
 
 ### `/api`,`/utils`,`/hooks` directory
 
@@ -197,5 +197,5 @@ export const VeryDumbComponent = () => {
 이전 1,2,3 시리즈와 마찬가지로 고민들을 주로 다뤘다. react-router는 route를, 브라우저 history를 좀 더 쉽게 다루기 위한 라이브러리라서 별 내용은 없었다. router 이야기보다 directory 구조잡는 이야기가 더 많았던 것 같다. directory 구조는 시간을 들여 고민해줘야 할 정도로 중요한 것 같다. 특히 top level의 directory 구조는 프로젝트를 한 눈에 파악하는데 많은 정보를 가지고 있기 때문에 많은 시간을 들였다. (시간을 들이기 싫다면 angular...)
 
 | | |
-| Next | [5. 컴포넌트 디자인하기](https://jbee.io/react/react-5-component/) |
-| Intro | [0. 들어가면서](https://jbee.io/react/react-0-intro/) |
+| Next | [5. 컴포넌트 디자인하기](https://jbee.io/articles/react/react-5-component/) |
+| Intro | [0. 들어가면서](https://jbee.io/articles/react/react-0-intro/) |

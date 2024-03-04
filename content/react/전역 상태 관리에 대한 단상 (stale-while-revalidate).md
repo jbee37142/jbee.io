@@ -117,7 +117,7 @@ interface Transaction {
 function fetchTransactions(): Promise<Transaction[]> { ... }
 ```
 
-거래내역 목록을 보여주는 컴포넌트를 만들어야 할 때, 거래내역 목록 API를 호출해야 한다. 그리고 이 API는 `TransactionList` 라는 컴포넌트에서 호출하는 것이 가장 이상적이다. (cc. [좋은 코드란 무엇인가](https://jbee.io/etc/what-is-good-code/#where))
+거래내역 목록을 보여주는 컴포넌트를 만들어야 할 때, 거래내역 목록 API를 호출해야 한다. 그리고 이 API는 `TransactionList` 라는 컴포넌트에서 호출하는 것이 가장 이상적이다. (cc. [좋은 코드란 무엇인가](https://jbee.io/articles/etc/what-is-good-code/#where))
 
 ```ts
 function TransactionListA() {
@@ -239,7 +239,7 @@ Redux에서 서버 데이터를 관리함으로써 데이터에 접근하는 시
 
 이 시점은 어떻게 알 수 있을까? 이 시점을 알기 위한 무언가가 또 필요하다.
 
-이 문제는 이미 redux 팀에서도 인정하고 있다. 이 글에서는 언급하지 않고 넘어갈 redux의 verbose한 boilerplate 코드도 [redux-toolkit](https://jbee.io/react/introduce-redux-starter-kit) 으로 대응이 된 것처럼 이 문제도 해결하기 위한 무언가가 등장했다. (cc. [rtk-query](https://github.com/rtk-incubator/rtk-query))
+이 문제는 이미 redux 팀에서도 인정하고 있다. 이 글에서는 언급하지 않고 넘어갈 redux의 verbose한 boilerplate 코드도 [redux-toolkit](https://jbee.io/articles/react/introduce-redux-starter-kit) 으로 대응이 된 것처럼 이 문제도 해결하기 위한 무언가가 등장했다. (cc. [rtk-query](https://github.com/rtk-incubator/rtk-query))
 
 이미 동일한 데이터를 두 군데에서 관리한다는 것에서 Single source of Truth 원칙을 위배한다. 위 예제 코드에서는 거래내역이라는 데이터를 서버에서도 저장하고 있고 클라이언트의 메모리에도 저장하는 것이다. 호출한 시점에서는 동일한 내용의 데이터겠지만 다시 서버 API를 호출하기 전에 어떤 변화가 있을지 알 수 없기 때문에 두 데이터가 동일하다는 것을 보장할 수 없게 된다.
 

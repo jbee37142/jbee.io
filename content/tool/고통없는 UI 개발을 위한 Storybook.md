@@ -92,7 +92,7 @@ Storybook은 단지 독립된 환경을 제공할 뿐이라 활용할 수 있는
 2. 여러 컴포넌트의 조합 단위로 story 작성
 3. 페이지 단위의 story 작성
 
-1번 같은 경우에는 Design System에서 많이 사용되는 방법이다. 필자가 진행한 프로젝트에서는 [[Testing] 4. 컴포넌트 테스트와 검증](https://jbee.io/react/testing-4-react-testing/)에서도 언급했듯이 3번의 방법으로 Storybook을 활용했다. 2번, 3번과 같이 여러 컴포넌트의 조합에 대해 story를 작성할 경우, store에 connect된 상황을 작성해야 하는데, 이 때 addon을 통해 해결할 수 있다.
+1번 같은 경우에는 Design System에서 많이 사용되는 방법이다. 필자가 진행한 프로젝트에서는 [[Testing] 4. 컴포넌트 테스트와 검증](https://jbee.io/articles/react/testing-4-react-testing/)에서도 언급했듯이 3번의 방법으로 Storybook을 활용했다. 2번, 3번과 같이 여러 컴포넌트의 조합에 대해 story를 작성할 경우, store에 connect된 상황을 작성해야 하는데, 이 때 addon을 통해 해결할 수 있다.
 
 ## Addons
 

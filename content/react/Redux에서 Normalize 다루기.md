@@ -186,7 +186,7 @@ entity로 정규화가 되면 문자열 타입의 키를 갖는 객체 형식(`{
 
 > Conditional Type and infer (WIP)
 
-> [Generic in TypeScript](https://jbee.io/typescript/TS-5-Generics-in-TypeScript/)
+> [Generic in TypeScript](https://jbee.io/articles/typescript/TS-5-Generics-in-TypeScript/)
 
 ## Profits
 

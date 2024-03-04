@@ -105,5 +105,5 @@ test('should $1', () => {
 
 |       |                                                                                   |
 | :---: | :-------------------------------------------------------------------------------: |
-| Next  | [3. Store와 비즈니스 로직 테스트](https://jbee.io/react/testing-3-react-testing/) |
-| Intro |   [0. 시리즈를 들어가며](https://jbee.io/react/testing-0-react-testing-intro/)    |
+| Next  | [3. Store와 비즈니스 로직 테스트](https://jbee.io/articles/react/testing-3-react-testing/) |
+| Intro |   [0. 시리즈를 들어가며](https://jbee.io/articles/react/testing-0-react-testing-intro/)    |

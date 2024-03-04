@@ -7,3 +7,4 @@ node_modules
 .generated
 .vercel
 memo.txt
+.DS_Store

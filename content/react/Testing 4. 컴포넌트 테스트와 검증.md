@@ -102,5 +102,5 @@ Storybook은 이미 수많은 addon들을 제공하고 있어서 화면을 구�
 
 |       |                                                                              |
 | :---: | :--------------------------------------------------------------------------: |
-| Next  | [5. 여러 테스트에 대한 단상](https://jbee.io/react/testing-5-react-testing/) |
-| Intro | [0. 시리즈를 들어가며](https://jbee.io/react/testing-0-react-testing-intro/) |
+| Next  | [5. 여러 테스트에 대한 단상](https://jbee.io/articles/react/testing-5-react-testing/) |
+| Intro | [0. 시리즈를 들어가며](https://jbee.io/articles/react/testing-0-react-testing-intro/) |

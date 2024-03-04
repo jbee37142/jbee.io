@@ -112,5 +112,5 @@ export const Button = (props: IButtonProps) => {
 
 |       |                                                                           |
 | :---: | :-----------------------------------------------------------------------: |
-| Next  | [2. 프론트엔드, 어떻게 테스트 할 것인가](https://jbee.io/react/testing-2-react-testing/) |
-| Intro |   [0. 시리즈를 들어가며](https://jbee.io/react/testing-0-react-testing-intro/)    |
+| Next  | [2. 프론트엔드, 어떻게 테스트 할 것인가](https://jbee.io/articles/react/testing-2-react-testing/) |
+| Intro |   [0. 시리즈를 들어가며](https://jbee.io/articles/react/testing-0-react-testing-intro/)    |

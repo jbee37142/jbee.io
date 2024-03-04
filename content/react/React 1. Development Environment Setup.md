@@ -84,7 +84,7 @@ CRA를 사용하든 사용하지 않든 개발 환경 구축과 관련된 문제
 
 ## 👉 TypeScript
 
-이미 많은 회사, 많은 프로젝트에서 사용되고 있기 때문에 길게 작성할 필요가 없을 것 같다. 1년 전, [달달한 제안, TypeScript](https://jbee.io/typescript/you_might_need_typescript/)라는 글을 썼는데, 이 부분에 대한 의견은 딱히 변함이 없다.
+이미 많은 회사, 많은 프로젝트에서 사용되고 있기 때문에 길게 작성할 필요가 없을 것 같다. 1년 전, [달달한 제안, TypeScript](https://jbee.io/articles/typescript/you_might_need_typescript/)라는 글을 썼는데, 이 부분에 대한 의견은 딱히 변함이 없다.
 
 ### 수많은 변경이 발생할 때 빛을 발하는 TypeScript
 
@@ -92,7 +92,7 @@ CRA를 사용하든 사용하지 않든 개발 환경 구축과 관련된 문제
 
 ## 👉 사소한 부분 미리 챙겨두기
 
-정말 사소한 것들이지만 눈에 거슬릴 수 있는 것들을 정리해두면 불필요한 코드 리뷰로 낭비되는 시간을 절약할 수 있다. 대부분 코딩 컨벤션에 대한 것인데 이러한 부분들을 미리 미리 정해두면 나중에 코드 전체에 대하여 수정하는 작업을 줄일 수 있다. 텍스트로 정리하기 보다는 eslint와 prettier를 사용하면 자동화 시킬 수 있는 부분이기도 하다. prettier 설정과 husky 설정은 [이 글](https://jbee.io/web/formatting-code-automatically/)을 참고하면 된다.
+정말 사소한 것들이지만 눈에 거슬릴 수 있는 것들을 정리해두면 불필요한 코드 리뷰로 낭비되는 시간을 절약할 수 있다. 대부분 코딩 컨벤션에 대한 것인데 이러한 부분들을 미리 미리 정해두면 나중에 코드 전체에 대하여 수정하는 작업을 줄일 수 있다. 텍스트로 정리하기 보다는 eslint와 prettier를 사용하면 자동화 시킬 수 있는 부분이기도 하다. prettier 설정과 husky 설정은 [이 글](https://jbee.io/articles/essay/formatting-code-automatically/)을 참고하면 된다.
 
 ### Convention
 
@@ -159,5 +159,5 @@ CRA를 사용하든 사용하지 않든 개발 환경 구축과 관련된 문제
 
 |       |                                                                            |
 | :---: | :------------------------------------------------------------------------: |
-| Next  | [2. Redux Architecture](https://jbee.io/react/react-2-redux-architecture/) |
-| Intro |              [0. 들어가면서](https://jbee.io/react/react-0-intro/)              |
+| Next  | [2. Redux Architecture](https://jbee.io/articles/react/react-2-redux-architecture/) |
+| Intro |              [0. 들어가면서](https://jbee.io/articles/react/react-0-intro/)              |

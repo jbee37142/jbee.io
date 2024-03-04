@@ -313,5 +313,5 @@ Controller 기준으로 module을 분리하여 관리하고 있다.
 
 |       |                                                                            |
 | :---: | :------------------------------------------------------------------------: |
-| Next  | [3. React Architecture](https://jbee.io/react/react-3-react-architecture/) |
-| Intro |              [0. 들어가면서](https://jbee.io/react/react-0-intro/)              |
+| Next  | [3. React Architecture](https://jbee.io/articles/react/react-3-react-architecture/) |
+| Intro |              [0. 들어가면서](https://jbee.io/articles/react/react-0-intro/)              |

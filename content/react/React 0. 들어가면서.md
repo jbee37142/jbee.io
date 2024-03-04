@@ -35,7 +35,7 @@ React Ecosystem에서의 best practice라고 했지만 이 글은 best practice�
 
 ## Table of Contents
 
-### [1. Development Environment](https://jbee.io/react/react-1-development-environment-setup/)
+### [1. Development Environment](https://jbee.io/articles/react/react-1-development-environment-setup/)
 
 - CRA?
 - TypeScript
@@ -43,7 +43,7 @@ React Ecosystem에서의 best practice라고 했지만 이 글은 best practice�
 - 프로젝트 세팅
 - 마무리
 
-### [2. Redux Architecture](https://jbee.io/react/react-2-redux-architecture/)
+### [2. Redux Architecture](https://jbee.io/articles/react/react-2-redux-architecture/)
 
 - 고민 1. Context API + Hooks API
 - 고민 2. action, reducer 관리 - module pattern
@@ -52,7 +52,7 @@ React Ecosystem에서의 best practice라고 했지만 이 글은 best practice�
 - 결과물
 - 마무리
 
-### [3. React Architecture](https://jbee.io/react/react-3-react-architecture/)
+### [3. React Architecture](https://jbee.io/articles/react/react-3-react-architecture/)
 
 - 고민 1. Functional vs Class
 - 고민 2. Hooks API 사용
@@ -61,13 +61,13 @@ React Ecosystem에서의 best practice라고 했지만 이 글은 best practice�
 - 결과물
 - 마무리
 
-### [4. React Router 다루기](https://jbee.io/react/react-4-react-router/)
+### [4. React Router 다루기](https://jbee.io/articles/react/react-4-react-router/)
 
 - Directory 구조
 - History 주입
 - With hooks
 
-### [5. 컴포넌트 디자인하기](https://jbee.io/react/react-5-component/)
+### [5. 컴포넌트 디자인하기](https://jbee.io/articles/react/react-5-component/)
 
 - 로직의 재사용성
 - 상태 접근

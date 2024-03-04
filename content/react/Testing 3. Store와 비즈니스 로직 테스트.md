@@ -184,5 +184,5 @@ Store에서 상태를 관리하고 그 상태에 대한 테스트 코드를 작�
 
 |       |                                                                              |
 | :---: | :--------------------------------------------------------------------------: |
-| Next  | [4. React Component 테스트](https://jbee.io/react/testing-4-react-testing/)  |
-| Intro | [0. 시리즈를 들어가며](https://jbee.io/react/testing-0-react-testing-intro/) |
+| Next  | [4. React Component 테스트](https://jbee.io/articles/react/testing-4-react-testing/)  |
+| Intro | [0. 시리즈를 들어가며](https://jbee.io/articles/react/testing-0-react-testing-intro/) |

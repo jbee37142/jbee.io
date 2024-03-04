@@ -11,7 +11,7 @@ category: react
 [redux-toolkit](https://github.com/reduxjs/redux-toolkit)의 [1.0version
 ](https://github.com/reduxjs/redux-toolkit/releases/tag/v1.0.0)이 공개됐습니다. `RSK` 라고 줄여부르네요. 자신들이 생각하는 redux best practice라고 생각하는 것들로 구성한 것 같습니다. 늦은 감이 좀 있지만 많은 부분을 커버하고 있고 redux 작성에 painful한 부분을 거의 대부분 해소했다고 생각합니다.
 
-일전에 공유한 [Redux Architecture](https://jbee.io/react/react-2-redux-architecture/) 글에서 다뤘던 내용들 중 많은 내용을 starter-kit이 다루고 있어 소개합니다.
+일전에 공유한 [Redux Architecture](https://jbee.io/articles/react/react-2-redux-architecture/) 글에서 다뤘던 내용들 중 많은 내용을 starter-kit이 다루고 있어 소개합니다.
 
 > 이 글을 다 읽고 난 후, 공식 문서도 한 번 읽어보시면 좋을 것 같습니다.
 

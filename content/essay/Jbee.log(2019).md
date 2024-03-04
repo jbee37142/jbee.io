@@ -6,8 +6,8 @@ category: essay
 
 ![2019_retro_thumbnail](./images/2019_retro_thumbnail.png)
 
-- [Jbee.log(2018)](https://jbee.io/essay/2018_retro/)
-- [Jbee.log(2017)](https://jbee.io/essay/2017_retro/)
+- [Jbee.log(2018)](https://jbee.io/articles/essay/2018_retro/)
+- [Jbee.log(2017)](https://jbee.io/articles/essay/2017_retro/)
 
 > 연말 회고  
 > 자동 반사
@@ -15,7 +15,7 @@ category: essay
 ## Jbee로서의 회고
 
 - 블로그 운영
-  - Gatsby로 블로그 마이그레이션 ([Link](https://jbee.io/etc/intro-new-blog/))
+  - Gatsby로 블로그 마이그레이션 ([Link](https://jbee.io/articles/etc/intro-new-blog/))
   - [resume](https://jbee.io/about)와 블로그 통합 및 개편
   - 도메인 구입 (jbee.io)
   - 블로그 starter-pack 만들어서 배포 ([gatsby-starter-bee](https://github.com/JaeYeopHan/gatsby-starter-bee))

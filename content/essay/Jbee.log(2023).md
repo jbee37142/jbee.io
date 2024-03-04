@@ -9,12 +9,12 @@ draft: false
 어김없이 올해가 다 지나가고 회고 시즌이 왔다. 올해는 분기별로 회고를 진행하고 있었어서 오래 걸리진 않았다. 연말에 다이빙 여행이 있어어 조금 일찍 회고를 정리해보았다. 2023년은 3가지 역할로 구분지어 회고했다.
 
 _previously on Jbee.log_
-- [Jbee.log(2022)](https://www.jbee.io/articles/essay/Jbee.log(2022))
-- [Jbee.log(2021)](https://www.jbee.io/articles/essay/Jbee.log(2021))
-- [Jbee.log(2020)](https://www.jbee.io/articles/essay/Jbee.log(2020))
-- [Jbee.log(2019)](https://www.jbee.io/articles/essay/Jbee.log(2019))
-- [Jbee.log(2018)](https://www.jbee.io/articles/essay/Jbee.log(2018))
-- [Jbee.log(2017)](https://www.jbee.io/articles/essay/Jbee.log(2017))
+- [Jbee.log(2022)](https://www.jbee.io/articles/articles/essay/Jbee.log(2022))
+- [Jbee.log(2021)](https://www.jbee.io/articles/articles/essay/Jbee.log(2021))
+- [Jbee.log(2020)](https://www.jbee.io/articles/articles/essay/Jbee.log(2020))
+- [Jbee.log(2019)](https://www.jbee.io/articles/articles/essay/Jbee.log(2019))
+- [Jbee.log(2018)](https://www.jbee.io/articles/articles/essay/Jbee.log(2018))
+- [Jbee.log(2017)](https://www.jbee.io/articles/articles/essay/Jbee.log(2017))
 
 ## 개발자
 > 아직 한 스푼 남은 코딩 경력

@@ -33,7 +33,7 @@ snapshot 테스트의 통과는 snapshot을 찍어둔 컴포넌트가 변하지 
 
 ## E2E Test에 대한 생각
 
-E2E Test에 대해서는 [2편](https://jbee.io/react/testing-2-react-testing/#e2e-%ED%85%8C%EC%8A%A4%ED%8A%B8-end-to-end-test)을 참고하면 된다.
+E2E Test에 대해서는 [2편](https://jbee.io/articles/react/testing-2-react-testing/#e2e-%ED%85%8C%EC%8A%A4%ED%8A%B8-end-to-end-test)을 참고하면 된다.
 
 ### 시나리오 Quality
 
@@ -83,4 +83,4 @@ Test Coverage란 테스트 코드가 커버(Cover)하고 있는 프로덕션 또
 
 |       |                                                                      |
 | :---: | :------------------------------------------------------------------: |
-| Intro | [0. 시리즈를 들어가며](https://jbee.io/react/testing-0-react-testing-intro/) |
+| Intro | [0. 시리즈를 들어가며](https://jbee.io/articles/react/testing-0-react-testing-intro/) |

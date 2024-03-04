@@ -10,9 +10,9 @@ draft: false
 
 ### 이전 회고
 
-- [Jbee.log(2019)](https://jbee.io/essay/2019_retro/)
-- [Jbee.log(2018)](https://jbee.io/essay/2018_retro/)
-- [Jbee.log(2017)](https://jbee.io/essay/2017_retro/)
+- [Jbee.log(2019)](https://jbee.io/articles/essay/2019_retro/)
+- [Jbee.log(2018)](https://jbee.io/articles/essay/2018_retro/)
+- [Jbee.log(2017)](https://jbee.io/articles/essay/2017_retro/)
 
 ### Table of Contents
 
@@ -65,7 +65,7 @@ draft: false
 
 작년 이맘때 쯤 백엔드 개발에 대한 욕심을 보인 적이 있었는데, 프런트엔드 개발에 대한 자만심 때문이었던 것 같기도 하다. 그래도 백엔드에 대한 관심은 놓치지 않고 틈만 보이면 시도해보고 있다. 지난 직장의 내 팀 동료에게 좁은 식견으로 프로젝트 구조를 잡고 리드했던 것에 대해 심심한 사과의 말을 전한다.
 
-자연스럽게 [성장에 대한 고민](https://jbee.io/essay/growth-mistaken-2020/)도 하게 되었고 [좋은 코드란 무엇일까](https://jbee.io/etc/what-is-good-code/)에 대해서도 깊게 고민해봤다. 최고의 복지는 동료라는 말을 믿지 않았는데, 맞는 말인 것 같기도 해서 나는 참 운이 좋다고 생각한다.
+자연스럽게 [성장에 대한 고민](https://jbee.io/articles/essay/growth-mistaken-2020/)도 하게 되었고 [좋은 코드란 무엇일까](https://jbee.io/articles/etc/what-is-good-code/)에 대해서도 깊게 고민해봤다. 최고의 복지는 동료라는 말을 믿지 않았는데, 맞는 말인 것 같기도 해서 나는 참 운이 좋다고 생각한다.
 
 > 세상은 넓고 고수는 많다. 👉 [**토스팀은 채용중**](https://toss.im/career)
 
@@ -111,7 +111,7 @@ FEConf2020 모든 세션은 [Youtube 공식 채널](https://www.youtube.com/chan
 
 ## 하고 싶은게 많은 엔지니어
 
-작년엔 [N년차 프론트엔드 엔지니어로서의 회고](https://jbee.io/essay/2019_retro/#n%EB%85%84%EC%B0%A8-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A1%9C%EC%84%9C%EC%9D%98-%ED%9A%8C%EA%B3%A0)라는 섹션에서 프런트엔드 개발자로서의 고민을 담았던 것 같다. 언제나 그랬듯 하고 싶은게 많았고 이직 후 적응이 마무리 된 하반기 동안 실행에 옮기느라 정신없었던 것 같다. 딱히 계획은 없었고 작년 회고에서처럼 상황에 따라 하고 싶은 일을 자연스럽게 하게 됐다.
+작년엔 [N년차 프론트엔드 엔지니어로서의 회고](https://jbee.io/articles/essay/2019_retro/#n%EB%85%84%EC%B0%A8-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A1%9C%EC%84%9C%EC%9D%98-%ED%9A%8C%EA%B3%A0)라는 섹션에서 프런트엔드 개발자로서의 고민을 담았던 것 같다. 언제나 그랬듯 하고 싶은게 많았고 이직 후 적응이 마무리 된 하반기 동안 실행에 옮기느라 정신없었던 것 같다. 딱히 계획은 없었고 작년 회고에서처럼 상황에 따라 하고 싶은 일을 자연스럽게 하게 됐다.
 
 ### 블로그
 

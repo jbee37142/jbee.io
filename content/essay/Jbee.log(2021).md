@@ -10,10 +10,10 @@ draft: false
 
 ### 이전 회고
 
-- [Jbee.log(2020)](https://jbee.io/essay/2020_retro/)
-- [Jbee.log(2019)](https://jbee.io/essay/2019_retro/)
-- [Jbee.log(2018)](https://jbee.io/essay/2018_retro/)
-- [Jbee.log(2017)](https://jbee.io/essay/2017_retro/)
+- [Jbee.log(2020)](https://jbee.io/articles/essay/2020_retro/)
+- [Jbee.log(2019)](https://jbee.io/articles/essay/2019_retro/)
+- [Jbee.log(2018)](https://jbee.io/articles/essay/2018_retro/)
+- [Jbee.log(2017)](https://jbee.io/articles/essay/2017_retro/)
 
 되돌아보면 정말 빨리 흘러간 한해였다. 물론 자세히 들여다보면 많은 우여곡절이 있었겠지만 말이다. ‘행동으로 옮겨서 좋았던 것’, ‘앞으로 해볼 것’, ‘하지 못해 아쉬웠던 것’ 세 가지로 회고해보려고 한다.
 
@@ -182,4 +182,4 @@ draft: false
 
 점점 시간이 빠르게 흐르는 것 같다. 하염없이 경력만 늘어나는 것을 경계하면서 경험을 쌓고 관점을 늘려가는 한해가 되었으면 좋겠다.
 
-- 자매품: Review 2021 프런트엔드, 그리고 2022 (<https://jbee.io/web/from-2021-to-2022/>)
+- 자매품: Review 2021 프런트엔드, 그리고 2022 (<https://jbee.io/articles/essay/from-2021-to-2022/>)
