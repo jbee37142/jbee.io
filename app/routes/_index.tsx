@@ -1,12 +1,13 @@
 import { json, type MetaFunction } from '@remix-run/node';
-import { Link, useLoaderData } from '@remix-run/react';
+import { useLoaderData } from '@remix-run/react';
 import { Logo } from '~/components/icon/Logo';
 import { SVGIcon } from '~/components/icon/SVGIcon';
+import { ArticlesSection } from '~/modules/article/articles-section';
 import { articleQuery } from '~/queries/article';
-import BlogConfig from '../../blog.config';
-import * as styles from './index.css';
 import { generateMeta } from '~/utils/meta/generate-meta';
 import { pathJoin } from '~/utils/path';
+import BlogConfig from '../../blog.config';
+import * as styles from './index.css';
 
 export const meta: MetaFunction = () => {
   return generateMeta({
@@ -40,19 +41,7 @@ export default function HomePage() {
           <SVGIcon.X />
         </Anchor>
       </div>
-      <section>
-        <h3>Recent articles</h3>
-        <ul className={styles.list}>
-          {articles.map(({ title, category }, index) => {
-            return (
-              <li key={index}>
-                <Link to={`/articles/${category}/${title}`} prefetch="intent">
-                  <span>{title}</span>
-                </Link>
-              </li>
-            )})}
-        </ul>
-      </section>
+      <ArticlesSection title="Recent articles" articles={articles} />
     </section>
   );
 }

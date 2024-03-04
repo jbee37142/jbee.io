@@ -2,7 +2,9 @@ import { style } from '@vanilla-extract/css';
 import { colors } from '~/styles/colors';
 import { flex, gap } from '~/styles/util.css';
 
-export const root = style([flex('column'), gap(0.7), {}]);
+export const root = style([flex('column'), gap(0.7), {
+  marginBottom: '8rem',
+}]);
 
 export const category = style({
   fontSize: '0.8rem',

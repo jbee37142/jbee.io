@@ -22,7 +22,7 @@ export interface Article {
   /**
    * @description frontmatter.date
    */
-  lastUpdatedAt: Date;
+  lastUpdatedAt: string;
   /**
    * @description frontmatter.thumbnail
    */

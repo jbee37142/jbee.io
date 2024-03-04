@@ -1,23 +1,26 @@
 import type { MetaFunction } from '@remix-run/node';
 import { LoaderFunctionArgs, json, redirect } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
+import { ArticlesSection } from '~/modules/article/articles-section';
 import { articleQuery } from '~/queries/article';
 import invariant from '~/utils/invariant';
 import { generateMeta } from '~/utils/meta/generate-meta';
-import { safelyFormatDate } from '~/utils/safelyFormatDate';
 import { pathJoin } from '~/utils/path';
+import { safelyFormatDate } from '~/utils/safelyFormatDate';
 import BlogConfig from '../../blog.config';
 import * as styles from './article.css';
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
-  const { category, title } = data ?? {};
+  const { category, title } = data?.article ?? {};
   invariant(category != null, '\'category\' is required');
   invariant(title != null, '\'title\' is required');
 
   return generateMeta({
-    title: [data?.title ?? 'Article', BlogConfig.seo.title],
-    description: data?.description ?? BlogConfig.seo.description,
-    image: data?.thumbnail != null ? pathJoin(BlogConfig.site, 'articles', category, data.thumbnail) : pathJoin(BlogConfig.site, BlogConfig.image.main),
+    title: [title, BlogConfig.seo.title],
+    description: data?.article.description ?? BlogConfig.seo.description,
+    image: data?.article.thumbnail != null
+      ? pathJoin(BlogConfig.site, 'articles', category, data.article.thumbnail)
+      : pathJoin(BlogConfig.site, BlogConfig.image.main),
     author: BlogConfig.author.twitter,
     site: BlogConfig.site,
   });
@@ -30,18 +33,23 @@ export async function loader({ params }: LoaderFunctionArgs) {
   invariant(category != null, '\'category\' is required');
   invariant(title != null, '\'title\' is required');
 
-  const article = await articleQuery.getArticle(category, title);
+  const [article, recentArticles] = await Promise.all([
+    articleQuery.getArticle(category, title),
+    articleQuery.getArticles({ count: 5 }),
+  ]);
 
   if (article == null) {
     return redirect('/404');
   }
 
-  return json(article);
+  return json({ article, recentArticles });
 }
 
 export default function ArticlePage() {
-  const { category, title, content, lastUpdatedAt, readingTime } =
-    useLoaderData<typeof loader>();
+  const {
+    article:{ category, title, content, lastUpdatedAt, readingTime },
+    recentArticles,
+  } = useLoaderData<typeof loader>();
 
   return (
     <section className={styles.root}>
@@ -54,6 +62,10 @@ export default function ArticlePage() {
         </span>
       </p>
       <article dangerouslySetInnerHTML={{ __html: content }} />
+      <hr />
+      <footer>
+        <ArticlesSection title="Recent articles" articles={recentArticles} />
+      </footer>
     </section>
   );
 }
