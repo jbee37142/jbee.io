@@ -391,5 +391,5 @@ function UserDropDown() {
 
 |       |                                                                               |
 | :---: | :---------------------------------------------------------------------------: |
-| Next  | [2. 클라이언트의 사용자 중심 예외 처리](/react/error-declarative-handling-2/) |
+| Next  | [2. 클라이언트의 사용자 중심 예외 처리](https://jbee.io/articles/react/error-declarative-handling-2/) |
 | Intro |   [0. 효율적인 프런트엔드 에러 핸들링](효율적인%20프런트엔드%20에러%20핸들링.md)   |
