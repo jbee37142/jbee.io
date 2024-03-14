@@ -24,7 +24,7 @@ export const link = style([common.anchor, {
     textUnderlinePosition: 'under',
     textDecorationColor: '#495057',
   }
-}])
+}]);
 
 export const dateText = style({
   fontSize: '0.9rem',

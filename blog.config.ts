@@ -33,4 +33,12 @@ export default {
   🎓 교육이 사회에 존재하는 많은 문제를 근본적으로 해결할 수 있다고 생각합니다. 어떻게 교육하는지 보단 무엇을 교육해야 하고 어떤 환경을 제공해야 할지에 더 관심이 많습니다. 다른 모습의 학교가 창조되길 바라며 영어 유치원을 다닐 필요없는 마을을 만들고 싶습니다.
   🪴 지속 가능성을 고민합니다. 소프트웨어 설계 뿐만 아니라 프로세스, 시스템, 문화에 대해 고민하곤 합니다. 개발 생태계에도 관심이 많아 n년째 프런트엔드 개발 컨퍼런스 FEConf를 운영하고 있습니다. 멀리는 해양 생태계가 지속 가능하길 바라며 언젠가 이것에 기여하는 일을 하고 싶습니다.
   `,
+  contacts: {
+    github: 'https://github.com/JaeYeopHan',
+    linkedin: 'https://www.linkedin.com/in/jbee0',
+    twitter: 'https://twitter.com/JbeeLjyhanll',
+    resume: 'https://docs.google.com/document/d/1NBCuW5DVscjbbaqfj2IkFRhTXzEdPTsPv5zchDXc_-M/edit?usp=sharing',
+    instagram: 'https://instagram.com/kai.fundiver',
+    youtube: 'https://www.youtube.com/@divelogchannel',
+  }
 };

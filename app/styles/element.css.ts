@@ -1,4 +1,5 @@
 import { style } from '@vanilla-extract/css';
+import { colors } from './colors';
 
 const anchor = style({
   textDecoration: 'none',
@@ -12,6 +13,19 @@ const anchor = style({
   },
 });
 
+const link = style([anchor, {
+  flex: 1,
+  paddingTop: '0.5rem',
+  paddingBottom: '0.5rem',
+  color: colors.blue500,
+  ':hover': {
+    textDecoration: 'underline',
+    textDecorationThickness: 'from-font',
+    textUnderlinePosition: 'under',
+    textDecorationColor: colors.blue500,
+  }
+}]);
+
 const listrow = style({
   display: 'flex',
   flexDirection: 'row',
@@ -19,5 +33,6 @@ const listrow = style({
 
 export const common = {
   anchor,
+  link,
   listrow,
 };
