@@ -1,5 +1,6 @@
 import { style } from '@vanilla-extract/css';
 import { colors } from '~/styles/colors';
+import { common } from '~/styles/element.css';
 import { flex, gap } from '~/styles/util.css';
 
 export const root = style([flex('column'), gap(0.7), {
@@ -35,3 +36,11 @@ export const updatedTime = style({
 export const readingTime = style({
   color: 'inherit',
 });
+
+export const backButton = style([common.anchor, {
+  display: 'block',
+  marginTop: '6rem',
+  fontSize: '1rem',
+  color: colors.gray800,
+  textDecoration: 'underline'
+}]);

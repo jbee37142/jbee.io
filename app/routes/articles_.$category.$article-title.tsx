@@ -67,7 +67,16 @@ export default function ArticlePage() {
       <footer>
         <ContactList />
         <ArticlesSection title={<h5>Recent articles</h5>} articles={recentArticles} />
+        <BackButton />
       </footer>
     </section>
+  );
+}
+
+function BackButton() {
+  return (
+    <a href="/articles" className={styles.backButton}>
+      ← Back to /articles
+    </a>
   );
 }
