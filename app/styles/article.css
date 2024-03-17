@@ -184,8 +184,12 @@ blockquote:not(.exclude) {
 article ul, ol {
     padding-left: calc(var(--line-height) * 1rem);
 }
-article > ul, ol {
+article > ul {
     list-style: square;
+}
+
+article > ol {
+    list-style: auto;
 }
 
 ul, ol > ul, ol {
