@@ -117,7 +117,7 @@ interface Transaction {
 function fetchTransactions(): Promise<Transaction[]> { ... }
 ```
 
-거래내역 목록을 보여주는 컴포넌트를 만들어야 할 때, 거래내역 목록 API를 호출해야 한다. 그리고 이 API는 `TransactionList` 라는 컴포넌트에서 호출하는 것이 가장 이상적이다. (cc. [좋은 코드란 무엇인가](https://jbee.io/articles/etc/what-is-good-code/#where))
+거래내역 목록을 보여주는 컴포넌트를 만들어야 할 때, 거래내역 목록 API를 호출해야 한다. 그리고 이 API는 `TransactionList` 라는 컴포넌트에서 호출하는 것이 가장 이상적이다. (cc. [좋은 코드란 무엇인가](https://www.jbee.io/articles/etc/%EC%A2%8B%EC%9D%80%20%EC%BD%94%EB%93%9C%EB%9E%80%20%EB%AC%B4%EC%97%87%EC%9D%BC%EA%B9%8C))
 
 ```ts
 function TransactionListA() {

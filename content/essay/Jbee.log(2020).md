@@ -30,7 +30,7 @@ draft: false
 
 ![2020_retro_0](./images/2020_retro_0.png)
 
-2020년 나에게 가장 큰 이벤트는 이직이었다. 이 과정에 대한 내용은 [이직 기록](https://jbee.io/career/2020-turnover-0/)을 통해 최대한 자세하게 정리해뒀다.
+2020년 나에게 가장 큰 이벤트는 이직이었다. 이 과정에 대한 내용은 [이직 기록](https://www.jbee.io/articles/career/%EC%9D%B4%EC%A7%81%EA%B8%B0%EB%A1%9D%200.%20Intro)을 통해 최대한 자세하게 정리해뒀다.
 
 ### Why, Toss
 
@@ -65,7 +65,7 @@ draft: false
 
 작년 이맘때 쯤 백엔드 개발에 대한 욕심을 보인 적이 있었는데, 프런트엔드 개발에 대한 자만심 때문이었던 것 같기도 하다. 그래도 백엔드에 대한 관심은 놓치지 않고 틈만 보이면 시도해보고 있다. 지난 직장의 내 팀 동료에게 좁은 식견으로 프로젝트 구조를 잡고 리드했던 것에 대해 심심한 사과의 말을 전한다.
 
-자연스럽게 [성장에 대한 고민](https://jbee.io/articles/essay/growth-mistaken-2020/)도 하게 되었고 [좋은 코드란 무엇일까](https://jbee.io/articles/etc/what-is-good-code/)에 대해서도 깊게 고민해봤다. 최고의 복지는 동료라는 말을 믿지 않았는데, 맞는 말인 것 같기도 해서 나는 참 운이 좋다고 생각한다.
+자연스럽게 [성장에 대한 고민](https://jbee.io/articles/essay/growth-mistaken-2020/)도 하게 되었고 [좋은 코드란 무엇일까](https://www.jbee.io/articles/etc/%EC%A2%8B%EC%9D%80%20%EC%BD%94%EB%93%9C%EB%9E%80%20%EB%AC%B4%EC%97%87%EC%9D%BC%EA%B9%8C)에 대해서도 깊게 고민해봤다. 최고의 복지는 동료라는 말을 믿지 않았는데, 맞는 말인 것 같기도 해서 나는 참 운이 좋다고 생각한다.
 
 > 세상은 넓고 고수는 많다. 👉 [**토스팀은 채용중**](https://toss.im/career)
 
