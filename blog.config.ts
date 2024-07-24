@@ -38,7 +38,7 @@ export default {
     linkedin: 'https://www.linkedin.com/in/jbee0',
     twitter: 'https://twitter.com/JbeeLjyhanll',
     resume: 'https://docs.google.com/document/d/1NBCuW5DVscjbbaqfj2IkFRhTXzEdPTsPv5zchDXc_-M/edit?usp=sharing',
-    instagram: 'https://instagram.com/kai.fundiver',
-    youtube: 'https://www.youtube.com/@divelogchannel',
+    instagram: 'https://instagram.com/diver.jbee',
+    youtube: 'https://www.youtube.com/@ssoyeop',
   }
 };
