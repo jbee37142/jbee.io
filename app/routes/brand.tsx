@@ -20,12 +20,12 @@ export default function BrandPage() {
         <h2>Frontend Engineer, Jbee</h2>
         <ul className={styles.list}>
           <li>
-            resume: <TextLink href={BlogConfig.contacts.resume}>link</TextLink>
+            resume: <TextLink href={BlogConfig.contacts.resume}>ko</TextLink>
           </li>
         </ul>
       </section>
       <section>
-        <h2>Diver, Kai</h2>
+        <h3>Scuba diver</h3>
         <ul className={styles.list}>
           <li>Instagram: <TextLink href={BlogConfig.contacts.instagram} /></li>
           <li>Youtube: <TextLink href={BlogConfig.contacts.youtube} /></li>
