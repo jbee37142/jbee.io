@@ -60,12 +60,18 @@ export default function ArticlePage() {
     <section className={styles.root}>
       <div className={styles.top}>
         <span className={styles.category}>{category}</span>
-        <a title="edit" href={BlogConfig.content.source + category + '/' + title + '.md'} className={styles.editButton}>
+        <a
+          className={styles.editButton}
+          title='edit'
+          href={BlogConfig.content.source + category + '/' + title + '.md'}
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           <img
             src={pencileIcon}
-            alt="edit button"
-            width="18px"
-            height="18px"
+            alt='edit button'
+            width='18px'
+            height='18px'
           />
         </a>
       </div>
@@ -89,7 +95,7 @@ export default function ArticlePage() {
 
 function BackButton() {
   return (
-    <a href="/articles" className={styles.backButton}>
+    <a href='/articles' className={styles.backButton}>
       ← Back to /articles
     </a>
   );
