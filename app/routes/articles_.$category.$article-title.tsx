@@ -1,6 +1,7 @@
 import type { MetaFunction } from '@remix-run/node';
 import { LoaderFunctionArgs, json, redirect } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
+import { pencileIcon } from '~/assets/icon/pencil';
 import { ArticlesSection } from '~/modules/article/articles-section';
 import { ContactList } from '~/modules/contact/ContactList';
 import { articleQuery } from '~/queries/article';
@@ -54,7 +55,17 @@ export default function ArticlePage() {
 
   return (
     <section className={styles.root}>
-      <span className={styles.category}>{category}</span>
+      <div className={styles.top}>
+        <span className={styles.category}>{category}</span>
+        <a title="edit" href={BlogConfig.content.source + category + '/' + title + '.md'} className={styles.editButton}>
+          <img
+            src={pencileIcon}
+            alt="edit button"
+            width="18px"
+            height="18px"
+          />
+        </a>
+      </div>
       <h1 className={styles.h1}>{title}</h1>
       <p className={styles.description}>
         <span className={styles.readingTime}>{readingTime} min read</span>|

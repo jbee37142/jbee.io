@@ -17,6 +17,7 @@ export default {
   },
   content: {
     directory: 'content',
+    source: 'https://github.com/JaeYeopHan/jbee.io/edit/main/content/',
   },
   image: {
     main: '/main-image.jpg', // public

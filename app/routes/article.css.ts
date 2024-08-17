@@ -20,6 +20,20 @@ export const category = style({
   borderRadius: '0.5rem',
 });
 
+export const top = style({
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+});
+
+export const editButton = style({
+  opacity: 0.5,
+  transition: 'opacity 0.3s',
+  ':hover': {
+    opacity: 0.9,
+  }
+});
+
 export const h1 = style({
 });
 
