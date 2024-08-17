@@ -14,6 +14,7 @@ import * as styles from './article.css';
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
   const { category, title } = data?.article ?? {};
+  
   invariant(category != null, '\'category\' is required');
   invariant(title != null, '\'title\' is required');
 
@@ -26,6 +27,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
     author: BlogConfig.author.twitter,
     site: BlogConfig.site,
     url: pathJoin(BlogConfig.site, 'articles', category, title),
+    logo: pathJoin(BlogConfig.site, 'logo.jpeg'),
   });
 };
 

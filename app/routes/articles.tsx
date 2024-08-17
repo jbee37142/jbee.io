@@ -12,6 +12,7 @@ export const meta: MetaFunction = () => {
     description: BlogConfig.seo.description,
     image: pathJoin(BlogConfig.site, BlogConfig.image.main),
     url: pathJoin(BlogConfig.site, 'articles'),
+    logo: pathJoin(BlogConfig.site, 'logo.jpeg'),
   });
 };
 
