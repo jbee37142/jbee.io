@@ -188,6 +188,14 @@ article > ul {
     list-style: square;
 }
 
+article > ul ul {
+    list-style: circle;
+}
+
+article > ul ul ul {
+    list-style: disc;
+}
+
 article > ol {
     list-style: auto;
 }
