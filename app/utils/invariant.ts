@@ -1,8 +1,8 @@
 const isProduction: boolean = process.env.NODE_ENV === 'production';
 const prefix: string = 'Invariant error';
 
-export default function invariant(
-  condition: any,
+export function invariant(
+  condition: unknown,
   message?: string | (() => string),
 ): asserts condition {
   if (condition) {

@@ -5,7 +5,7 @@ import { pencileIcon } from '~/assets/icon/pencil';
 import { ArticlesSection } from '~/modules/article/articles-section';
 import { ContactList } from '~/modules/contact/ContactList';
 import { articleQuery } from '~/queries/article';
-import invariant from '~/utils/invariant';
+import { invariant } from '~/utils/invariant';
 import { generateMeta } from '~/utils/meta/generate-meta';
 import { pathJoin } from '~/utils/path';
 import { safelyFormatDate } from '~/utils/safelyFormatDate';
