@@ -25,6 +25,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       : pathJoin(BlogConfig.site, BlogConfig.image.main),
     author: BlogConfig.author.twitter,
     site: BlogConfig.site,
+    url: pathJoin(BlogConfig.site, 'articles', category, title),
   });
 };
 

@@ -11,6 +11,7 @@ export const meta: MetaFunction = () => {
     title: ['Articles', BlogConfig.seo.title],
     description: BlogConfig.seo.description,
     image: pathJoin(BlogConfig.site, BlogConfig.image.main),
+    url: pathJoin(BlogConfig.site, 'articles'),
   });
 };
 
