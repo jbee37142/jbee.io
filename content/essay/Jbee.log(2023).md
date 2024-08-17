@@ -103,9 +103,9 @@ Read less는 책을 끝까지 다 읽어야 한다는 약간의 미련을 완전
 글의 서두에서 말했다시피 곧 있을 연말 연휴에도 필리핀으로 다이빙 여행을 갈 예정이고 내년 구정, 추석에도 다이빙 여행 일정이 잡혀있다. 혹시 스쿠버 다이빙에 관심이 생겼다면 [스쿠버 다이빙 이야기](https://www.jbee.io/articles/diving/%EC%8A%A4%EC%BF%A0%EB%B2%84%20%EB%8B%A4%EC%9D%B4%EB%B9%99%20%EC%9D%B4%EC%95%BC%EA%B8%B0)를 읽어보길 추천한다!
 
 #### 그린피스
-내친김에 미루고 미루던 [그린피스 해양보호 캠페인에 후원](https://supporter.ea.greenpeace.org/kr/s/donate?campaign=ocean)을 시작했다. (~~홈페이지에 개선하고 싶은게 참 많았는데 Frontend Engineer는 채용이 열려있지 않았다.~~) 작고 귀여운 금액이지만 꾸준히 하면 의미있지 않을까 하는 생각에 시작했다.
+내친김에 미루고 미루던 [그린피스 해양보호 캠페인에 후원](https://supporter.ea.greenpeace.org/kr/s/donate?campaign=ocean)을 시작했다. (그린피스 홈페이지에 개선하고 싶은게 참 많았는데 Frontend Engineer는 채용이 열려있지 않았다.) 작고 귀여운 금액이지만 꾸준히 하면 의미있지 않을까 하는 생각에 시작했다.
 
-![그린피스 후원](./images/greenpeace_support.png)
+![그린피스 후원](./images/greenpeace.png)
 
 ## 2024 목표
 올해를 마무리하고 나서 목표가 꽤 명확해졌다. 그리고 명확해진 목표와는 별개로 그 목표를 달성했을 때 어떤 성장을 이뤘을지, 어떤 결과물이 나올지는 또 명확하지 않더라. 다만 목표를 위해 더 많은 사람들과 이야기해보고 경험하지 못한 것들을 추구하려고 한다.
