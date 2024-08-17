@@ -5,7 +5,7 @@ import { pencileIcon } from '~/assets/icon/pencil';
 import { ArticlesSection } from '~/modules/article/articles-section';
 import { ContactList } from '~/modules/contact/ContactList';
 import { articleQuery } from '~/queries/article';
-import invariant from '~/utils/invariant';
+import { invariant } from '~/utils/invariant';
 import { generateMeta } from '~/utils/meta/generate-meta';
 import { pathJoin } from '~/utils/path';
 import { safelyFormatDate } from '~/utils/safelyFormatDate';
@@ -14,6 +14,7 @@ import * as styles from './article.css';
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
   const { category, title } = data?.article ?? {};
+  
   invariant(category != null, '\'category\' is required');
   invariant(title != null, '\'title\' is required');
 
@@ -25,6 +26,8 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       : pathJoin(BlogConfig.site, BlogConfig.image.main),
     author: BlogConfig.author.twitter,
     site: BlogConfig.site,
+    url: pathJoin(BlogConfig.site, 'articles', category, title),
+    logo: pathJoin(BlogConfig.site, 'logo.jpeg'),
   });
 };
 
@@ -57,12 +60,18 @@ export default function ArticlePage() {
     <section className={styles.root}>
       <div className={styles.top}>
         <span className={styles.category}>{category}</span>
-        <a title="edit" href={BlogConfig.content.source + category + '/' + title + '.md'} className={styles.editButton}>
+        <a
+          className={styles.editButton}
+          title='edit'
+          href={BlogConfig.content.source + category + '/' + title + '.md'}
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           <img
             src={pencileIcon}
-            alt="edit button"
-            width="18px"
-            height="18px"
+            alt='edit button'
+            width='18px'
+            height='18px'
           />
         </a>
       </div>
@@ -86,7 +95,7 @@ export default function ArticlePage() {
 
 function BackButton() {
   return (
-    <a href="/articles" className={styles.backButton}>
+    <a href='/articles' className={styles.backButton}>
       ← Back to /articles
     </a>
   );
