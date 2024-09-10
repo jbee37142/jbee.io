@@ -1,7 +1,7 @@
 import { LoaderFunctionArgs } from '@remix-run/node';
-import { Resvg } from '@resvg/resvg-js';
 import fs from 'fs';
 import satori from 'satori';
+import sharp from 'sharp';
 import { OpenGraphTemplate } from '~/components/og/OpenGraphTemplate';
 import { FreesentationFont } from '~/styles/font/freesentation';
 
@@ -24,9 +24,14 @@ export async function loader({
     }),
   })
 
-  return new Response(new Resvg(svg).render().asPng(), {
+  return new Response(await svgBufferToPngBuffer(svg), {
     headers: {
       'Content-Type': 'image/png',
     },
   })
+}
+async function svgBufferToPngBuffer(svg: string) {
+  const pngBuffer = await sharp(Buffer.from(svg)).png().toBuffer();
+
+  return pngBuffer;
 }
