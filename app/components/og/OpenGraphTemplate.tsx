@@ -27,7 +27,6 @@ export function OpenGraphTemplate({ title, date }: Props) {
           top: 0,
           left: 0,
           objectFit: 'cover',
-          transform: 'scaleX(-1)',
         }}
       />
       <div
