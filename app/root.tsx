@@ -1,15 +1,15 @@
-import { cssBundleHref } from '@remix-run/css-bundle';
 import type { LinksFunction } from '@remix-run/node';
 import {
   Links,
-  LiveReload,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
   isRouteErrorResponse,
-  useRouteError,
+  useRouteError
 } from '@remix-run/react';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/remix';
 import '~/styles/article.css';
 import '~/styles/global.css';
 import '~/styles/reset.css';
@@ -17,13 +17,10 @@ import BlogConfig from '../blog.config';
 import { Container } from './components/container/Container';
 import { GlobalNavigationBar } from './components/gnb/GlobalNavigationBar';
 import { GoogleAnalyticsScripts } from './utils/ga/google-analytics';
-import { createSitemapLink } from './utils/sitemap/link';
 import { createRSSLink } from './utils/rss/link';
-import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/remix'
+import { createSitemapLink } from './utils/sitemap/link';
 
 export const links: LinksFunction = () => [
-  ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
   { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css' },
   { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css' },
   { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/icon/favicon-32x32.png' },
@@ -52,7 +49,6 @@ export default function App() {
         </Layout>
         <ScrollRestoration />
         <Scripts />
-        <LiveReload />
         <Analytics />
         <SpeedInsights />
       </body>
