@@ -7,42 +7,42 @@ export function OpenGraphTemplate({ title, date }: Props) {
   return (
     <div
       style={{
-        padding: 64,
+        padding: 72,
         width: '100%',
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
         position: 'relative',
-        backgroundColor: '#000000',
         fontFamily: 'Freesentation, Roboto, sans-serif',
       }}
     >
       <img
-        src="https://jbee.io/img/open-graph-template.jpg"
+        src="https://jbee.io/img/open-graph-template.png"
         alt=""
+        width="1280px"
+        height="720px"
         style={{
-          width: '100%',
-          objectFit: 'cover',
           position: 'absolute',
-          bottom: 0,
-          right: 0,
+          top: 0,
+          left: 0,
+          objectFit: 'cover',
           transform: 'scaleX(-1)',
         }}
       />
       <div
         style={{
-          width: 700,
+          width: 960,
           display: 'flex',
           flexDirection: 'column',
-          gap: 16,
         }}
       >
         <p
           style={{
             color: '#343A40',
             fontSize: 80,
-            fontWeight: 700, 
+            fontWeight: 700,
+            wordBreak: 'keep-all',
           }}
         >
           {title}

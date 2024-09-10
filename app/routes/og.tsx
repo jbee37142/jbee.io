@@ -23,11 +23,8 @@ export async function loader({
       }
     }),
   })
-  const resvg = new Resvg(svg)
-  const pngData = resvg.render()
-  const data = pngData.asPng()
 
-  return new Response(data, {
+  return new Response(new Resvg(svg).render().asPng(), {
     headers: {
       'Content-Type': 'image/png',
     },
