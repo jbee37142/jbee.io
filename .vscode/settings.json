@@ -1,0 +1,11 @@
+{
+  "typescript.preferGoToSourceDefinition": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always",
+    "source.organizeImports": "always",
+    "source.removeUnusedImports": "always",
+    "source.fixAll.ts": "always",
+    "source.sortImports": "always",
+    "source.addMissingImports.ts": "always"
+  }
+}
