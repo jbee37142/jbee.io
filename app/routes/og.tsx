@@ -18,7 +18,7 @@ export async function loader({
     fonts: Object.entries(FreesentationFont).map(([, { filename, weight }]) => {
       return {
         name: 'Freesentation',
-        data: fs.readFileSync(`./fonts/${filename}`),
+        data: fs.readFileSync(`/fonts/${filename}`),
         weight,
       }
     }),
