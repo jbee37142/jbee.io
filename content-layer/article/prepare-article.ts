@@ -52,7 +52,7 @@ async function buildArticle(text: string) {
     category: attr.category,
     content: html,
     title: attr.title,
-    lastUpdatedAt: attr.date,
+    lastUpdatedAt: attr.date.toString(),
     thumbnail: attr.thumbnail, // TODO: default thumbnail
     description: attr?.description,
     readingTime: attr.readingTime,
