@@ -1,4 +1,3 @@
-import Giscus from '@giscus/react';
 
 import type { MetaFunction } from '@remix-run/node';
 import { LoaderFunctionArgs, json, redirect } from '@remix-run/node';
@@ -88,20 +87,6 @@ export default function ArticlePage() {
       <hr />
       <footer>
         <ContactList />
-        <Giscus
-          id="comments"
-          repo={BlogConfig.comments.repo as `${string}/${string}`}
-          repoId="R_kgDOM2stlg="
-          category="Announcements"
-          categoryId="DIC_kwDOM2stls4Ciw3h"
-          mapping="og:title"
-          reactionsEnabled="1"
-          emitMetadata="0"
-          inputPosition="top"
-          theme="light"
-          lang="ko"
-          loading="lazy"
-        />
         <ArticlesSection title={<h5>Recent articles</h5>} articles={recentArticles} />
         <BackButton />
       </footer>
