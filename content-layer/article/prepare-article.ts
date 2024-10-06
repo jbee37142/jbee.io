@@ -55,6 +55,7 @@ async function buildArticle(text: string) {
     lastUpdatedAt: attr.date.toString(),
     thumbnail: attr.thumbnail, // TODO: default thumbnail
     description: attr?.description,
+    permalink: attr?.permalink,
     readingTime: attr.readingTime,
   };
   
