@@ -32,6 +32,10 @@ export interface Article {
    */
   description?: string;
   /**
+   * @description frontmatter.permalink
+   */
+  permalink?: string;
+  /**
    * @description calculated by 'reading-time' package
    */
   readingTime: number;
@@ -43,5 +47,6 @@ export interface ArticleFrontMatter {
   category: string;
   thumbnail?: string;
   description?: string;
+  permalink?: string;
   draft?: boolean;
 }
