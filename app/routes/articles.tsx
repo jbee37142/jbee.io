@@ -1,10 +1,10 @@
 import { Link, MetaFunction, json, useLoaderData } from '@remix-run/react';
 import { articleQuery } from '~/queries/article';
+import { generateMeta } from '~/utils/meta/generate-meta';
+import { pathJoin } from '~/utils/path';
 import { safelyFormatDate } from '~/utils/safelyFormatDate';
 import BlogConfig from '../../blog.config';
 import * as styles from './articles.css';
-import { generateMeta } from '~/utils/meta/generate-meta';
-import { pathJoin } from '~/utils/path';
 
 export const meta: MetaFunction = () => {
   return generateMeta({
@@ -27,10 +27,10 @@ export default function ArticlesPage() {
 
   return (
     <ul className={styles.root}>
-      {articles.map(({ title, category, lastUpdatedAt }, index) => {
+      {articles.map(({ title, category, lastUpdatedAt, permalink }, index) => {
         return (
           <li key={index} className={styles.item}>
-            <Link to={`/articles/${category}/${title}`} className={styles.link} prefetch="intent">
+            <Link to={`/articles/${category}/${permalink ?? title}`} className={styles.link} prefetch="intent">
               <span>{title}</span>
             </Link>
             <span className={styles.dateText}>{safelyFormatDate(lastUpdatedAt)}</span>

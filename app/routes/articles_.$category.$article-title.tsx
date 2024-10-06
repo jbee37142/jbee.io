@@ -39,10 +39,13 @@ export async function loader({ params }: LoaderFunctionArgs) {
   invariant(category != null, '\'category\' is required');
   invariant(title != null, '\'title\' is required');
 
-  const [article, recentArticles] = await Promise.all([
+  const [articleByPermalink, articleByTitle, recentArticles] = await Promise.all([
+    articleQuery.getArticleByPermalink(title),
     articleQuery.getArticle(category, title),
     articleQuery.getArticles({ count: 5 }),
   ]);
+
+  const article = articleByPermalink ?? articleByTitle;
 
   if (article == null) {
     return redirect('/404');

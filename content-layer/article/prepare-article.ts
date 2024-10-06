@@ -25,6 +25,9 @@ export async function prepareArticles({ from: baseDirectory, to: destination }: 
       manifest.push(article);
       console.log('[content-layer] generated: ', article.title);
       await fs.outputJson(`${destination}/${article.id}.json`, article)
+      if (article.permalink != null) {
+        await fs.outputJson(`${destination}/${article.permalink}.json`, article)
+      }
     }
   }));
   await fs.outputJson(`${destination}/manifest.json`, { articles: JSON.stringify(manifest) });

@@ -33,8 +33,16 @@ async function getArticle(category: string, title: string): Promise<Article | nu
   try {
     return await fs.readJSON(articlesDir(`${getArticleId(category, title)}.json`));
   } catch {
-    console.error('Article not found', category, title);
+    console.error('Article not found: ', category, title);
   
+    return null;
+  }
+}
+
+async function getArticleByPermalink(permalink: string): Promise<Article | null> {
+  try {
+    return await fs.readJSON(articlesDir(`${permalink}.json`));
+  } catch {
     return null;
   }
 }
@@ -42,4 +50,5 @@ async function getArticle(category: string, title: string): Promise<Article | nu
 export const articleQuery = {
   getArticle,
   getArticles,
+  getArticleByPermalink,
 }
