@@ -7,10 +7,10 @@ export const loader: LoaderFunction = async () => {
   const articles = await articleQuery.getArticles();
   
   const feed = generateRss(BlogConfig.origin, {
-    title: 'My Blog',
-    description: 'My Blog',
+    title: BlogConfig.seo.title,
+    description: BlogConfig.seo.description,
     lang:'ko',
-    link: `https://${BlogConfig.origin}}`,
+    link: BlogConfig.site,
     entries: articles.map((article) => ({
       description: article.description ?? '',
       pubDate: new Date(article.lastUpdatedAt).toUTCString(),
