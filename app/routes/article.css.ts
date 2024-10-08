@@ -55,6 +55,5 @@ export const backButton = style([common.anchor, {
   display: 'block',
   marginTop: '6rem',
   fontSize: '1rem',
-  color: colors.gray800,
   textDecoration: 'underline'
 }]);
