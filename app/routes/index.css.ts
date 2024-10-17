@@ -10,3 +10,15 @@ export const post = style({
   wordBreak: 'keep-all',
   margin: 0,
 });
+
+export const arrowButton = style({
+  fontSize: '1rem',
+  textDecoration: 'underline',
+  color: 'var(--color-primary)',
+  ':hover': {
+    color: 'var(--color-primary-dark)',
+  },
+  display: 'flex',
+  alignSelf: 'flex-end',
+  
+});

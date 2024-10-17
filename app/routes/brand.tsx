@@ -1,5 +1,6 @@
 import { MetaFunction } from '@remix-run/node';
 import { TextLink } from '~/components/text-link/TextLink';
+import { ContactList } from '~/modules/contact/ContactList';
 import { generateMeta } from '~/utils/meta/generate-meta';
 import { pathJoin } from '~/utils/path';
 import BlogConfig from '../../blog.config';
@@ -17,12 +18,12 @@ export const meta: MetaFunction = () => {
 
 export default function BrandPage() {
   return (
-    <section>
+    <section className={styles.root}>
       <section>
-        <h2>Frontend Engineer, Jbee</h2>
+        <h3>👋 Frontend Engineer, Jbee</h3>
         <p>Resume: <TextLink href={BlogConfig.contacts.resume}>🇰🇷 한국어</TextLink> | <TextLink href="https://docs.google.com/document/d/1aiSYwhp9h8QI2KvbzcAFEepTjWg9Bo6bU18qXGD-qIY/edit?usp=sharing">🇺🇸 English</TextLink></p>
         <section>
-          <h3>Community</h3>
+          <h4>Community</h4>
           <ul className={styles.list}>
             <li>
               <TextLink href="https://2024.feconf.kr/">FEConf Organizer</TextLink> (18.06 - current)
@@ -30,7 +31,7 @@ export default function BrandPage() {
           </ul>
         </section>
         <section>
-          <h3>Presentations</h3>
+          <h4>Presentations</h4>
           <ul className={styles.list}>
             <li><TextLink href='https://www.youtube.com/watch?v=qlNzmQEuMjQ'>너디너리 데모데이: 개발자의 학과습</TextLink> (2023.09.09)</li>
             <li><TextLink href='https://speakerdeck.com/jaeyeophan/yunanhan-ende'>프런트엔드 다이빙 클럽: 유난한 엔데</TextLink> (2023.06.30)</li>
@@ -44,7 +45,7 @@ export default function BrandPage() {
           </ul>
         </section>
         <section>
-          <h3>Articles</h3>
+          <h4>Articles</h4>
           <ul className={styles.list}>
             <li>
               <TextLink href="https://toss.tech/article/restructuring">달리는 기차의 바퀴 교체하기 2. Restructuring</TextLink>
@@ -58,7 +59,7 @@ export default function BrandPage() {
           </ul>
         </section>
         <section>
-          <h3>Books</h3>
+          <h4>Books</h4>
           <ul className={styles.list}>
             <li>
               <TextLink href="https://fastcampus.co.kr/books/212106">커리어 속에서 성장하는 방법</TextLink>
@@ -66,7 +67,7 @@ export default function BrandPage() {
           </ul>
         </section>
         <section>
-          <h3>Mentoring</h3>
+          <h4>Mentoring</h4>
           <ul className={styles.list}>
             <li>
               <TextLink href="https://f-lab.kr/">F-lab Mehtor</TextLink> (22.11 - 24.10)
@@ -81,15 +82,19 @@ export default function BrandPage() {
         </section>
       </section>
       <section>
-        <h3>One more thing</h3>
+        <h4>One more thing</h4>
         <p>{'I\'m scuba diver'}</p>
         <ul className={styles.list}>
           <li>Instagram: <TextLink href={BlogConfig.contacts.instagram} /></li>
           <li>Youtube: <TextLink href={BlogConfig.contacts.youtube} /></li>
         </ul>
       </section>
+      <section>
+        <h4>Contacts</h4>
+        <p>Feel free to contact</p>
+        <ContactList />
+      </section>
     </section>
-    
   );
 }
 
