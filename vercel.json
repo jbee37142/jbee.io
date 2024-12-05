@@ -5,6 +5,10 @@
       "destination": "/brand"
     },
     {
+      "source": "/about/",
+      "destination": "/brand"
+    },
+    {
       "source": "/career/:title",
       "destination": "/articles/career/:title"
     },
