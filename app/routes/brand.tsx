@@ -70,7 +70,7 @@ export default function BrandPage() {
           <h4>Mentoring</h4>
           <ul className={styles.list}>
             <li>
-              <TextLink href="https://f-lab.kr/">F-lab Mehtor</TextLink> (22.11 - 24.10)
+              <TextLink href="https://f-lab.kr/">F-lab Mentor</TextLink> (22.11 - 24.10)
             </li>
             <li>
               <TextLink href="https://www.woowacourse.io/">우아한테크코스 리뷰어</TextLink> (21.02 - 21.06)
