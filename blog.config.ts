@@ -3,7 +3,7 @@ export default {
   site: 'https://jbee.io',
   author: {
     displayName: 'Jbee',
-    twitter: 'JbeeLjyhanll',
+    twitter: 'jbee_han',
   },
   seo: {
     title: 'Jbee.io',
@@ -39,7 +39,7 @@ export default {
   contacts: {
     github: 'https://github.com/JaeYeopHan',
     linkedin: 'https://www.linkedin.com/in/jbee0',
-    twitter: 'https://twitter.com/JbeeLjyhanll',
+    twitter: 'https://twitter.com/jbee_han',
     resume: 'https://docs.google.com/document/d/1NBCuW5DVscjbbaqfj2IkFRhTXzEdPTsPv5zchDXc_-M/edit?usp=sharing',
     instagram: 'https://instagram.com/diver.jbee',
     youtube: 'https://www.youtube.com/@ssoyeop',
