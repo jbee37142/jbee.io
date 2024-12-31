@@ -1,6 +1,6 @@
 ---
 title: 'Jbee.log(2024)'
-date: 2024-12-31 17:12:12
+date: 2024-12-31 12:12:12
 category: essay
 thumbnail: './images/2024_retro_thumbnail.jpg'
 draft: false
