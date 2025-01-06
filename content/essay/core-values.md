@@ -6,6 +6,8 @@ thumbnail: './images/core-values.jpg'
 draft: false
 ---
 
+![](./images/core-values.jpg)
+
 아래 3가지는 제게 가장 중요한 가치입니다. 이 세 가지 만큼은 놓치고 싶지 않아 곁에 두곤 합니다.
 
 ### 겸손
