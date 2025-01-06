@@ -4,6 +4,7 @@ date: 2025-01-07 08:00:00
 category: essay
 thumbnail: './images/core-values.jpg'
 draft: false
+permalink: core-values
 ---
 
 ![](./images/core-values.jpg)
