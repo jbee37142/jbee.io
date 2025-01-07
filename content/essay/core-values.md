@@ -38,3 +38,5 @@ permalink: core-values
 친절함. 여유를 갖고 상대방을 존중하면 선한 마음을 베풀 수 있습니다.  
 
 선한 마음과 꾸준한 성장이 비범함을 만든다고 생각합니다.
+
+- [일과 삶의 통합](https://jbee.io/articles/essay/%EC%9D%BC%EA%B3%BC%20%EC%82%B6%EC%9D%98%20%ED%86%B5%ED%95%A9)
