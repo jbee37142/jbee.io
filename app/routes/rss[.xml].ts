@@ -1,4 +1,4 @@
-import { LoaderFunction } from '@remix-run/node';
+import { LoaderFunction } from 'react-router';
 import { articleQuery } from '~/queries/article';
 import { generateRss } from '~/utils/rss/generate-rss';
 import BlogConfig from '../../blog.config';

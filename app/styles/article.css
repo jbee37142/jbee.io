@@ -6,6 +6,8 @@
     html {
         --background-color: #f8f9fa;
         --color: #343a40;
+        --link-color: #5167f4;
+        --link-hover-color: #3550ff;
         --inline-code-background-color: #e9ecef;
     }
     html[data-high-contrast="on"] {
@@ -17,6 +19,8 @@
     html {
         --background-color: #212529;
         --color: #fff;
+        --link-color: #8bc3ff;
+        --link-hover-color: #4dc4ff;
         --inline-code-background-color: #343a40;
     }
     html[data-high-contrast="on"] {
@@ -80,7 +84,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote, hr, footer, header, nav, figure, figcapti
 
 /* Headings */
 h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 800;
     line-height: calc(var(--line-height) * 2rem);
     margin-top: 0;
@@ -89,31 +93,31 @@ h1 {
 }
 
 h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: calc(var(--line-height) * 2rem);
-    margin-bottom: calc(var(--line-height) * 0.5rem);
-    padding-top: calc(var(--line-height) * 2rem);
-}
-
-h3 {
-    font-size: 1.75rem;
+    font-size: 1.15rem;
     font-weight: 600;
-    line-height: calc(var(--line-height) * 1.2rem);
-    margin-bottom: calc(var(--line-height) * 0.25rem);
-    padding-top: calc(var(--line-height) * 1.5rem);
-}
-
-h4 {
-    font-size: 1.5rem;
-    font-weight: 500;
-    line-height: calc(var(--line-height) * 1.2rem);
-    margin-bottom: calc(var(--line-height) * 0.25rem);
+    line-height: calc(var(--line-height) * 1.5rem);
+    margin-bottom: calc(var(--line-height) * 0.5rem);
     padding-top: calc(var(--line-height) * 1.25rem);
 }
 
+h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: calc(var(--line-height) * 1.2rem);
+    margin-bottom: calc(var(--line-height) * 0.25rem);
+    padding-top: calc(var(--line-height) * 1.15rem);
+}
+
+h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: calc(var(--line-height) * 1.1rem);
+    margin-bottom: calc(var(--line-height) * 0.25rem);
+    padding-top: calc(var(--line-height) * 1rem);
+}
+
 h5, h6 {
-    font-size: 1.25rem;
+    font-size: 1rem;
     line-height: calc(var(--line-height) * 1.2rem);
     margin-bottom: calc(var(--line-height) * 0.25rem);
     padding-top: calc(var(--line-height) * 1rem);
@@ -219,6 +223,19 @@ ul, ol > ul, ol {
     padding-left: calc(var(--line-height) * 1rem);
 }
 
-article a {
-    color: #4055dc;
+article a[href] {
+    color: var(--link-color);
+    text-decoration: underline;
+    text-decoration-color: var(--link-color);
+    text-decoration-thickness: 0.05rem;
+    text-underline-position: under;
+    &:hover {
+        text-decoration: none;
+        color: var(--link-hover-color);
+    }
+
+    &.hash {
+        text-decoration: none;
+        color: var(--color);
+    }
 }

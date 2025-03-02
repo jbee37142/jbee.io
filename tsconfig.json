@@ -1,5 +1,5 @@
 {
-  "include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx", "content-layer", "scripts"],
+  "include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx", "content-layer", "scripts", ".react-router/types/**/*"],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2022"],
     "isolatedModules": true,
@@ -14,7 +14,8 @@
     "forceConsistentCasingInFileNames": true,
     "allowImportingTsExtensions": true,
     "baseUrl": ".",
-    "types": ["@remix-run/node", "vite/client"],
+    "types": ["@react-router/node", "vite/client"],
+    "rootDirs": [".", "./.react-router/types"],
     "module": "ESNext",
     "paths": {
       "~/*": ["./app/*"]

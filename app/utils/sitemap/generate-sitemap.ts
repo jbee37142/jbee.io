@@ -1,7 +1,7 @@
 /**
  * @see {@link https://github.com/nasa-gcn/remix-seo/blob/main/src/sitemap/index.ts}
  */
-import type { ServerBuild } from '@remix-run/server-runtime';
+import type { ServerBuild } from 'react-router';
 import { isEqual } from '../isEqual';
 import { SEOHandle, SEOOptions, SitemapEntry } from './types';
 

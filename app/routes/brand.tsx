@@ -1,4 +1,4 @@
-import { MetaFunction } from '@remix-run/node';
+import { MetaFunction } from 'react-router';
 import { TextLink } from '~/components/text-link/TextLink';
 import { ContactList } from '~/modules/contact/ContactList';
 import { generateMeta } from '~/utils/meta/generate-meta';

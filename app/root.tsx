@@ -1,4 +1,5 @@
-import type { LinksFunction } from '@remix-run/node';
+import { Analytics } from '@vercel/analytics/react';
+import type { LinksFunction } from 'react-router';
 import {
   Links,
   Meta,
@@ -6,10 +7,8 @@ import {
   Scripts,
   ScrollRestoration,
   isRouteErrorResponse,
-  useRouteError
-} from '@remix-run/react';
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/remix';
+  useRouteError,
+} from 'react-router';
 import '~/styles/article.css';
 import '~/styles/global.css';
 import '~/styles/reset.css';
@@ -51,7 +50,6 @@ export default function App() {
         <ScrollRestoration />
         <Scripts />
         <Analytics />
-        <SpeedInsights />
       </body>
     </html>
   );

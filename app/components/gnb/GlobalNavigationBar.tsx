@@ -1,4 +1,4 @@
-import { NavLink } from '@remix-run/react';
+import { NavLink } from 'react-router';
 import * as styles from './styles.css';
 
 export function GlobalNavigationBar() {

@@ -1,13 +1,19 @@
 html {
     scrollbar-gutter: stable;
+    text-shadow: 0 0 0.1px rgba(0, 0, 0, 0.3);
+    -webkit-text-size-adjust: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, li, a, span, div {
-    font-family: 'Pretendard';
+    font-family: 'Pretendard', sans-serif;
 }
 
 article:not(pre) {
-    font-family: 'Pretendard';
+    font-family: 'Pretendard', sans-serif;
 }
 
 @media (prefers-color-scheme: light) {

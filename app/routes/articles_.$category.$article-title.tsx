@@ -1,7 +1,6 @@
 
-import type { MetaFunction } from '@remix-run/node';
-import { LoaderFunctionArgs, json, redirect } from '@remix-run/node';
-import { useLoaderData } from '@remix-run/react';
+import type { MetaFunction } from 'react-router';
+import { LoaderFunctionArgs, redirect, useLoaderData } from 'react-router';
 import { pencileIcon } from '~/assets/icon/pencil';
 import { ArticlesSection } from '~/modules/article/articles-section';
 import { ContactList } from '~/modules/contact/ContactList';
@@ -51,7 +50,7 @@ export async function loader({ params }: LoaderFunctionArgs) {
     return redirect('/404');
   }
 
-  return json({ article, recentArticles });
+  return { article, recentArticles };
 }
 
 export default function ArticlePage() {

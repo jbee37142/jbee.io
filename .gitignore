@@ -8,3 +8,4 @@ node_modules
 .vercel
 memo.txt
 .DS_Store
+.react-router/

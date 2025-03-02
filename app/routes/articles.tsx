@@ -1,4 +1,4 @@
-import { Link, MetaFunction, json, useLoaderData } from '@remix-run/react';
+import { Link, MetaFunction, useLoaderData } from 'react-router';
 import { articleQuery } from '~/queries/article';
 import { generateMeta } from '~/utils/meta/generate-meta';
 import { pathJoin } from '~/utils/path';
@@ -17,7 +17,7 @@ export const meta: MetaFunction = () => {
 };
 
 export async function loader() {
-  const articles = json(await articleQuery.getArticles());
+  const articles = await articleQuery.getArticles();
 
   return articles
 }
