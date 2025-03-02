@@ -1,4 +1,4 @@
-import { LoaderFunctionArgs } from '@remix-run/node';
+import { LoaderFunctionArgs } from 'react-router';
 import satori from 'satori';
 import sharp from 'sharp';
 import { OpenGraphTemplate } from '~/components/og/OpenGraphTemplate';

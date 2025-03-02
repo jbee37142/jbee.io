@@ -1,4 +1,4 @@
-import { MetaDescriptor } from '@remix-run/node';
+import { MetaDescriptor } from 'react-router';
 
 interface generateMetaOptions {
   title: string[];

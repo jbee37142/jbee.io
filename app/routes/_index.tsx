@@ -1,6 +1,5 @@
-import { json, type MetaFunction } from '@remix-run/node';
-import { useLoaderData } from '@remix-run/react';
 import { ReactNode } from 'react';
+import { useLoaderData, type MetaFunction } from 'react-router';
 import { Logo } from '~/components/icon/Logo';
 import { ArticlesSection } from '~/modules/article/articles-section';
 import { articleQuery } from '~/queries/article';
@@ -20,7 +19,7 @@ export const meta: MetaFunction = () => {
 };
 
 export async function loader() {
-  const articles = json(await articleQuery.getArticles({ count: 5 }));
+  const articles = await articleQuery.getArticles({ count: 5 });
 
   return articles
 }

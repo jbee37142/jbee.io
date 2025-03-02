@@ -1,4 +1,4 @@
-import { LoaderFunctionArgs } from '@remix-run/node';
+import { LoaderFunctionArgs } from 'react-router';
 import logo from '~/components/icon/logo.png';
 
 export async function loader({ request }: LoaderFunctionArgs) {
