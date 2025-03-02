@@ -53,3 +53,12 @@ permalink: release-note-2025-02
 - 개발, 더 좋은 인터페이스 더 좋은 라이브러리들이 나와도 새로운 것들은 LLM-friendly 하지 않아 사용하기 망설여진다.
 - 하나의 글을 더 발행하고 싶었는데, 초안으로 남겨두고 미처 발행하지 못했다. 좀 더 쉽게 발행할 수 있는 시스템!이 필요하다.
 - 2월엔 사람 만나는 데에 시간을 많이 할애하지 못했다. 2명과만 커피챗을 했다. 좀 더 많은 사람을 만나고 싶은데, 둘다 가능한 약속 날짜 정하고 장소 정하고 너무 귀찮다. 매주 목요일, 저녁 성수 이런 느낌으로 만날 수 없을지 고민하고 있다. 사람들을 만나 대화하면서 에너지를 받기도 하고 예상치 못한 행운을 만나기도 한다. 아직까지 운의 표면적을 넓히는 데에 어떤 사람을 만나는 것만큼 좋은게 없는 것 같다.
+
+### Worth the Click
+
+- Developing taste
+  - 단순히 제품을 만드는 것은 누구나 할 수 있는 시대, 이젠 브랜드, 직관적인 사용성, 경험이 중요하다는 것을 이야기 한다. 글 내에 링크되어 있는 [Taste is eating silicon valley](https://www.workingtheorys.com/p/taste-is-eating-silicon-valley)도 생각할 거리를 던져준다.
+  - 본문: [https://emilkowal.ski/ui/developing-taste](https://emilkowal.ski/ui/developing-taste)
+- 50 things we’ve learned about building successful products
+  - 지금 팀에서 제품이 어떻게 개발되고 있는지 회고해볼 포인트를 제시한다.
+  - 본문: [https://newsletter.posthog.com/p/50-things-weve-learned-about-building](https://newsletter.posthog.com/p/50-things-weve-learned-about-building)
