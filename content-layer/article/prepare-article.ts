@@ -13,7 +13,7 @@ import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import { unified } from 'unified';
 import { Article, ArticleFrontMatter, Category, Title } from './types';
-import { urlToLink } from './url-to-link';
+import { urlToLink } from './url-to-link.js';
 
 export async function prepareArticles({ from: baseDirectory, to: destination }: {from:string;to:string}) {
   const markdownFiles = await fb.glob('**/*.md', { cwd: baseDirectory });
