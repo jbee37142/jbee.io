@@ -223,7 +223,7 @@ ul, ol > ul, ol {
     padding-left: calc(var(--line-height) * 1rem);
 }
 
-article a {
+article a[href] {
     color: var(--link-color);
     text-decoration: underline;
     text-decoration-color: var(--link-color);
@@ -232,5 +232,10 @@ article a {
     &:hover {
         text-decoration: none;
         color: var(--link-hover-color);
-    }   
+    }
+
+    &.hash {
+        text-decoration: none;
+        color: var(--color);
+    }
 }

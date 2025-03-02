@@ -1,10 +1,12 @@
-  
 import rehypeShiki from '@shikijs/rehype';
 import fb from 'fast-glob';
 import fm from 'front-matter';
 import fs from 'fs-extra';
 import path from 'node:path';
 import readingTime from 'reading-time';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypeExternalLinks from 'rehype-external-links';
+import rehypeSlug from 'rehype-slug';
 import rehypeStringify from 'rehype-stringify';
 import remarkFrontmatter from 'remark-frontmatter';
 import remarkParse from 'remark-parse';
@@ -88,6 +90,14 @@ async function parseMarkdown<FrontMatterType>(text: string) {
         light: 'vitesse-light',
         dark: 'vitesse-dark',
       }
+    })
+    .use(rehypeExternalLinks, {rel: ['nofollow']})
+    .use(rehypeSlug)
+    .use(rehypeAutolinkHeadings, {
+      behavior: 'wrap',
+      properties: {
+        className: ['hash'],
+      },
     })
     .use(rehypeStringify)
     .use(remarkFrontmatter, ['yaml', 'toml'])
