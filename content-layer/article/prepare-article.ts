@@ -13,6 +13,7 @@ import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import { unified } from 'unified';
 import { Article, ArticleFrontMatter, Category, Title } from './types';
+import { urlToLink } from './url-to-link';
 
 export async function prepareArticles({ from: baseDirectory, to: destination }: {from:string;to:string}) {
   const markdownFiles = await fb.glob('**/*.md', { cwd: baseDirectory });
@@ -91,6 +92,8 @@ async function parseMarkdown<FrontMatterType>(text: string) {
         dark: 'vitesse-dark',
       }
     })
+    .use(rehypeStringify)
+    .use(urlToLink)
     .use(rehypeExternalLinks, {rel: ['nofollow']})
     .use(rehypeSlug)
     .use(rehypeAutolinkHeadings, {
@@ -99,7 +102,6 @@ async function parseMarkdown<FrontMatterType>(text: string) {
         className: ['hash'],
       },
     })
-    .use(rehypeStringify)
     .use(remarkFrontmatter, ['yaml', 'toml'])
     .process(text)
     .then((value) => String(value));
