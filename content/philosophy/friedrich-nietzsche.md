@@ -4,6 +4,7 @@ date: 2025-01-30 12:12:12
 category: philosophy
 thumbnail: './images/friedrich-nietzsche.jpg'
 draft: false
+permalink: friedrich-nietzsche
 ---
 
 ![](./images/friedrich-nietzsche.jpg)

@@ -4,6 +4,7 @@ date: 2025-02-15 12:12:12
 category: philosophy
 thumbnail: './images/jean-paul-sartre.jpg'
 draft: false
+permalink: jean-paul-sartre
 ---
 
 ![](./images/jean-paul-sartre.jpg)

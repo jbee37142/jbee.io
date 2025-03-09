@@ -1,5 +1,6 @@
 ---
 title: 'Release Note (2025-01)'
+description: '올해의 첫 릴리즈 노트. 1월을 되돌아보며 느낀 감상을 정리한다. 애증의 영어, 기부, 블로그 글, 그리고 니체'
 date: 2025-01-31 12:12:12
 category: essay
 thumbnail: './images/release-note-2025-01.jpg'
@@ -23,7 +24,7 @@ permalink: release-note-2025-01
 ## 1월의 철학자, 니체
 한달에 철학자 한명씩 살펴보고 짧게 생각을 정리하기로 했다. 첫 철학자로 니체를 고른 것은 특별한 이유는 없다. GD의 POWER라는 곡에서 우버메쉬(Ubermensch)라는 단어가 자주 들려 니체를 선택했다. 예전에 잠깐 철학책을 읽었을 때 니체를 좋아하기도 했었다.
 
-[니체](./philosophy/friedrich-nietzsche.md)
+[니체](https://jbee.io/articles/philosophy/friedrich-nietzsche)
 
 ## 마무리
 

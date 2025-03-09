@@ -1,5 +1,6 @@
 ---
 title: 'Release Note (2025-02)'
+description: '사르트르, 패스트 라이브즈, 채식주의자, 복리와 루틴 그리고 고민들을 정리했다. Developing taste과 Posthog 팀의 아티클 2개의 글을 소개한다.'
 date: 2025-02-28 12:12:12
 category: essay
 thumbnail: './images/release-note-2025-02.jpg'
@@ -63,3 +64,6 @@ permalink: release-note-2025-02
 - 50 things we’ve learned about building successful products
   - 지금 팀에서 제품이 어떻게 개발되고 있는지 회고해볼 포인트를 제시한다.
   - 본문: [https://newsletter.posthog.com/p/50-things-weve-learned-about-building](https://newsletter.posthog.com/p/50-things-weve-learned-about-building)
+
+### 지난 회고
+- [2025-02](/articles/essay/release-note-2025-01)
