@@ -19,18 +19,18 @@ export const meta: MetaFunction = () => {
 export default function BrandPage() {
   return (
     <section className={styles.root}>
-      <section>
+      <article>
         <h3>👋 Frontend Engineer, Jbee</h3>
         <p>Resume: <TextLink href={BlogConfig.contacts.resume}>🇰🇷 한국어</TextLink> | <TextLink href="https://docs.google.com/document/d/1aiSYwhp9h8QI2KvbzcAFEepTjWg9Bo6bU18qXGD-qIY/edit?usp=sharing">🇺🇸 English</TextLink></p>
-        <section>
+        <article>
           <h4>Community</h4>
           <ul className={styles.list}>
             <li>
               <TextLink href="https://2024.feconf.kr/">FEConf Organizer</TextLink> (18.06 - current)
             </li>
           </ul>
-        </section>
-        <section>
+        </article>
+        <article>
           <h4>Presentations</h4>
           <ul className={styles.list}>
             <li><TextLink href='https://www.youtube.com/watch?v=qlNzmQEuMjQ'>너디너리 데모데이: 개발자의 학과습</TextLink> (2023.09.09)</li>
@@ -43,8 +43,8 @@ export default function BrandPage() {
             <li><TextLink href='https://slides.com/jbee/devfest_seoul_2018_performance_optimization_with_chrome_devtools'>GDG Devfest Seoul: Chrome Devtools를 활용한 웹 프런트엔드 성능 측정과 개선</TextLink> (2018.11.10)</li>
             <li><TextLink href='https://speakerdeck.com/jaeyeophan/gdg-campus-2018-meetup-balpyojaryo-hamgge-ilhago-sipeun-gaebalja'>GDG Campus Meetup: 함께 일하고 싶은 개발자</TextLink> (2018.02.11)</li>
           </ul>
-        </section>
-        <section>
+        </article>
+        <article>
           <h4>Articles</h4>
           <ul className={styles.list}>
             <li>
@@ -57,16 +57,16 @@ export default function BrandPage() {
               <TextLink href="https://toss.tech/article/faster-initial-rendering">조금만 신경써서 초기 렌더링 빠르게 하기 (feat. JAM Stack)</TextLink>
             </li>
           </ul>
-        </section>
-        <section>
+        </article>
+        <article>
           <h4>Books</h4>
           <ul className={styles.list}>
             <li>
               <TextLink href="https://fastcampus.co.kr/books/212106">커리어 속에서 성장하는 방법</TextLink>
             </li>
           </ul>
-        </section>
-        <section>
+        </article>
+        <article>
           <h4>Mentoring</h4>
           <ul className={styles.list}>
             <li>
@@ -79,21 +79,21 @@ export default function BrandPage() {
               <TextLink href="https://boostcamp.connect.or.kr/">CONNECT 부스트캠프 리뷰어</TextLink> (20.08 - 20.10)
             </li>
           </ul>
-        </section>
-      </section>
-      <section>
+        </article>
+      </article>
+      <article>
         <h4>One more thing</h4>
         <p>{'I\'m scuba diver'}</p>
         <ul className={styles.list}>
           <li>Instagram: <TextLink href={BlogConfig.contacts.instagram} /></li>
           <li>Youtube: <TextLink href={BlogConfig.contacts.youtube} /></li>
         </ul>
-      </section>
-      <section>
+      </article>
+      <article>
         <h4>Contacts</h4>
         <p>Feel free to contact</p>
         <ContactList />
-      </section>
+      </article>
     </section>
   );
 }
