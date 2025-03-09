@@ -20,13 +20,27 @@ export default function BrandPage() {
   return (
     <section className={styles.root}>
       <article>
-        <h3>👋 Frontend Engineer, Jbee</h3>
+        <h3>👋 Product Engineer, Frontend Engineer, Jbee</h3>
         <p>Resume: <TextLink href={BlogConfig.contacts.resume}>🇰🇷 한국어</TextLink> | <TextLink href="https://docs.google.com/document/d/1aiSYwhp9h8QI2KvbzcAFEepTjWg9Bo6bU18qXGD-qIY/edit?usp=sharing">🇺🇸 English</TextLink></p>
         <article>
           <h4>Community</h4>
           <ul className={styles.list}>
             <li>
               <TextLink href="https://2024.feconf.kr/">FEConf Organizer</TextLink> (18.06 - current)
+            </li>
+          </ul>
+        </article>
+        <article>
+          <h4>Mentoring</h4>
+          <ul className={styles.list}>
+            <li>
+              <TextLink href="https://f-lab.kr/">F-lab Mentor</TextLink> (22.11 - 24.10)
+            </li>
+            <li>
+              <TextLink href="https://www.woowacourse.io/">우아한테크코스 리뷰어</TextLink> (21.02 - 21.06)
+            </li>
+            <li>
+              <TextLink href="https://boostcamp.connect.or.kr/">CONNECT 부스트캠프 리뷰어</TextLink> (20.08 - 20.10)
             </li>
           </ul>
         </article>
@@ -63,20 +77,6 @@ export default function BrandPage() {
           <ul className={styles.list}>
             <li>
               <TextLink href="https://fastcampus.co.kr/books/212106">커리어 속에서 성장하는 방법</TextLink>
-            </li>
-          </ul>
-        </article>
-        <article>
-          <h4>Mentoring</h4>
-          <ul className={styles.list}>
-            <li>
-              <TextLink href="https://f-lab.kr/">F-lab Mentor</TextLink> (22.11 - 24.10)
-            </li>
-            <li>
-              <TextLink href="https://www.woowacourse.io/">우아한테크코스 리뷰어</TextLink> (21.02 - 21.06)
-            </li>
-            <li>
-              <TextLink href="https://boostcamp.connect.or.kr/">CONNECT 부스트캠프 리뷰어</TextLink> (20.08 - 20.10)
             </li>
           </ul>
         </article>
