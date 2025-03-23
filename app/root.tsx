@@ -11,6 +11,7 @@ import {
 } from 'react-router';
 import '~/styles/article.css';
 import '~/styles/global.css';
+import '~/styles/highlight-text.css';
 import '~/styles/reset.css';
 import BlogConfig from '../blog.config';
 import { Container } from './components/container/Container';

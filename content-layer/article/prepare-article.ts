@@ -12,6 +12,7 @@ import remarkFrontmatter from 'remark-frontmatter';
 import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import { unified } from 'unified';
+import { highlightText } from './highlight-text.js';
 import { Article, ArticleFrontMatter, Category, Title } from './types';
 import { urlToLink } from './url-to-link.js';
 
@@ -95,6 +96,7 @@ async function parseMarkdown(text: string) {
     })
     .use(rehypeStringify)
     .use(urlToLink)
+    .use(highlightText, { color: 'random' })
     .use(rehypeExternalLinks, {rel: ['nofollow']})
     .use(rehypeSlug)
     .use(rehypeAutolinkHeadings, {

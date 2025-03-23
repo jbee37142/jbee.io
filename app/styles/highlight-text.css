@@ -1,0 +1,203 @@
+/* Highlight Text CSS styles with hand-drawn pen effect */
+
+/* Base styles for all highlight types */
+[class^="highlight-text--"] {
+  position: relative;
+  display: inline;
+  padding: 0 1px;
+  border-radius: 0;
+  z-index: 1;
+}
+
+/* Hand-drawn pen effect common base */
+[class^="highlight-text--"]::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  top: 40%;
+  bottom: -2px;
+  z-index: -1;
+  transform: skew(-4deg) rotate(-1deg);
+  opacity: 0.4;
+  transition: all 0.3s ease;
+}
+
+/* Hover effects to make the highlights more interactive */
+[class^="highlight-text--"]:hover::before {
+  transform: skew(0deg) rotate(0deg);
+  opacity: 0.6;
+}
+
+/* Random highlight style - changes on hover */
+.highlight-text--random::before {
+  background-image: linear-gradient(120deg, #ff333370, #3333ff70, #33cc3370, #ffff3370, #cc33cc70);
+  background-size: 400% 400%;
+  animation: randomHighlight 200s ease infinite;
+  clip-path: polygon(
+    0% 0%, 100% 5%, 98% 15%, 99.5% 30%, 97% 45%, 
+    99% 60%, 96% 75%, 98.5% 90%, 100% 100%, 0% 95%
+  );
+}
+
+@keyframes randomHighlight {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .highlight-text--random::before {
+    background-image: linear-gradient(120deg, #ff000040, #0000ff40, #00800040, #ffff0040, #80008040);
+    background-size: 400% 400%;
+    animation: randomHighlight 60s ease infinite;
+    clip-path: polygon(
+      0% 0%, 100% 5%, 98% 15%, 99.5% 30%, 97% 45%, 
+      99% 60%, 96% 75%, 98.5% 90%, 100% 100%, 0% 95%
+    );
+  }
+  [class^="highlight-text--"]::before {
+    opacity: 0.9;
+  }
+
+  /* Brighter Red */
+  .highlight-text--red::before {
+    background-color: #ff333365;
+  }
+  
+  /* Brighter Blue */
+  .highlight-text--blue::before {
+    background-color: #3333ff65;
+  }
+  
+  /* Brighter Green */
+  .highlight-text--green::before {
+    background-color: #33cc3365;
+  }
+  
+  /* Brighter Yellow */
+  .highlight-text--yellow::before {
+    background-color: #ffff3365;
+  }
+  
+  /* Brighter Purple */
+  .highlight-text--purple::before {
+    background-color: #cc33cc65;
+  }
+  
+  /* Brighter Pink */
+  .highlight-text--pink::before {
+    background-color: #ff66cc65;
+  }
+  
+  /* Brighter Orange */
+  .highlight-text--orange::before {
+    background-color: #ff994465;
+  }
+  
+  /* Brighter Teal */
+  .highlight-text--teal::before {
+    background-color: #33cccc65;
+  }
+  
+  /* Brighter Cyan */
+  .highlight-text--cyan::before {
+    background-color: #33ffff65;
+  }
+  
+  /* Brighter Lime */
+  .highlight-text--lime::before {
+    background-color: #99ff3365;
+  }
+} 
+
+/* Red highlight */
+.highlight-text--red::before {
+  background-color: #ff000040;
+  clip-path: polygon(
+    0% 0%, 100% 5%, 98% 15%, 99.5% 30%, 97% 45%, 
+    99% 60%, 96% 75%, 98.5% 90%, 100% 100%, 0% 95%
+  );
+}
+
+/* Blue highlight */
+.highlight-text--blue::before {
+  background-color: #0000ff40;
+  clip-path: polygon(
+    0% 5%, 100% 0%, 96% 20%, 99% 40%, 97% 60%, 
+    99.5% 80%, 98% 95%, 100% 100%, 0% 90%
+  );
+}
+
+/* Green highlight */
+.highlight-text--green::before {
+  background-color: #00800040;
+  clip-path: polygon(
+    0% 10%, 100% 5%, 97.5% 25%, 99% 50%, 98.5% 75%, 
+    99% 90%, 100% 100%, 0% 95%, 2% 75%, 0.5% 50%
+  );
+}
+
+/* Yellow highlight */
+.highlight-text--yellow::before {
+  background-color: #ffff0040;
+  clip-path: polygon(
+    0% 5%, 100% 0%, 98% 20%, 97% 45%, 99% 70%, 
+    97.5% 85%, 99% 95%, 98% 100%, 0% 95%, 2% 70%
+  );
+}
+
+/* Purple highlight */
+.highlight-text--purple::before {
+  background-color: #80008040;
+  clip-path: polygon(
+    0% 0%, 100% 5%, 97% 25%, 99.5% 50%, 96% 75%, 
+    99% 90%, 97% 100%, 0% 95%, 3% 75%, 1% 50%
+  );
+}
+
+/* Pink highlight */
+.highlight-text--pink::before {
+  background-color: #ff69b440;
+  clip-path: polygon(
+    0% 10%, 100% 0%, 97% 15%, 99% 35%, 96.5% 60%, 
+    98% 80%, 99.5% 95%, 98% 100%, 0% 90%, 2% 60%
+  );
+}
+
+/* Orange highlight */
+.highlight-text--orange::before {
+  background-color: #ffa50040;
+  clip-path: polygon(
+    0% 5%, 100% 10%, 99% 30%, 97% 50%, 99.5% 70%, 
+    98% 85%, 97% 100%, 0% 95%, 1% 70%, 2.5% 40%
+  );
+}
+
+/* Teal highlight */
+.highlight-text--teal::before {
+  background-color: #00808040;
+  clip-path: polygon(
+    0% 0%, 100% 5%, 98.5% 20%, 97% 40%, 99% 65%, 
+    96.5% 85%, 99% 100%, 0% 95%, 2% 80%, 1% 55%
+  );
+}
+
+/* Cyan highlight */
+.highlight-text--cyan::before {
+  background-color: #00ffff40;
+  clip-path: polygon(
+    0% 15%, 100% 0%, 98% 25%, 99.5% 50%, 97% 75%, 
+    99% 90%, 98.5% 100%, 0% 90%, 1.5% 65%, 2% 40%
+  );
+}
+
+/* Lime highlight */
+.highlight-text--lime::before {
+  background-color: #00ff0040;
+  clip-path: polygon(
+    0% 5%, 100% 10%, 97.5% 25%, 99% 45%, 98% 65%, 
+    97% 85%, 99.5% 95%, 100% 100%, 0% 95%, 2% 75%
+  );
+}
