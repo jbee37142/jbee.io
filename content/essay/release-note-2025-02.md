@@ -66,4 +66,4 @@ permalink: release-note-2025-02
   - 본문: [https://newsletter.posthog.com/p/50-things-weve-learned-about-building](https://newsletter.posthog.com/p/50-things-weve-learned-about-building)
 
 ### 지난 회고
-- [2025-02](/articles/essay/release-note-2025-01)
+- [2025-01](/articles/essay/release-note-2025-01)
