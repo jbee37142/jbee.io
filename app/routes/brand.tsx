@@ -20,7 +20,7 @@ export default function BrandPage() {
   return (
     <section className={styles.root}>
       <article>
-        <h3>👋 Product Engineer, Frontend Engineer, Jbee</h3>
+        <h3>👋 Growth mindset Software Engineer, Jbee</h3>
         <p>Resume: <TextLink href={BlogConfig.contacts.resume}>🇰🇷 한국어</TextLink> | <TextLink href="https://docs.google.com/document/d/1aiSYwhp9h8QI2KvbzcAFEepTjWg9Bo6bU18qXGD-qIY/edit?usp=sharing">🇺🇸 English</TextLink></p>
         <article>
           <h4>Community</h4>
