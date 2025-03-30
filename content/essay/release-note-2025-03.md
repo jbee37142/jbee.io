@@ -50,6 +50,7 @@ permalink: release-note-2025-03
 
 ### Thinking in react-lynx
 본문: https://lynxjs.org/react/thinking-in-reactlynx.html
+
 Cross platform 쪽에 여러 가지 변경사항이 있다. [Fernando](https://github.com/nandorojo)가 Vercel에 합류하는가 하면 ByteDance 팀에서 [Lynx](https://github.com/lynx-family/lynx)를 오픈소스로 공개했다. RN, Flutter, KMP 등 이미 여러 플레이어가 있는 Cross platform에 새로운 대안이 등장한 것이다.
 
 thinking something 글은 해당 프레임워크가 무엇을 지향하는지 잘 드러내고 있다. Main thread와 Background Thread를 나눴다. 'background-only'라는 directive도 있다. 낯섬 예산을 최소화하기 위해 React를 내세우기도 했다.
