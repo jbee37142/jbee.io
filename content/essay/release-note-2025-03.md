@@ -56,8 +56,9 @@ Cross platform 쪽에 여러 가지 변경사항이 있다. [Fernando](https://g
 thinking something 글은 해당 프레임워크가 무엇을 지향하는지 잘 드러내고 있다. Main thread와 Background Thread를 나눴다. 'background-only'라는 directive도 있다. 낯섬 예산을 최소화하기 위해 React를 내세우기도 했다.
 
 [AI, 그리고 Engineer](https://jbee.io/articles/essay/ai-and-engineer) 글에서도 얘기했는데, Quality가 중요해질수록 Cross platform 보단 Native가 중요해지지 않을까 싶은데, 어떤 추세로 움직일지 기대되는 분야이다.
+
 ### 10 rues for crafting products that stand out
-https://www.figma.com/blog/karri-saarinens-10-rules-for-crafting-products-that-stand-out/
+본문: https://www.figma.com/blog/karri-saarinens-10-rules-for-crafting-products-that-stand-out/
 
 이 글을 읽고 문화는 Top-down이란 생각이 더 견고해졌다. Quality를 제대로 정의하는 것이 중요할 것 같은데 이것이 제품에 따라 다르게 정의되지 않을까 하는 생각도 든다.
 
