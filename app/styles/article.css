@@ -239,3 +239,7 @@ article a[href] {
         color: var(--color);
     }
 }
+
+article img {
+    border-radius: 0.5rem;
+}

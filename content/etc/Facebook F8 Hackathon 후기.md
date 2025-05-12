@@ -4,11 +4,11 @@ date: 2019-05-19 19:05:41
 category: etc
 ---
 
-![f8_attendee](/images/f8/f8_attendee.jpeg)
+![f8_attendee](./images/f8/f8_attendee.jpeg)
 
 지난 4월 말, Facebook에서 **F8**이라는 컨퍼런스를 진행했다. 그리고 나는 행사의 해커톤 참석자로 선정되어 참가하게 되었다. 해커톤 참가자들에게는 컨퍼런스 기간 동안의 숙소와 왕복 항공편이 지원됐다. 올해 운은 전부 끌어다 쓰지 않았을까 생각된다.
 
-![f8_notice](/images/f8/f8_notice.png)
+![f8_notice](./images/f8/f8_notice.png)
 
 > 아직도 짜릿하다. 🤩
 
@@ -18,7 +18,7 @@ category: etc
 - English, English and English
 - Fourth hackathon is special to me
 
-![f8_sanjose](/images/f8/f8_sanjose.jpeg)
+![f8_sanjose](./images/f8/f8_sanjose.jpeg)
 
 > 처음 와보는 San Jose.
 
@@ -35,7 +35,7 @@ category: etc
 
 눈이 마주치면 인사를 하고 ‘how are you?’로 넘아가게 되면서 너무나도 자연스럽게 대화를 하게 되었다. 처음에는 적응이 안됐다. (일단 한국은 눈을 마주치면 무시한다. 눈을 마주치지도 않았나.) 대화 내용은 넌 어디서 왔니, 주로 뭘하니, 해커톤은 해봤니 등 아주 간단한 것들이었다. 대화는 영어로 진행되었고 다양한 나라와 출신이 있었다. 모르는 사람과 대화하는 것이 이렇게 쉬웠나 하는 생각이 들었다.
 
-![f8_venue](/images/f8/f8_venue.jpeg)
+![f8_venue](./images/f8/f8_venue.jpeg)
 
 ### 페이스북 오픈소스 프로젝트 소개
 
@@ -53,7 +53,7 @@ category: etc
 
 맨날 하던거 말고 새로운 것을 해보고 싶었는데 AR 관련해서 할 수 있을 것 같아 바로 Join! 했다. (그 땐 몰랐다. 내가 이 팀에서도 React를 하게 될 줄.) 그렇게 해서 오스트리아 개발자 두 명과 나를 포함해 한국인 개발자 두 명이 한 팀이 되었다.
 
-![f8_team](/images/f8/f8_team.jpg)
+![f8_team](./images/f8/f8_team.jpg)
 
 ### Start hackathon
 
@@ -61,7 +61,7 @@ category: etc
 
 #### [UN Sustainable Development Goals (SDGs)](https://sustainabledevelopment.un.org/?menu=1300)
 
-![f8_sdgs](/images/f8/f8_sdgs.png)
+![f8_sdgs](./images/f8/f8_sdgs.png)
 
 > 2016년 부터 2030년 까지 새로 시행되는 유엔과 국제사회의 최대 공동목표다. 인류의 보편적 문제 (빈곤, 질병, 교육, 성평등, 난민, 분쟁 등) 와 지구 환경문제 (기후변화, 에너지, 환경오염, 물, 생물다양성 등), 경제 사회문제 (기술, 주거, 노사, 고용, 생산 소비, 사회구조, 법, 대내외 경제) 를 2030년까지 17가지 주 목표와 169개 세부목표로 해결하고자 이행하는 국제사회 최대 공동목표다.
 
@@ -76,7 +76,7 @@ category: etc
 
 ## English, English, and English
 
-![f8_english](/images/f8/f8_english.png)
+![f8_english](./images/f8/f8_english.png)
 
 대부분의 참가자가 모국어가 아닌 외국어로 영어를 하고 있을거란 생각에 자신감이 있었다. 하지만 모국어 수준으로 잘 하더라. 대부분 영어로 대화하는데 어려움이 없었다. 깔끔한 원어민 발음으로만 리스닝을 해왔던 나는 각양각색의 발음에 혼돈을 맞이했고 의사소통이 생각보다 힘들었다. 내 말을 상대방이 제대로 알아듣지 못하는 경우가 발생할 때마다 영어에 대한 자신감은 계속 떨어졌다.
 
@@ -101,7 +101,7 @@ category: etc
 
 ## 특별했던 네번째의 해커톤의 최종 결과물
 
-![f8_ping](/images/f8/f8_ping.png)
+![f8_ping](./images/f8/f8_ping.png)
 
 우리 팀에서 만든 이 간단한 서비스의 이름은 **Ping**이다. 페이스북 메신저를 기반으로 동작하는 **챗봇**과 **React Application**과 약간의 **AR Effect**가 들어가 있다.
 
@@ -111,7 +111,7 @@ React로 작성된 대시보드는 UNICEF와 같은 단체들이 어떠한 이�
 
 조금 더 발전시키고 싶었던 부분은 단체에서 제보된 이슈에 대해 진행 중 처리를 할 수 있는데 그 때 제보한 사람에게 알림이 가도록 하는 부분이다. 또 우리가 정의한 '이슈'를 좀 더 세분화하고 **narrow down** 했으면 좋지 않았을까 하는 아쉬움이 남는다.
 
-![f8_final_ping](/images/f8/f8_final_ping.jpeg)
+![f8_final_ping](./images/f8/f8_final_ping.jpeg)
 
 > 중간 평가를 위한 데모 현장.
 
@@ -121,7 +121,7 @@ React로 작성된 대시보드는 UNICEF와 같은 단체들이 어떠한 이�
 
 ### 결과
 
-![f8_final](/images/f8/f8_final.jpeg)
+![f8_final](./images/f8/f8_final.jpeg)
 
 해커톤은 이틀동안 진행되었지만 3일차에 중간 평가를 준비해야했고 그 3일차에 결과 발표가 있었다. (덕분에 F8 Day 1은 키노트 세션과 애프터 파티에만 참가할 수 있었다.)
 
