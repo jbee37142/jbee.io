@@ -63,7 +63,7 @@ export function urlToLink() {
         parts.push({
           type: 'element',
           tagName: 'a',
-          properties: { href: url },
+          properties: { href: url, target: '_blank', rel: 'noopener noreferrer' } as any,
           children: [linkTextNode]
         });
         
