@@ -83,7 +83,6 @@ export default function BrandPage() {
         <p>{'I\'m scuba diver'}</p>
         <ul className={styles.list}>
           <li>Instagram: <TextLink href={BlogConfig.contacts.instagram} /></li>
-          <li>Youtube: <TextLink href={BlogConfig.contacts.youtube} /></li>
         </ul>
       </article>
       <article>
