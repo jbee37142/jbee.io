@@ -87,3 +87,11 @@ AI가 중심이 되면서 개발에도 이런 현상이 있다. React가 거의 
 	- 출처: [https://www.youtube.com/watch?v=v2JxdjTi_1I](https://www.youtube.com/watch?v=v2JxdjTi_1I)
 
 ![./images/2025-05-release-note-3](./images/2025-05-release-note-3.jpeg)
+
+### 지난 회고
+
+- [2025.04 Release Note](https://jbee.io/articles/essay/release-note-2025-04)
+- [2025.03 Release Note](https://jbee.io/articles/essay/release-note-2025-03)
+- [2025.02 Release Note](https://jbee.io/articles/essay/release-note-2025-02)
+- [2025.01 Release Note](https://jbee.io/articles/essay/release-note-2025-01)
+- [Release Note Beginning](https://jbee.io/articles/essay/about-release-note)
