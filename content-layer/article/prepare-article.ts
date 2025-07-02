@@ -97,7 +97,7 @@ async function parseMarkdown(text: string) {
     .use(rehypeStringify)
     .use(urlToLink)
     .use(highlightText, { color: 'random' })
-    .use(rehypeExternalLinks, {rel: ['nofollow']})
+    .use(rehypeExternalLinks, { rel: ['nofollow', 'noopener', 'noreferrer'], target: '_blank' })
     .use(rehypeSlug)
     .use(rehypeAutolinkHeadings, {
       behavior: 'wrap',
@@ -122,7 +122,6 @@ async function parseMarkdown(text: string) {
 function getArticleId(category: Category, title: Title) {
   return `${category}+${title}`;
 }
-
 
 function extractPlainText(text: string, { maxChars = 100 }: { maxChars?: number } = {}): string {
   // Remove image references with descriptions
