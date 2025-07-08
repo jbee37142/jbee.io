@@ -10,11 +10,11 @@ draft: false
 
 어김없이 돌아온 새해, 2022년을 구성한 여러 순간들을 키워드로 돌아보려고 한다.
 
-- [Jbee.log(2021)](https://jbee.io/articles/essay/2021_retro/)
-- [Jbee.log(2020)](https://jbee.io/articles/essay/2020_retro/)
-- [Jbee.log(2019)](https://jbee.io/articles/essay/2019_retro/)
-- [Jbee.log(2018)](https://jbee.io/articles/essay/2018_retro/)
-- [Jbee.log(2017)](https://jbee.io/articles/essay/2017_retro/)
+- [Jbee.log(2021)](https://jbee.io/articles/essay/Jbee.log(2021))
+- [Jbee.log(2020)](https://jbee.io/articles/essay/Jbee.log(2020))
+- [Jbee.log(2019)](https://jbee.io/articles/essay/Jbee.log(2019))
+- [Jbee.log(2018)](https://jbee.io/articles/essay/Jbee.log(2018))
+- [Jbee.log(2017)](https://jbee.io/articles/essay/Jbee.log(2017))
 
 ## 새로운 라이프 사이클
 
