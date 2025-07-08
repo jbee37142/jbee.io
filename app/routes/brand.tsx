@@ -73,7 +73,7 @@ export default function BrandPage() {
           <h4>Books</h4>
           <ul className={styles.list}>
             <li>
-              <TextLink href="https://fastcampus.co.kr/books/212106">커리어 속에서 성장하는 방법</TextLink>
+              커리어 속에서 성장하는 방법
             </li>
           </ul>
         </article>
