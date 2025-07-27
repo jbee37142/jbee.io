@@ -26,13 +26,19 @@ export default function BrandPage() {
           <h4>Community</h4>
           <ul className={styles.list}>
             <li>
-              <TextLink href="https://2024.feconf.kr/">FEConf Organizer</TextLink> (18.06 - current)
+              <TextLink href="https://feconf.kr/">FEConf Organizer</TextLink> (18.06 - current)
+            </li>
+            <li>
+              <TextLink href="https://jbee.notion.site/JCurve-217f39e13cbc80a588a5fcfab5037048">JCurve</TextLink> (25.06 - current)
             </li>
           </ul>
         </article>
         <article>
           <h4>Mentoring</h4>
           <ul className={styles.list}>
+            <li>
+              개인 1:1 멘토링 (22.01 - 24.08)
+            </li>
             <li>
               <TextLink href="https://www.woowacourse.io/">우아한테크코스 리뷰어</TextLink> (21.02 - 21.06)
             </li>
