@@ -1,5 +1,5 @@
 ---
-title: '토스로 다 합ㅠㅏㄴ 이'
+title: '토스로 다시 합류한 이유'
 date: 2025-08-24 08:29:50
 category: career
 thumbnail: './images/temp.jpeg'
