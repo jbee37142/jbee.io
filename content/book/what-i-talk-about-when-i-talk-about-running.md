@@ -1,5 +1,5 @@
 ---
-title: '달리기를 말할 때 내가 하고 싶은 이야기 책'
+title: '달리기를 말할 때 내가 하고 싶은 이야기'
 date: 2025-08-26 08:29:50
 category: book
 thumbnail: './images/what-i-talk-about-when-i-talk-about-running.jpeg'
