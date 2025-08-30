@@ -91,3 +91,13 @@ permalink: release-note-2025-07
 
 ## 마무리
 정말 더운 7월이었다. 료님으로 시작하여 료님으로 끝나는 달이다. 책도 료님의 생각없는 생각을 읽었고 료님의 인터뷰도 좋았다. 이 회고로 첫 월간 회고 모임에 나간다. 킥오프 때 자기소개로 3시간을 보낸 모임이다. 얼마나 재밌는 얘기가 오가려나.
+
+### 지난 회고
+
+- [2025.06 Release Note](https://jbee.io/articles/essay/release-note-2025-06)
+- [2025.05 Release Note](https://jbee.io/articles/essay/release-note-2025-05)
+- [2025.04 Release Note](https://jbee.io/articles/essay/release-note-2025-04)
+- [2025.03 Release Note](https://jbee.io/articles/essay/release-note-2025-03)
+- [2025.02 Release Note](https://jbee.io/articles/essay/release-note-2025-02)
+- [2025.01 Release Note](https://jbee.io/articles/essay/release-note-2025-01)
+- [Release Note Beginning](https://jbee.io/articles/essay/about-release-note)
