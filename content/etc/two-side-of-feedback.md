@@ -8,7 +8,7 @@ draft: false
 permalink: dead_poets_society
 ---
 
-![dead_poets_society](./images/dead_poets_society.jpg)
+![dead_poets_society](./images/dead_poets_society.jpeg)
 
 > 오 캡틴 마이 캡틴
 
