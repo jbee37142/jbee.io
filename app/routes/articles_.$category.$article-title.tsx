@@ -55,7 +55,7 @@ export async function loader({ params }: LoaderFunctionArgs) {
 
 export default function ArticlePage() {
   const {
-    article:{ category, title, content, lastUpdatedAt, readingTime },
+    article:{ category, title, content, lastUpdatedAt, readingTime, permalink },
     recentArticles,
   } = useLoaderData<typeof loader>();
 
@@ -66,7 +66,7 @@ export default function ArticlePage() {
         <a
           className={styles.editButton}
           title='edit'
-          href={BlogConfig.content.source + category + '/' + title + '.md'}
+          href={BlogConfig.content.source + category + '/' + (permalink ?? title) + '.md'}
           target='_blank'
           rel='noopener noreferrer'
         >
