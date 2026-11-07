@@ -20,8 +20,8 @@ export function OpenGraphTemplate({ title, date }: Props) {
       <img
         src="https://jbee.io/img/open-graph-template.png"
         alt=""
-        width="1280px"
-        height="720px"
+        width={1280}
+        height={720}
         style={{
           position: 'absolute',
           top: 0,
