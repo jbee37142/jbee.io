@@ -1,0 +1,1 @@
+for d in ~/.asdf/installs/nodejs/*/; do [ -e "$d/bin/claude" ] && PATH="$d/bin:$PATH" npm uninstall -g @anthropic-ai/claude-code && echo "removed: $d"; done
