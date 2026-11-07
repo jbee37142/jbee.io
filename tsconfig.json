@@ -13,24 +13,16 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "allowImportingTsExtensions": true,
-    "baseUrl": ".",
     "types": ["@react-router/node", "vite/client"],
     "rootDirs": [".", "./.react-router/types"],
     "module": "ESNext",
     "paths": {
-      "~/*": ["./app/*"]
+      "~/*": ["./app/*"],
+      "blog.config.ts": ["./blog.config.ts"],
+      "content-layer/*": ["./content-layer/*"]
     },
 
     // Remix takes care of building everything in `remix build`.
     "noEmit": true
-  },
-
-  "ts-node": {
-    "transpileOnly": true,
-    "esm": true,
-    "compilerOptions": {
-      "module": "Node16",
-      "moduleResolution": "Node16"
-    }
   }
 }

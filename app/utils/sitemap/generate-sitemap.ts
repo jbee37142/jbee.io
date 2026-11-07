@@ -62,8 +62,9 @@ async function getSitemapXml(
 
   const rawSitemapEntries = (
     await Promise.all(
-      Object.entries(routes).map(async ([id, { module: mod }]) => {
-        if (id === 'root') return;
+      Object.entries(routes).map(async ([id, route]) => {
+        if (id === 'root' || route == null) return;
+        const mod = route.module;
 
         const handle = mod.handle as SEOHandle | undefined;
         if (handle?.getSitemapEntries) {
