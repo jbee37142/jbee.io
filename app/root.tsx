@@ -40,6 +40,7 @@ export default function App() {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:site_name" content={BlogConfig.seo.name}></meta>
+        <meta name="google-site-verification" content="9h2SU_EK6tRwwcayP-vUGXVugECXGemMDbBUQL_OBVA" />
         <Meta />
         <Links />
         <GoogleAnalyticsScripts id={BlogConfig.ga.id} />
