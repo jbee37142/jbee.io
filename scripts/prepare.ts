@@ -10,6 +10,10 @@ const DIRNAME = path.resolve();
     prepareArticles({
       from: path.join(DIRNAME, BlogConfig.articles.contentDirectory),
       to: path.join(DIRNAME, BlogConfig.articles.generatedDirectory, BlogConfig.articles.articlesDirectory),
+      thumbnails: {
+        to: path.join(DIRNAME, 'public', 'articles'),
+        rootDirectory: DIRNAME,
+      },
     }),
     prepareImages({
       from:path.join(DIRNAME, BlogConfig.articles.contentDirectory),

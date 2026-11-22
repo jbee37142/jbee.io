@@ -2,6 +2,7 @@
 title: 'AI, 그리고 학습'
 date: 2025-07-27 14:00:00
 category: essay
+series: ai
 thumbnail: './images/ai-and-learning.jpg'
 draft: false
 permalink: ai-and-learning

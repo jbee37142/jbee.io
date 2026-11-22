@@ -49,4 +49,9 @@ export interface ArticleFrontMatter {
   description?: string;
   permalink?: string;
   draft?: boolean;
+  /**
+   * @description Series the article belongs to (e.g. 'ai'). Posts in an auto-thumbnail
+   * series get a generated thumbnail when `thumbnail` is not set.
+   */
+  series?: string;
 }

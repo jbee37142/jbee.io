@@ -3,6 +3,7 @@ title: 'AI, 그리고 좋은 코드 (feat. 추상)'
 description: '추상을 제대로 이해하고 코드 덩어리에 경계를 긋고 LLM이 생성되는 코드를 정확히 이해한다면 빠르게 좋은 코드를 만들 수 있는 시대가 되었다. 코드가 생성되는 시간이 그 코드가 어떤 논리로 생성되는지 잘 살펴봐야 한다. 잘못된 부분은 없는지 그 코드를 이해하고 감시자가 되어야 한다. 자연어가 다음 프로그래밍 언어가 될 수도 있겠지만 개발자의 역할은 궁극적으로 문제를 정의하고 이를 플랫폼 위에서 적절하게 해결할 방법을 찾는 것이라 생각한다.'
 date: 2025-09-14 14:00:00
 category: essay
+series: ai
 thumbnail: './images/ai-and-good-code.jpg'
 draft: false
 permalink: ai-and-good-code

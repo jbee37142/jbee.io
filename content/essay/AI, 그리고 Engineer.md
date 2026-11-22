@@ -2,6 +2,7 @@
 title: 'AI, 그리고 Engineer'
 date: 2025-03-23 14:00:00
 category: essay
+series: ai
 thumbnail: './images/ai-and-engineer.jpg'
 draft: false
 permalink: ai-and-engineer

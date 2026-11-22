@@ -3,6 +3,7 @@ title: 'AI, 함께 하고 싶은 동료'
 description: '무난하지 않으려면 뾰족한 탁월함을 가져가야 한다. 탁월함에는 여러 기준이 있지만 그중 함께 일하고 싶은 동료의 모습으로 다섯 가지 추구미를 정리해봤다. 품질의 기준을 높이고, 불편함을 문제로 정의하고, 끝까지 실행하고, 함께 성장하고, 팀을 하나로 만드는 동료.'
 date: 2026-11-07 12:00:00
 category: essay
+series: ai
 draft: false
 permalink: ai-and-colleague
 ---
