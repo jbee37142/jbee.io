@@ -82,3 +82,13 @@ LLM, 그리고 Agent의 등장으로 개발자라는 직업이 재정의 될 것
 생각하지 않으면 사는 대로 생각하게 된다. 그리고 생각하지 않으면 ==AI가 이끄는 대로== 생각하게 된다.
 
 [2월 릴리즈 노트, Worth the click](https://jbee.io/articles/essay/release-note-2025-02#worth-the-click)에서 'Taste'에 대한 생각을 짧게 남겼다. 이 글에 영향을 준 글이라 링크를 남긴다. 지난 [AI, 그리고 하고 싶은 것](https://jbee.io/articles/essay/what-i-want-to-do-and-ai) 글에선 우린 무엇을 해야 할까에 대한 생각을 정리했고 이번엔 개발에 대한 생각을 정리했는데, 다음번엔 학습에 대한 생각을 정리하려고 한다.
+
+### AI 시리즈
+- [AI, 그리고 역할의 변화](https://jbee.io/articles/essay/ai-and-developer)
+- [AI, 함께 하고 싶은 동료](https://jbee.io/articles/essay/ai-and-colleague)
+- [AI, 그리고 제품](https://jbee.io/articles/essay/ai-and-product)
+- [AI, 개발자의 뉴노멀](https://jbee.io/articles/essay/ai-and-new-normal)
+- [AI, 그리고 좋은 코드 (feat. 추상)](https://jbee.io/articles/essay/ai-and-good-code)
+- [AI, 그리고 학습](https://jbee.io/articles/essay/ai-and-learning)
+- [AI, 그리고 Frontend](https://jbee.io/articles/essay/ai-and-frontend)
+- [AI, 그리고 하고 싶은 것](https://jbee.io/articles/essay/what-i-want-to-do-and-ai)

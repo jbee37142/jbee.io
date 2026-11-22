@@ -43,3 +43,13 @@ Vibe 코딩 시대다. 생산성을 올리기 위해 AI를 활용하는 것은 �
 
 ## 마무리
 온 세상이 AI에 집중하는 중 내면의 무언가에 초점을 맞춰봤다. AI 덕분에 반복되는 작업, 귀찮은 작업이 점점 사라지고 있다. 귀찮은 것들은 전부 시키고 인간은 하고 싶은 일에 집중할 수 있을까? 그러면 일이 지금보다 더 즐거워질 수 있지 않을까?
+
+### AI 시리즈
+- [AI, 그리고 역할의 변화](https://jbee.io/articles/essay/ai-and-developer)
+- [AI, 함께 하고 싶은 동료](https://jbee.io/articles/essay/ai-and-colleague)
+- [AI, 그리고 제품](https://jbee.io/articles/essay/ai-and-product)
+- [AI, 개발자의 뉴노멀](https://jbee.io/articles/essay/ai-and-new-normal)
+- [AI, 그리고 좋은 코드 (feat. 추상)](https://jbee.io/articles/essay/ai-and-good-code)
+- [AI, 그리고 학습](https://jbee.io/articles/essay/ai-and-learning)
+- [AI, 그리고 Frontend](https://jbee.io/articles/essay/ai-and-frontend)
+- [AI, 그리고 Engineer](https://jbee.io/articles/essay/ai-and-engineer)

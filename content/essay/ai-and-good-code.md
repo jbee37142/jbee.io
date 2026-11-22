@@ -137,6 +137,10 @@ LLM에 목표하고자 하는 바를 이야기하면 코드가 생성된다. 에
 - https://martinfowler.com/articles/2025-nature-abstraction.html
 
 ### AI와 관련된 글들
+- [AI, 그리고 역할의 변화](https://jbee.io/articles/essay/ai-and-developer)
+- [AI, 함께 하고 싶은 동료](https://jbee.io/articles/essay/ai-and-colleague)
+- [AI, 그리고 제품](https://jbee.io/articles/essay/ai-and-product)
+- [AI, 개발자의 뉴노멀](https://jbee.io/articles/essay/ai-and-new-normal)
 - [AI, 그리고 학습](https://jbee.io/articles/essay/ai-and-learning)
 - [AI, 그리고 Frontend](https://jbee.io/articles/essay/ai-and-frontend)
 - [AI, 그리고 Engineer](https://jbee.io/articles/essay/ai-and-engineer)

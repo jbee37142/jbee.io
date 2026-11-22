@@ -96,6 +96,12 @@ Chat UI가 익숙해짐에 따라 UI가 사라질 것이라는 이야기도 있�
 - 영향력을 넓히기 좋은 시기이기 때문에 기회가 된다면 다양한 분야의 역할에 도전해보는 것이 좋다.
 
 ### AI 시리즈
+- [AI, 그리고 역할의 변화](https://jbee.io/articles/essay/ai-and-developer)
+- [AI, 함께 하고 싶은 동료](https://jbee.io/articles/essay/ai-and-colleague)
+- [AI, 그리고 제품](https://jbee.io/articles/essay/ai-and-product)
+- [AI, 개발자의 뉴노멀](https://jbee.io/articles/essay/ai-and-new-normal)
+- [AI, 그리고 좋은 코드 (feat. 추상)](https://jbee.io/articles/essay/ai-and-good-code)
+- [AI, 그리고 학습](https://jbee.io/articles/essay/ai-and-learning)
 - [AI, 그리고 Engineer](https://jbee.io/articles/essay/ai-and-engineer)
 - [AI, 그리고 하고 싶은 것](https://jbee.io/articles/essay/what-i-want-to-do-and-ai)
 

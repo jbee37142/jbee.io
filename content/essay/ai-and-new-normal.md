@@ -89,6 +89,9 @@ ROI(비용 투자 대비 효익)가 나오지 않아 아직 '프로그래밍'의
 ## 마무리
 인간이 가진 강점은 인간이라는 동류성이다. 인간이기 때문에 인간에게 어필할 수 있다. 같은 게임 방송을 보더라도 누가 게임을 하느냐에 따라 시청률이 다르다. 같은 기능을 하는 소프트웨어라도 누가 만들었느냐에 따라 달라지지 않을까. 잘 만든 앱 하나가 독점하는 시대가 저물어가는 것이 아닐까? 다양한 취향이 존중받는 시대가 오지 않을까?
 
+- [AI, 그리고 역할의 변화](https://jbee.io/articles/essay/ai-and-developer)
+- [AI, 함께 하고 싶은 동료](https://jbee.io/articles/essay/ai-and-colleague)
+- [AI, 그리고 제품](https://jbee.io/articles/essay/ai-and-product)
 - [AI, 그리고 좋은 코드 (feat. 추상)](https://jbee.io/articles/essay/ai-and-good-code)
 - [AI, 그리고 학습](https://jbee.io/articles/essay/ai-and-learning)
 - [AI, 그리고 Frontend](https://jbee.io/articles/essay/ai-and-frontend)
