@@ -36,6 +36,10 @@ export interface Article {
    */
   permalink?: string;
   /**
+   * @description frontmatter.series
+   */
+  series?: string;
+  /**
    * @description calculated by 'reading-time' package
    */
   readingTime: number;

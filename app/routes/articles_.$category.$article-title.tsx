@@ -12,6 +12,20 @@ import { safelyFormatDate } from '~/utils/safelyFormatDate';
 import BlogConfig from '../../blog.config';
 import * as styles from './article.css';
 
+/**
+ * Series whose share URL (og:url) uses the permalink instead of the title.
+ * Kept narrow on purpose: changing og:url of an already shared post resets its share counts.
+ */
+const PERMALINK_SHARE_URL_SERIES = ['ai'];
+
+function getShareSlug(article: { permalink?: string; series?: string } | undefined, title: string) {
+  if (article?.permalink != null && article.series != null && PERMALINK_SHARE_URL_SERIES.includes(article.series)) {
+    return article.permalink;
+  }
+
+  return title;
+}
+
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
   const { category, title } = data?.article ?? {};
   
@@ -26,7 +40,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       : pathJoin(BlogConfig.site, BlogConfig.image.main),
     author: BlogConfig.author.twitter,
     site: BlogConfig.site,
-    url: pathJoin(BlogConfig.site, 'articles', category, title),
+    url: pathJoin(BlogConfig.site, 'articles', category, getShareSlug(data?.article, title)),
     logo: pathJoin(BlogConfig.site, 'logo.jpeg'),
   });
 };

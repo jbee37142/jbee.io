@@ -99,6 +99,7 @@ async function buildArticle(text: string, thumbnails?: ThumbnailOptions) {
     thumbnail,
     description: attr?.description,
     permalink: attr?.permalink,
+    series: attr?.series,
     readingTime: attr.readingTime,
   };
 
