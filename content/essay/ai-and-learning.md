@@ -53,6 +53,11 @@ LLM을 사용할 때 잘 아는 분야일수록 구체적인 지시사항을 전
 대단한 내용이 나올 것으로 예상했지만 사실 무언가 학습하는 방법은 크게 달라지지 않았다. AI가 등장했다고 해서 변하지 않는 것도 많다. 단순히 겉핥기 정도로 배우고 끝내는 것이 아니라 어떤 것을 제대로 학습하기 위해선 의도적인 수련이 필요한 부분, Input과 Output이 병행되어야 하는 부분, 꾸준히 하는 것 등 더 중요한 것이 많다.
 
 ### AI 시리즈
+- [AI, 그리고 역할의 변화](https://jbee.io/articles/essay/ai-and-developer)
+- [AI, 함께 하고 싶은 동료](https://jbee.io/articles/essay/ai-and-colleague)
+- [AI, 그리고 제품](https://jbee.io/articles/essay/ai-and-product)
+- [AI, 개발자의 뉴노멀](https://jbee.io/articles/essay/ai-and-new-normal)
+- [AI, 그리고 좋은 코드 (feat. 추상)](https://jbee.io/articles/essay/ai-and-good-code)
 - [AI, 그리고 Frontend](https://jbee.io/articles/essay/ai-and-frontend)
 - [AI, 그리고 Engineer](https://jbee.io/articles/essay/ai-and-engineer)
 - [AI, 그리고 하고 싶은 것](https://jbee.io/articles/essay/what-i-want-to-do-and-ai)

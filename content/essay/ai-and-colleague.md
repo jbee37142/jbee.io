@@ -1,5 +1,5 @@
 ---
-title: 'AI 시대, 함께 하고 싶은 동료'
+title: 'AI, 함께 하고 싶은 동료'
 description: '무난하지 않으려면 뾰족한 탁월함을 가져가야 한다. 탁월함에는 여러 기준이 있지만 그중 함께 일하고 싶은 동료의 모습으로 다섯 가지 추구미를 정리해봤다. 품질의 기준을 높이고, 불편함을 문제로 정의하고, 끝까지 실행하고, 함께 성장하고, 팀을 하나로 만드는 동료.'
 date: 2026-11-07 12:00:00
 category: essay
@@ -56,6 +56,7 @@ permalink: ai-and-colleague
 
 다섯 가지를 모두 갖춘 사람은 없다. 나 역시 그렇다. 다만 무난함에 머무르지 않고 어느 한 곳이라도 뾰족해지려는 사람들이 모여 서로의 빈 곳을 채울 때 팀은 탁월해진다고 믿는다. 그래서 이건 기준이라기보다 ==추구미==에 가깝다. 오늘 나는 어떤 뾰족함을 가져가고 있는지 한 번쯤 돌아보면 좋겠다.
 
+- [AI, 그리고 역할의 변화](https://jbee.io/articles/essay/ai-and-developer)
 - [AI, 그리고 제품](https://jbee.io/articles/essay/ai-and-product)
 - [AI, 개발자의 뉴노멀](https://jbee.io/articles/essay/ai-and-new-normal)
 - [AI, 그리고 좋은 코드 (feat. 추상)](https://jbee.io/articles/essay/ai-and-good-code)

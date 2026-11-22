@@ -1,5 +1,5 @@
 ---
-title: '개발자는 어떻게 될까'
+title: 'AI, 그리고 역할의 변화'
 date: 2026-11-22 12:00:00
 category: essay
 draft: false
@@ -72,7 +72,7 @@ Copilot 사용 세션을 행동 단위로 나눠 기록했더니 가장 긴 시�
 
 소프트웨어의 새로운 수요는 어디에 있을까. 사서 쓰던 소프트웨어를 직접 만드는 조직, 아무도 만들지 않던 작은 소프트웨어, AI를 현장에 적용하는 일에서 수요가 보인다. 첫 번째와 세 번째에는 개발자가 필요하다. 두 번째는 개발자 없이도 만들어지고 있다. 소프트웨어가 싸졌을 때도 사람들이 개발자를 더 찾게 될지는 개발 조직이 없던 곳의 소프트웨어를 누가 만드는지 보면 알 수 있지 않을까.
 
-- [AI 시대, 함께 하고 싶은 동료](https://jbee.io/articles/essay/ai-and-colleague)
+- [AI, 함께 하고 싶은 동료](https://jbee.io/articles/essay/ai-and-colleague)
 - [AI, 그리고 제품](https://jbee.io/articles/essay/ai-and-product)
 - [AI, 개발자의 뉴노멀](https://jbee.io/articles/essay/ai-and-new-normal)
 - [AI, 그리고 좋은 코드 (feat. 추상)](https://jbee.io/articles/essay/ai-and-good-code)

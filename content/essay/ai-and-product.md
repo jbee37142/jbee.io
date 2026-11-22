@@ -74,6 +74,8 @@ Sync Engine, WebGPU, Local-first Architecture 같은 기술들은 예전에는 �
 
 프론트엔드 엔지니어는 사용자 경험의 ==상방==을 뚫고 혁신하는 주체가 될 것이다. 기존 제품을 더 잘 만들고, 특정 페르소나를 깊이 파고들고, 새로운 기술로 새로운 시장을 열고, 익숙한 UI를 재정의하는 것. 이 모든 것이 프론트엔드의 영역이다. AI가 만들어준 잉여시간을 어디에 쓸 것인가. 그 답이 제품의 수준을 결정한다.
 
+- [AI, 그리고 역할의 변화](https://jbee.io/articles/essay/ai-and-developer)
+- [AI, 함께 하고 싶은 동료](https://jbee.io/articles/essay/ai-and-colleague)
 - [AI, 개발자의 뉴노멀](https://jbee.io/articles/essay/ai-and-new-normal)
 - [AI, 그리고 좋은 코드 (feat. 추상)](https://jbee.io/articles/essay/ai-and-good-code)
 - [AI, 그리고 학습](https://jbee.io/articles/essay/ai-and-learning)
