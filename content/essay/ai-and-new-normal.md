@@ -3,6 +3,7 @@ title: 'AI, 개발자의 뉴노멀'
 description: '개발자의 미래에 대해 다양한 의견이 오고 가는 요즘 구체적으로 어떻게 하면 좋을까? N과 S의 대화가 힌트가 되지 않을까. 앞으로 개발자의 역할과 AI를 어떻게 맞이해야 하는지 그 고민의 과정을 정리했다.'
 date: 2026-01-24 14:00:00
 category: essay
+series: ai
 thumbnail: './images/ai-and-new-normal.jpg'
 draft: false
 permalink: ai-and-new-normal

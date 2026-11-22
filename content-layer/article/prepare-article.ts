@@ -12,18 +12,32 @@ import remarkFrontmatter from 'remark-frontmatter';
 import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import { unified } from 'unified';
+import { generateThumbnail } from './generate-thumbnail.js';
 import { highlightText } from './highlight-text.js';
 import { Article, ArticleFrontMatter, Category, Title } from './types';
 import { urlToLink } from './url-to-link.js';
 
-export async function prepareArticles({ from: baseDirectory, to: destination }: {from:string;to:string}) {
+/**
+ * Series whose posts get an auto-generated thumbnail when the frontmatter has no `thumbnail`.
+ */
+const AUTO_THUMBNAIL_SERIES = ['ai'];
+const AUTO_THUMBNAIL_DIRECTORY = 'thumbnails';
+
+interface ThumbnailOptions {
+  /** Directory the article images are served from (public/articles) */
+  to: string;
+  /** Repository root, used to find the thumbnail template and fonts */
+  rootDirectory: string;
+}
+
+export async function prepareArticles({ from: baseDirectory, to: destination, thumbnails }: {from:string;to:string;thumbnails?: ThumbnailOptions}) {
   const markdownFiles = await fb.glob('**/*.md', { cwd: baseDirectory });
-  
+
   const manifest: Article[] = []
-  
+
   await Promise.all(markdownFiles.map(async (file) => {
     const text = await readFileToString(baseDirectory, file);
-    const article = await buildArticle(text);
+    const article = await buildArticle(text, thumbnails);
   
     if (article != null)  {
       manifest.push(article);
@@ -38,7 +52,7 @@ export async function prepareArticles({ from: baseDirectory, to: destination }: 
     
 }
 
-async function buildArticle(text: string) {
+async function buildArticle(text: string, thumbnails?: ThumbnailOptions) {
   const result = await parseMarkdown(text);
   
   if (result == null) {
@@ -54,19 +68,46 @@ async function buildArticle(text: string) {
   
     return null;
   }
+  let content = html;
+  let thumbnail = attr.thumbnail;
+
+  if (thumbnails != null && thumbnail == null && attr.series != null && AUTO_THUMBNAIL_SERIES.includes(attr.series)) {
+    if (attr.permalink == null) {
+      console.warn(`[content-layer] auto thumbnail needs a permalink: ${attr.title}`);
+    } else {
+      thumbnail = `./${AUTO_THUMBNAIL_DIRECTORY}/${attr.permalink}.jpg`;
+      await generateThumbnail({
+        title: attr.title,
+        date: attr.date,
+        output: path.join(thumbnails.to, attr.category, AUTO_THUMBNAIL_DIRECTORY, `${attr.permalink}.jpg`),
+        rootDirectory: thumbnails.rootDirectory,
+      });
+      // Show the thumbnail at the top of the post, like the hand-made series posts do.
+      // Absolute path so it resolves with or without a trailing slash on the page URL.
+      const src = `/articles/${encodeURIComponent(attr.category)}/${AUTO_THUMBNAIL_DIRECTORY}/${encodeURIComponent(attr.permalink)}.jpg`;
+      content = `<p><img src="${src}" alt="${escapeAttribute(attr.title)}"></p>\n${html}`;
+      console.log('[content-layer] thumbnail generated: ', attr.title);
+    }
+  }
+
   const article: Article = {
     id: getArticleId(attr.category, attr.title),
     category: attr.category,
-    content: html,
+    content,
     title: attr.title,
     lastUpdatedAt: attr.date.toString(),
-    thumbnail: attr.thumbnail, // TODO: default thumbnail
+    thumbnail,
     description: attr?.description,
     permalink: attr?.permalink,
+    series: attr?.series,
     readingTime: attr.readingTime,
   };
-  
+
   return article;
+}
+
+function escapeAttribute(value: string): string {
+  return value.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
 }
   
 async function readFileToString(...args: string[]): Promise<string> {

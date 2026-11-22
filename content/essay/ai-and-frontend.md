@@ -2,6 +2,7 @@
 title: 'AI, 그리고 Frontend'
 date: 2025-07-02 14:00:00
 category: essay
+series: ai
 thumbnail: './images/ai-and-frontend.jpg'
 draft: false
 permalink: ai-and-frontend

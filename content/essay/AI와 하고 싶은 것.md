@@ -2,6 +2,7 @@
 title: 'AI, 그리고 하고 싶은 것'
 date: 2025-03-16 08:00:00
 category: essay
+series: ai
 thumbnail: './images/what-i-want-to-do-and-ai.jpg'
 draft: false
 permalink: what-i-want-to-do-and-ai

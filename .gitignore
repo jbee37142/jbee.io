@@ -9,3 +9,6 @@ node_modules
 memo.txt
 .DS_Store
 .react-router/
+
+# auto-generated thumbnails (content-layer)
+/public/articles/*/thumbnails/

@@ -3,6 +3,7 @@ title: 'AI, 그리고 제품'
 description: 'AI가 만들어준 잉여시간 덕분에 기존 제품을 더 잘 만들거나, 뾰족한 페르소나를 공략하거나, 새로운 기술 기반 제품을 만드는 것이 가능해졌다. 프론트엔드 엔지니어는 이 시간을 활용해 사용자 경험의 상방을 뚫는 혁신의 주체가 될 수 있다.'
 date: 2026-02-09 23:10:00
 category: essay
+series: ai
 thumbnail: './images/ai-and-product.jpg'
 draft: false
 permalink: ai-and-product

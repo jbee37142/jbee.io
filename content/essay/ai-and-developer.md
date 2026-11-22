@@ -2,6 +2,7 @@
 title: 'AI, 그리고 역할의 변화'
 date: 2026-11-22 12:00:00
 category: essay
+series: ai
 draft: false
 permalink: ai-and-developer
 ---
